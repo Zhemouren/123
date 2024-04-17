@@ -26,6 +26,13 @@ PUBLIC	  = $(ROOT_DIR)/public
 USER      = $(ROOT_DIR)/user
 DRIVER    = $(ROOT_DIR)/driver
 TOOL   	  = $(ROOT_DIR)/tool
+RTthread_include  = $(ROOT_DIR)/rtthread/include
+RTthread_libcpu   = $(ROOT_DIR)/rtthread/libcpu
+RTthread_libcpu_bumblebee   = $(ROOT_DIR)/rtthread/libcpu/risc-v/bumblebee
+RTthread_libcpu_common  	= $(ROOT_DIR)/rtthread/libcpu/risc-v/common
+RTthread_src  	  = $(ROOT_DIR)/rtthread/src
+RTthread_bsp  	  = $(ROOT_DIR)/rtthread/bsp
+
 BOARD = 1c102
 BOARDNAME = LS1C102
 IMAGENAME = 1c102_demo
@@ -35,7 +42,10 @@ BCMDLINE  = $(ROOT_DIR)/user/main.o
 BCOMMAND  = $(ROOT_DIR)/user/$(BOARD)_cmd.o
 BINT      = $(ROOT_DIR)/user/$(BOARD)_Interrupt.o
 
-SRCDIR    = $(TARGET) $(PUBLIC) $(PRIVATE)  $(DRIVER) $(TOOL)
+SRCDIR    = $(TARGET) $(PUBLIC) $(PRIVATE)  $(DRIVER) $(TOOL) \
+			$(RTthread_include) $(RTthread_libcpu) $(RTthread_libcpu_bumblebee) \
+			$(RTthread_libcpu_common) $(RTthread_src) \
+			$(RTthread_bsp) 
 VPATH     = $(SRCDIR) $(USER)
 
 # **********************************************
@@ -48,7 +58,10 @@ IMAGE_MAP = $(IMAGENAME).map
 # **********************************************
 # Compiler and linker options
 # **********************************************
-INCLUDE	+= -I$(ROOT_DIR)/include -I$(ROOT_DIR)/public -I$(PRIVATE) -I$(TARGET) -I$(DRIVER) -I$(TOOL)
+INCLUDE	+= -I$(ROOT_DIR)/include -I$(ROOT_DIR)/public -I$(PRIVATE) -I$(TARGET) -I$(DRIVER) -I$(TOOL) \
+			$(RTthread_include) $(RTthread_libcpu) $(RTthread_libcpu_bumblebee) \
+			$(RTthread_libcpu_common) $(RTthread_src) \
+			$(RTthread_bsp)
 
 FLAGS   = -std=gnu99 -O0 -ffunction-sections -fdata-sections -msoft-float -fsched-pressure -fno-builtin -D $(BOARDNAME) 
 
