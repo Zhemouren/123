@@ -1,0 +1,29 @@
+{
+	"files.associations": {
+		"user_ls1c102.h": "c",
+		"soc_pwm.h": "c",
+		"soc_ls1c102.h": "c",
+		"my_delay.h": "c",
+		"soc_ls1c102_i2c.h": "c",
+		"soc_gpio.h": "c",
+		"soc_at24cxx.h": "c",
+		"soc_uart.h": "c",
+		"soc_hpet.h": "c",
+		"ls1x.h": "c",
+		"ls1x_string.h": "c",
+		"soc_printf.h": "c",
+		"stdint.h": "c",
+		"stdio.h": "c",
+		"ls1x_uart.h": "c",
+		"soc_i2c.h": "c",
+		"my_p_sum.h": "c",
+		"main.h": "c",
+		"peri_test_sum.h": "c",
+		"ls1x_wdg.h": "c",
+		"calin8m.h": "c",
+		"ls1x_clock.h": "c",
+		"ls1x_printf.h": "c",
+		"ls1c102_touch.h": "c"
+	},
+	"C_Cpp.errorSquiggles": "disabled"
+}
