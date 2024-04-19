@@ -1,5 +1,6 @@
 {
     "files.associations": {
         "peri_test_sum.h": "c"
-    }
+    },
+    "git.ignoreLimitWarning": true
 }
