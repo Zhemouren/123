@@ -2,7 +2,7 @@
 ipc_version=4
 file=blk_mem_gen_0
 module=blk_mem_gen_0
-target_device=gw5ast138b-000
+target_device=gw5ast138b-002
 type=ram_sp
 version=3.0
 
@@ -10,7 +10,7 @@ version=3.0
 BYTE_SIZE=1
 DEPTH=32768
 LANG=0
-MEM_FILE=../../../sw/gpio_out_cut_in_right_delay_0116_1111.mi
+MEM_FILE=../../../../../gpio1.mi
 READ=0
 RESET_MODE=true
 WIDTH=32

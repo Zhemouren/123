@@ -11,6 +11,54 @@ module godson_mcu_cpu (
     output [31:0] apb0_pwdata,
     input  [31:0] apb0_prdata,
     input         apb0_ack,
+	
+    output        apb1_psel,
+    output [31:0] apb1_paddr,
+    output        apb1_pwrite,
+	output        apb1_penable,
+    output [31:0] apb1_pwdata,
+    input  [31:0] apb1_prdata,
+    input         apb1_ack,
+	
+    output        apb2_psel,
+    output [31:0] apb2_paddr,
+    output        apb2_pwrite,
+	output        apb2_penable,
+    output [31:0] apb2_pwdata,
+    input  [31:0] apb2_prdata,
+    input         apb2_ack,
+	
+    output        apb3_psel,
+    output [31:0] apb3_paddr,
+    output        apb3_pwrite,
+	output        apb3_penable,
+    output [31:0] apb3_pwdata,
+    input  [31:0] apb3_prdata,
+    input         apb3_ack,
+	
+    output        apb4_psel,
+    output [31:0] apb4_paddr,
+    output        apb4_pwrite,
+	output        apb4_penable,
+    output [31:0] apb4_pwdata,
+    input  [31:0] apb4_prdata,
+    input         apb4_ack,
+
+    output        apb5_psel,
+    output [31:0] apb5_paddr,
+    output        apb5_pwrite,
+	output        apb5_penable,
+    output [31:0] apb5_pwdata,
+    input  [31:0] apb5_prdata,
+    input         apb5_ack,
+	
+	output        apb6_psel,
+    output [31:0] apb6_paddr,
+    output        apb6_pwrite,
+	output        apb6_penable,
+    output [31:0] apb6_pwdata,
+    input  [31:0] apb6_prdata,
+    input         apb6_ack,
 
     input [5:0]   interrupt,
 
@@ -137,7 +185,8 @@ module godson_mcu_cpu (
 	wire                      apb_rready;
 	
 
-
+	wire 					  apd_clk;		//add by zhemou
+	wire					  apb_reset_n;	//add by zhemou
 	wire                      apb_ack;
 	wire                      apb_rw;
 	wire                      apb_psel;
@@ -323,7 +372,7 @@ module godson_mcu_cpu (
 	axi_slave_mux_cpu A_cpu_mux
     (
 		.axi_s_aclk       (clock               ),
-		.axi_s_aresetn    (reset           ),
+		.axi_s_aresetn    (reset           	   ),
 		.axi_s_awid       (cpu_awid            ),
 		.axi_s_awaddr     (cpu_awaddr          ),
 		.axi_s_awlen      (cpu_awlen           ),
@@ -479,7 +528,7 @@ module godson_mcu_cpu (
 		.axi_s_rready     (apb_rready          ),//
 
 		.apb_valid_cpu    (apb_valid           ),
-		.apb_clk          (                    ),
+		.apb_clk          (apd_clk             ),//add by zhemou
 		.apb_reset_n      (apb_reset_n         ),
 		.reg_psel         (apb_psel            ),
 		.reg_enable       (apb_enab            ),
@@ -501,14 +550,68 @@ module godson_mcu_cpu (
 		.apb_datao_cpu    (apb_datao           ),
 		.apb_valid_cpu    (apb_valid           ),
 
-		.apb0_req         (                    ),            
+		.apb0_req         (                    ),
 		.apb0_ack         (apb0_ack            ),
 		.apb0_rw          (apb0_pwrite         ),
 		.apb0_psel        (apb0_psel           ),
 		.apb0_enab        (apb0_penable        ),
 		.apb0_addr        (apb0_paddr          ),
 		.apb0_datai       (apb0_pwdata         ),
-		.apb0_datao       (apb0_prdata         )
+		.apb0_datao       (apb0_prdata         ),
+		
+		.apb1_req         (                    ),
+		.apb1_ack         (apb1_ack            ),
+		.apb1_rw          (apb1_pwrite         ),
+		.apb1_psel        (apb1_psel           ),
+		.apb1_enab        (apb1_penable        ),
+		.apb1_addr        (apb1_paddr          ),
+		.apb1_datai       (apb1_pwdata         ),
+		.apb1_datao       (apb1_prdata         ),		
+		
+		.apb2_req         (                    ),
+		.apb2_ack         (apb2_ack            ),
+		.apb2_rw          (apb2_pwrite         ),
+		.apb2_psel        (apb2_psel           ),
+		.apb2_enab        (apb2_penable        ),
+		.apb2_addr        (apb2_paddr          ),
+		.apb2_datai       (apb2_pwdata         ),
+		.apb2_datao       (apb2_prdata         ),		
+		
+		.apb3_req         (                    ),
+		.apb3_ack         (apb3_ack            ),
+		.apb3_rw          (apb3_pwrite         ),
+		.apb3_psel        (apb3_psel           ),
+		.apb3_enab        (apb3_penable        ),
+		.apb3_addr        (apb3_paddr          ),
+		.apb3_datai       (apb3_pwdata         ),
+		.apb3_datao       (apb3_prdata         ),		
+		
+		.apb4_req         (                    ),
+		.apb4_ack         (apb4_ack            ),
+		.apb4_rw          (apb4_pwrite         ),
+		.apb4_psel        (apb4_psel           ),
+		.apb4_enab        (apb4_penable        ),
+		.apb4_addr        (apb4_paddr          ),
+		.apb4_datai       (apb4_pwdata         ),
+		.apb4_datao       (apb4_prdata         ),		
+		
+		.apb5_req         (                    ),
+		.apb5_ack         (apb5_ack            ),
+		.apb5_rw          (apb5_pwrite         ),
+		.apb5_psel        (apb5_psel           ),
+		.apb5_enab        (apb5_penable        ),
+		.apb5_addr        (apb5_paddr          ),
+		.apb5_datai       (apb5_pwdata         ),
+		.apb5_datao       (apb5_prdata         ),
+		
+		.apb6_req         (                    ),
+		.apb6_ack         (apb6_ack            ),
+		.apb6_rw          (apb6_pwrite         ),
+		.apb6_psel        (apb6_psel           ),
+		.apb6_enab        (apb6_penable        ),
+		.apb6_addr        (apb6_paddr          ),
+		.apb6_datai       (apb6_pwdata         ),
+		.apb6_datao       (apb6_prdata         )
 	);
 
 	
@@ -544,16 +647,16 @@ module Dram_8k (DO, AD, STRB, CLKin, DI, EN, R_WB, reset);
 	*/
 
     blk_mem_gen_1 ram_8k_inst(
-        .dout(DO), //output [31:0] dout
-        .clk(CLKin), //input clk
-        .oce(EN), //input oce
-        .ce(EN), //input ce
-        .reset(~reset), //input reset
-        // .reset(1'b0),
-        .wre(R_WB), //input wre
-        .ad(AD[12 : 2]), //input [10:0] ad
-        .din(DI), //input [31:0] din
-        .byte_en(4'b1111) //input [3:0] byte_en
+        .dout		(DO), 		//output [31:0] dout
+        .clk		(CLKin), 	//input clk
+        .oce		(EN), 		//input oce
+        .ce			(EN), 		//input ce
+        .reset		(~reset), 	//input reset
+     // .reset		(1'b0),
+        .wre		(R_WB), 	//input wre
+        .ad			(AD[12:2]), //input [10:0] ad
+        .din		(DI), 		//input [31:0] din
+        .byte_en	(4'b1111) 	//input [3:0] byte_en
     );
 endmodule
 
@@ -586,18 +689,18 @@ module Flash_128k (DO, AD, STRB, CLKin, DI, EN, R_WB, reset);
 	*/
 
 	blk_mem_gen_0 flash_128k_inst(
-		.dout(DO), //output [31:0] dout
-		.clk(CLKin), //input clk
-		.oce(EN), //input oce
-		.ce(EN), //input ce
-		.reset(~reset), //input reset
-		// .reset(1'b0),
-		.wre(R_WB), //input wre
-		//.wre(1'b0), //input wre
-		.ad(AD[16 : 2]), //input [14:0] ad
-		.din(DI), //input [31:0] din
-		// .byte_en(byte_en_i) //input [3:0] byte_en
-		.byte_en(4'b1111) //input [3:0] byte_en
+		.dout		(DO), 		//output [31:0] dout
+		.clk		(CLKin), 	//input clk
+		.oce		(EN), 		//input oce
+		.ce			(EN), 		//input ce
+		.reset		(~reset), 	//input reset
+	// 	.reset		(1'b0),
+		.wre		(R_WB), 	//input wre
+	//	.wre		(1'b0), 	//input wre
+		.ad			(AD[16:2]), //input [14:0] ad
+		.din		(DI), 		//input [31:0] din
+	// 	.byte_en	(byte_en_i) //input [3:0] byte_en
+		.byte_en	(4'b1111) 	//input [3:0] byte_en
 	);
 
 endmodule

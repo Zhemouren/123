@@ -1,0 +1,105 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/EDA/GOWIN/01_sopc/1C102/src/hw
+vDram_8k
+Z1 !s110 1712845061
+!i10b 1
+!s100 U[6^MX`ZhnGXeIe6S:c;U2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IEJUh6LjIR7;jSmAV^9Ji00
+R0
+Z3 w1712845058
+Z4 8E:\EDA\GOWIN\01_sopc\1C102\src\hw\godson_mcu_cpu.v
+Z5 FE:\EDA\GOWIN\01_sopc\1C102\src\hw\godson_mcu_cpu.v
+!i122 5
+L0 621 41
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z8 !s108 1712845061.000000
+Z9 !s107 config.v|E:\EDA\GOWIN\01_sopc\1C102\src\hw\godson_mcu_cpu.v|
+Z10 !s90 E:\EDA\GOWIN\01_sopc\1C102\src\hw\godson_mcu_cpu.v|
+!i113 0
+Z11 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z12 tCvgOpt 0
+n@dram_8k
+vFlash_128k
+R1
+!i10b 1
+!s100 @c_mJ_CD0eE75B<C3X:463
+R2
+Im0J]>iODj2;gnBdKAHU:72
+R0
+R3
+R4
+R5
+!i122 5
+L0 663 44
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R12
+n@flash_128k
+vgodson_mcu_cpu
+R1
+!i10b 1
+!s100 MbZ^jY>X]ah<5UceDTOmz0
+R2
+IBZDcD9XK0_8[7c2]W9ofP2
+R0
+R3
+R4
+R5
+!i122 5
+L0 3 616
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R12
+vgodson_mcu_top
+!s110 1712842831
+!i10b 1
+!s100 RgMMigIWY>dFzV7GTiMk[2
+R2
+IQX`2E3m^TFR2`2H_D=ODl3
+R0
+w1712842824
+8E:\EDA\GOWIN\01_sopc\1C102\src\hw\godson_mcu_top.v
+FE:\EDA\GOWIN\01_sopc\1C102\src\hw\godson_mcu_top.v
+!i122 3
+L0 2 349
+R6
+R7
+r1
+!s85 0
+31
+!s108 1712842831.000000
+!s107 config.v|E:\EDA\GOWIN\01_sopc\1C102\src\hw\godson_mcu_top.v|
+!s90 E:\EDA\GOWIN\01_sopc\1C102\src\hw\godson_mcu_top.v|
+!i113 0
+R11
+R12

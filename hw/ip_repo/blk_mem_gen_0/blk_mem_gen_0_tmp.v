@@ -1,11 +1,11 @@
-//Copyright (C)2014-2023 Gowin Semiconductor Corporation.
+//Copyright (C)2014-2024 Gowin Semiconductor Corporation.
 //All rights reserved.
 //File Title: Template file for instantiation
-//Tool Version: V1.9.9 (64-bit)
-//Part Number: GW5AST-LV138PG484AES
+//Tool Version: V1.9.9.01 (64-bit)
+//Part Number: GW5AST-LV138FPG676AES
 //Device: GW5AST-138B
 //Device Version: B
-//Created Time: Sat Feb  3 11:35:02 2024
+//Created Time: Fri Apr 19 21:29:28 2024
 
 //Change the instance name and port connections to the signal names
 //--------Copy here to design--------

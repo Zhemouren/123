@@ -71,23 +71,23 @@
 `define APB_SLV0_ADDR_LEN    32'h0000ffff     //APB0 length
 
 //APB1
-`define APB_SLV1_ADDR_BASE   32'hffffffff     //APB1 base address    
-`define APB_SLV1_ADDR_LEN    32'hffffffff     //APB1 length
+`define APB_SLV1_ADDR_BASE   32'hbfec0000     //APB1 base address    
+`define APB_SLV1_ADDR_LEN    32'h0000ffff     //APB1 length
 //APB2
-`define APB_SLV2_ADDR_BASE   32'hffffffff     //APB2 base address    
-`define APB_SLV2_ADDR_LEN    32'hffffffff     //APB3 length
+`define APB_SLV2_ADDR_BASE   32'hbfed0000     //APB2 base address    
+`define APB_SLV2_ADDR_LEN    32'h0000ffff     //APB3 length
 //APB3
-`define APB_SLV3_ADDR_BASE   32'hffffffff     //APB3 base address    
-`define APB_SLV3_ADDR_LEN    32'hffffffff     //APB3 length
+`define APB_SLV3_ADDR_BASE   32'hbfee0000     //APB3 base address    
+`define APB_SLV3_ADDR_LEN    32'h0000ffff     //APB3 length
 //APB4
-`define APB_SLV4_ADDR_BASE   32'hffffffff     //APB4 base address    
-`define APB_SLV4_ADDR_LEN    32'hffffffff     //APB4 length
+`define APB_SLV4_ADDR_BASE   32'hbfef0000     //APB4 base address    
+`define APB_SLV4_ADDR_LEN    32'h0000ffff     //APB4 length
 //APB5
-`define APB_SLV5_ADDR_BASE   32'hffffffff     //APB5 base address    
-`define APB_SLV5_ADDR_LEN    32'hffffffff     //APB5 length
+`define APB_SLV5_ADDR_BASE   32'hbff00000     //APB5 base address    
+`define APB_SLV5_ADDR_LEN    32'h0000ffff     //APB5 length
 //APB6
-`define APB_SLV6_ADDR_BASE   32'hffffffff     //APB6 base address     
-`define APB_SLV6_ADDR_LEN    32'hffffffff     //APB6 length
+`define APB_SLV6_ADDR_BASE   32'hbff10000     //APB6 base address     
+`define APB_SLV6_ADDR_LEN    32'h0000ffff     //APB6 length
 //APB7
 `define APB_SLV7_ADDR_BASE   32'hffffffff     //APB7 base address   
 `define APB_SLV7_ADDR_LEN    32'hffffffff     //APB7 length
