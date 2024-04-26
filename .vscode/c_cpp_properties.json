@@ -4,11 +4,7 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "F:\\\\GOWIN\\Project\\\\loongxin2\\\\sw\\\\soft_rtthread\\\\driver",
-                "F:/GOWIN/Project/loongxin2/sw/soft_rtthread/include",
-                "F:/GOWIN/Project/loongxin2/sw/soft_rtthread/rtthread/include",
-                "F:/GOWIN/Project/loongxin2/sw/soft_rtthread/rtthread/libcpu/risc-v/common",
-                "F:/GOWIN/Project/loongxin2/sw/soft_rtthread/rtthread/libcpu/risc-v/bumblebee"
+                "F:\\\\GOWIN\\\\Project\\\\loongxin2\\\\sw\\\\soft_app_rtthread\\\\rtthread\\\\libcpu\\\\mips\\\\loongson_1c"
             ],
             "defines": [
                 "_DEBUG",

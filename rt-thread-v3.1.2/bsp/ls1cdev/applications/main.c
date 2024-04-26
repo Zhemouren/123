@@ -12,6 +12,6 @@
 
 int main(int argc, char** argv)
 {   
-
+    hw_pin_init();
     return 0;
 }

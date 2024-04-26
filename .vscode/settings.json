@@ -1,6 +1,10 @@
 {
     "files.associations": {
-        "peri_test_sum.h": "c"
+        "peri_test_sum.h": "c",
+        "test.h": "c",
+        "main.h": "c",
+        "config.h": "c",
+        "rtthread.h": "c"
     },
     "git.ignoreLimitWarning": true
 }
