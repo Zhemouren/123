@@ -13,64 +13,198 @@
 #include "oled_Font.h"    //字库（可以自己制作）
 #include "my_delay.h"
 
+
+void IIC_Start()
+{
+
+	OLED_SCLK_Set() ;
+	OLED_SDIN_Set();
+	OLED_SDIN_Clr();
+	OLED_SCLK_Clr();
+}
+
+/**********************************************
+//IIC Stop
+**********************************************/
+void IIC_Stop()
+{
+	OLED_SCLK_Set() ;
+//	OLED_SCLK_Clr();
+	OLED_SDIN_Clr();
+	OLED_SDIN_Set();
+}
+
+void IIC_Wait_Ack()
+{
+
+	OLED_SCLK_Set() ;
+	OLED_SCLK_Clr();
+}
+
+/**********************************************
+// IIC Write byte
+**********************************************/
+
+void Write_IIC_Byte(unsigned char IIC_Byte)
+{
+	uint8_t i;
+	uint8_t m,da;
+	da=IIC_Byte;
+	OLED_SCLK_Clr();
+	for(i=0;i<8;i++)		
+	{
+			m=da;
+		//	OLED_SCLK_Clr();
+		m=m&0x80;
+		if(m==0x80)
+		{OLED_SDIN_Set();}
+		else OLED_SDIN_Clr();
+			da=da<<1;
+		OLED_SCLK_Set();
+		OLED_SCLK_Clr();
+		}
+
+
+}
+/****************************************************************
+  * 函数名：I2C_WriteByte
+  * 功  能：写一个字节
+  * 参  数：u8Addr要写入的地址
+			u8Data要写入的数据
+  * 返回值：无
+  * 说  明：无
+****************************************************************/
+void I2C_WriteByte(uint8_t u8Addr, uint8_t u8Data) {
+	soc_I2C_GenerateSTART(ENABLE);// 起始信号
+
+	soc_I2C_SendData(OLED_ADD);// 器件寻址+读/写选择
+	
+	soc_I2C_wait();
+	
+	soc_I2C_SendData(0x00);
+	
+	soc_I2C_wait();
+	
+	soc_I2C_SendData(u8Addr);
+
+	soc_I2C_wait();
+	
+	soc_I2C_SendData(u8Data);
+	
+	soc_I2C_wait();
+
+    soc_I2C_GenerateSTOP(ENABLE);// 停止信号
+
+    soc_I2C_delay(20);// 需要延时 2u ，保证下次能正常开始传输
+}
+
 //硬件IIC驱动代码
 void WriteCmd(uint8_t I2C_Command) //写命令利用I2C通讯
  {
-	soc_I2C_GenerateSTART(ENABLE);// 启动I2C
-	soc_I2C_SendData(OLED_ADD | WRITE_CMD);// 器件寻址+读/写选择
-	soc_I2C_wait();//延时等待响应
-	soc_I2C_SendData((uint8_t)(COM & 0xFF));//寻址0x00
-	soc_I2C_wait();//延时等待响应
-	soc_I2C_SendData((uint8_t)(I2C_Command & 0xFF));//输出命令
-	soc_I2C_wait();//延时等待响应
-	soc_I2C_GenerateSTOP(ENABLE);// 停止信号
+	// I2C_WriteByte(0X00,I2C_Command);
+	soc_I2C_GenerateSTART(ENABLE);// 起始信号
+
+	soc_I2C_SendData(OLED_ADD);// 器件寻址+读/写选择
+	
+	soc_I2C_wait();
+	my_delay_us(5);
+	
+	soc_I2C_SendData((uint8_t)(0x00 & 0Xff));
+	
+	soc_I2C_wait();
+	
+	my_delay_us(5);
+	soc_I2C_SendData(I2C_Command);
+	
+	soc_I2C_wait();
+
+    soc_I2C_GenerateSTOP(ENABLE);// 停止信号
+
     soc_I2C_delay(20);// 需要延时 2u ，保证下次能正常开始传输
+	my_delay_us(5);
+//    IIC_Start();
+//    Write_IIC_Byte(0x78);            //Slave address,SA0=0
+// 	IIC_Wait_Ack();	
+//    Write_IIC_Byte(0x00);			//write command
+// 	IIC_Wait_Ack();	
+//    Write_IIC_Byte(I2C_Command); 
+// 	IIC_Wait_Ack();	
+//    IIC_Stop();
+	// my_delay_ms(10);
 
  }
 		
 void WriteDat(uint8_t I2C_Data)    //写数据利用I2C通讯
  {
-	soc_I2C_GenerateSTART(ENABLE);// 启动I2C
-	soc_I2C_SendData(OLED_ADD | WRITE_CMD);// 器件寻址+读/写选择
-	soc_I2C_wait();//延时等待响应
-	soc_I2C_SendData((uint8_t)(DAT & 0xFF));//寻址0x00
-	soc_I2C_wait();//延时等待响应
-	soc_I2C_SendData((uint8_t)(I2C_Data & 0xFF));//输出命令
-	soc_I2C_wait();//延时等待响应
-	soc_I2C_GenerateSTOP(ENABLE);// 停止信号
+	// I2C_WriteByte((uint8_t)DAT,I2C_Data);
+	soc_I2C_GenerateSTART(ENABLE);// 起始信号
+
+	soc_I2C_SendData(OLED_ADD);// 器件寻址+读/写选择
+	
+	soc_I2C_wait();
+	my_delay_us(5);
+	
+	soc_I2C_SendData((uint8_t)(0x40 & 0Xff));
+	
+	soc_I2C_wait();
+	
+	my_delay_us(5);
+	soc_I2C_SendData(I2C_Data);
+	
+	soc_I2C_wait();
+
+    soc_I2C_GenerateSTOP(ENABLE);// 停止信号
+
     soc_I2C_delay(20);// 需要延时 2u ，保证下次能正常开始传输
+	my_delay_us(5);
+	// my_delay_ms(10);
+//    IIC_Start();
+//    Write_IIC_Byte(0x78);			//D/C#=0; R/W#=0
+// 	IIC_Wait_Ack();	
+//    Write_IIC_Byte(0x40);			//write data
+// 	IIC_Wait_Ack();	
+//    Write_IIC_Byte(I2C_Data);
+// 	IIC_Wait_Ack();	
+//    IIC_Stop();
   }
  
 void OLED_Init(void)
 {
-	my_delay_ms(200); //这里的延时很重要
+	my_delay_ms(800); //这里的延时很重要
 
 	WriteCmd(0xAE); //display off
+
 	WriteCmd(0x20);	//Set Memory Addressing Mode	
 	WriteCmd(0x10);	//00,Horizontal Addressing Mode;01,Vertical Addressing Mode;10,Page Addressing Mode (RESET);11,Invalid
 	WriteCmd(0xb0);	//Set Page Start Address for Page Addressing Mode,0-7
+	
 	WriteCmd(0xc8);	//Set COM Output Scan Direction
 	WriteCmd(0x00); //---set low column address
 	WriteCmd(0x10); //---set high column address
+	
 	WriteCmd(0x40); //--set start line address
 	WriteCmd(0x81); //--set contrast control register
 	WriteCmd(0xff); //亮度调节 0x00~0xff
 	WriteCmd(0xa1); //--set segment re-map 0 to 127
+	
 	WriteCmd(0xa6); //--set normal display
 	WriteCmd(0xa8); //--set multiplex ratio(1 to 64)
 	WriteCmd(0x3F); //
 	WriteCmd(0xa4); //0xa4,Output follows RAM content;0xa5,Output ignores RAM content
 	WriteCmd(0xd3); //-set display offset
 	WriteCmd(0x00); //-not offset
+	
 	WriteCmd(0xd5); //--set display clock divide ratio/oscillator frequency
 	WriteCmd(0xf0); //--set divide ratio
 	WriteCmd(0xd9); //--set pre-charge period
 	WriteCmd(0x22); //
+	
 	WriteCmd(0xda); //--set com pins hardware configuration
 	WriteCmd(0x12);
 	WriteCmd(0xdb); //--set vcomh
 	WriteCmd(0x20); //0x20,0.77xVcc
 	WriteCmd(0x8d); //--set DC-DC enable
+	
 	WriteCmd(0x14); //
 	WriteCmd(0xaf); //--turn on oled panel
 }
@@ -84,7 +218,7 @@ void OLED_SetPos(uint8_t x, uint8_t y) //设置起始点坐标
  
 void OLED_Fill(uint8_t fill_Data)//????
 {
-	uint8_t m,n;
+	uint32_t m,n;
 	for(m=0;m<8;m++)
 	{
 		WriteCmd(0xb0+m);		//page0-page1
@@ -197,8 +331,8 @@ void OLED_ShowCN_STR(u8 x , u8 y , u8 begin , u8 num)
 //eg: OLED_DrawBMP(30, 2, 80, 7, (uint8_t *)gImage_cc);
 void OLED_DrawBMP(int x0, int y0, int x1, int y1, const uint8_t *BMP)
 {
-	unsigned int j=0;
-	uint8_t x,y;
+	uint32_t j=0;
+	uint32_t x,y;
 
   if(y1%8==0)
 		y = y1/8;
@@ -224,7 +358,7 @@ void OLED_DrawBMP(int x0, int y0, int x1, int y1, const uint8_t *BMP)
 
 void OLED_ShowChar(u8 x,u8 y,u8 chr,u8 Char_Size)
 {      	
-	uint8_t c=0,i=0;	
+	uint32_t c=0,i=0;	
 		c=chr-' ';// 将字符转换为字库中对应的索引			
 		if(x>128-1){x=0;y=y+2;}
 		if(Char_Size ==16)
@@ -253,7 +387,7 @@ u32 oled_pow(u8 m, u8 n)
 {
 	u32 result = 1;	 
 	while (n--) {
-		result *= m;    
+		result =result* m;    
 	}
 	return result;
 }
@@ -265,12 +399,12 @@ u32 oled_pow(u8 m, u8 n)
 //num：要显示的数值（范围：0~4294967295）	 		  
 void OLED_ShowNum(u8 x,u8 y,u32 num,u8 len,u8 size2)
 {         	
-	u8 t,temp;
-	u8 enshow=0;						   
+	uint32_t t,temp;
+	uint32_t enshow=0;						   
 	for(t=0;t<len;t++)
 	{
 		temp=(num/oled_pow(10,len-t-1))%10;
-		if(enshow==0&&t<(len-1))
+		if((enshow==0)&&t<(len-1))
 		{
 			if(temp==0)
 			{
@@ -317,4 +451,21 @@ void OLED_DrawGIF(uint8_t x0, uint8_t y0,uint8_t x1, uint8_t y1, uint8_t k, int 
 
 	}
 }
+
+// void show_title(void)
+// {
+// 	uint32_t i;
+// 	OLED_CLS();
+// 	for ( i = 0; i < 10; i++)
+// 	{
+// 		if(i<4)
+// 			OLED_ShowCN(20+(i*16),1,Title,i);
+			
+// 		else
+// 			OLED_ShowCN(10+((i-5)*16),4,Title,i);
+// 		/* code */
+// 	}
+
+// }
+
 

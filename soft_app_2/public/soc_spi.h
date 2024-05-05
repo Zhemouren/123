@@ -2,7 +2,7 @@
 #define _SOC_SPI_H
 
 #include "soc_ls1c102.h"
-// #include "ls1x.h"
+#include "ls1x.h"
 
 //******************  SPI REGS  ******************/
 
@@ -15,38 +15,38 @@
 #define HW_SPI_SFC_SOFTCS	            *(volatile unsigned char *)(LS1C102_SPI_BASE+0x05) //片选控制寄存器
 #define HW_SPI_SFC_TIMING	            *(volatile unsigned char *)(LS1C102_SPI_BASE+0x06) //时序控制寄存器
 
-#define SPI_INT_ENABLE      (HW_SPI->SPCR |= 0x80)          //SPI 控制器中断使能
-#define SPI_INT_DISABLE     (HW_SPI->SPCR &= ~(0x80))       //SPI 控制器中断失能
+#define SPI_INT_ENABLE      (SPI->SPCR |= 0x80)          //SPI 控制器中断使能
+#define SPI_INT_DISABLE     (SPI->SPCR &= ~(0x80))       //SPI 控制器中断失能
 
-#define SPI_ENABLE          (HW_SPI->SPCR |= 0x40)          //SPI 控制器使能
-#define SPI_DISABLE         (HW_SPI->SPCR &= ~(0x40))       //SPI 控制器停止
+#define SPI_ENABLE          (SPI->SPCR |= 0x40)          //SPI 控制器使能
+#define SPI_DISABLE         (SPI->SPCR &= ~(0x40))       //SPI 控制器停止
 
-#define SPI_MODE_MASTER     (HW_SPI->SPCR |= 0x10)
-#define SPI_MODE_SLAVE      (HW_SPI->SPCR &= ~(0x10))
+#define SPI_MODE_MASTER     (SPI->SPCR |= 0x10)
+#define SPI_MODE_SLAVE      (SPI->SPCR &= ~(0x10))
 
-#define SPI_CPOL_HIGH       (HW_SPI->SPCR |= 0x08)
-#define SPI_CPOL_LOW        (HW_SPI->SPCR &= ~(0x08))
+#define SPI_CPOL_HIGH       (SPI->SPCR |= 0x08)
+#define SPI_CPOL_LOW        (SPI->SPCR &= ~(0x08))
 
-#define SPI_CPHA_REV        (HW_SPI->SPCR |= 0x04)
-#define SPI_CPHA_SAME       (HW_SPI->SPCR &= ~(0x04))
+#define SPI_CPHA_REV        (SPI->SPCR |= 0x04)
+#define SPI_CPHA_SAME       (SPI->SPCR &= ~(0x04))
 
-#define SPI_TXEMPTY (HW_SPI->SPSR & 0x04)
-#define SPI_RXEMPTY (HW_SPI->SPSR & 0x01)
-#define SPI_TXFULL  (HW_SPI->SPSR & 0x08)
-#define SPI_RXFULL  (HW_SPI->SPSR & 0x02)
+#define SPI_TXEMPTY (SPI->SPSR & 0x04)
+#define SPI_RXEMPTY (SPI->SPSR & 0x01)
+#define SPI_TXFULL  (SPI->SPSR & 0x08)
+#define SPI_RXFULL  (SPI->SPSR & 0x02)
 
-#define SPI_MODE_COMPATIBILIY     	(HW_SPI->SPER |= 0x04)
-#define SPI_MODE_STAND      		(HW_SPI->SPER &= ~(0x04))
+#define SPI_MODE_COMPATIBILIY     	(SPI->SPER |= 0x04)
+#define SPI_MODE_STAND      		(SPI->SPER &= ~(0x04))
 
-#define SPI_TRANST_1BYTE 			(HW_SPI->SPER &= 0x3F)
-#define SPI_TRANST_2BYTE 			(HW_SPI->SPER |= (1<<6))
-#define SPI_TRANST_3BYTE 			(HW_SPI->SPER |= (2<<6))
-#define SPI_TRANST_4BYTE			(HW_SPI->SPER |= (3<<6))
+#define SPI_TRANST_1BYTE 			(SPI->SPER &= 0x3F)
+#define SPI_TRANST_2BYTE 			(SPI->SPER |= (1<<6))
+#define SPI_TRANST_3BYTE 			(SPI->SPER |= (2<<6))
+#define SPI_TRANST_4BYTE			(SPI->SPER |= (3<<6))
 
-#define SPI_ENABLE_CS(n)     	    (HW_SPI->SOFTCS |= (1<<n) )
-#define SPI_DISABLE_CS(n)    	    (HW_SPI->SOFTCS &= ~(1<<n) )
-#define SPI_LOW_CS(n)     		    (HW_SPI->SOFTCS &= ~(1<<(n+4)))
-#define SPI_HIGH_CS(n)    		    (HW_SPI->SOFTCS |= (1<<(n+4)) )
+#define SPI_ENABLE_CS(n)     	    (SPI->SOFTCS |= (1<<n) )
+#define SPI_DISABLE_CS(n)    	    (SPI->SOFTCS &= ~(1<<n) )
+#define SPI_LOW_CS(n)     		    (SPI->SOFTCS &= ~(1<<(n+4)))
+#define SPI_HIGH_CS(n)    		    (SPI->SOFTCS |= (1<<(n+4)) )
 
 #define SPI_DIV_2				0b0000
 #define SPI_DIV_4               0b0001

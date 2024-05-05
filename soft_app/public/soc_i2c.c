@@ -76,7 +76,7 @@ void soc_I2C_Init(I2C_InitTypeDef* I2C_InitStruct) {
 		I2C->CR_SR = 0x04;
 	}
 	
-	soc_I2C_wait();
+	// soc_I2C_wait();
 }
 
 /**

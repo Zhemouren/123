@@ -8,6 +8,8 @@ extern "C" {
 #include <stdint.h>
 
 
+#define UNCACHED_MEMORY_ADDR 	0xa0000000
+#define PHYS_TO_UNCACHED(x)     ((x) | UNCACHED_MEMORY_ADDR)
 
 // ================================================================
 #define LS1C102_PMU_BASE           0xBFEB0000      // 电源管理单元寄存器基地址
@@ -56,7 +58,7 @@ typedef struct
 typedef enum
 {
   GPIO_PIN_RESET = 0u,
-  GPIO_PIN_SET
+  GPIO_PIN_SET  =1u
 } GPIO_PinState;
 
 // ================================================================
@@ -94,56 +96,7 @@ typedef struct
 
 // ================================================================
 // typedef enum {DISABLE = 0, ENABLE = !DISABLE} FunctionalState;
-#define LS1C102_I2C_BASE         0xbfe90000      // 
-#define HW_I2C                 ((HW_I2C_TypeDef *)LS1C102_I2C_BASE)
-/**
- * @说明：I2C接口宏定义
- *
- */
-typedef struct
-{
-  volatile uint8_t PRERL;			/* 分频值低字节寄存器 */
-  volatile uint8_t PRERH;			/* 分频值高字节寄存器 */
-  volatile uint8_t CTRL;			/* 控制寄存器 */
-  volatile uint8_t DR;				/* 数据寄存器 */
-  volatile uint8_t CR_SR;			/* 命令寄存器 兼 状态寄存器 */
-  volatile uint8_t BLTOP;			/* 总线死锁时间寄存器 */
-  volatile uint8_t RESERVED0;		/* 保留字节  */
-  volatile uint8_t SADDR;			/* 从模式地址寄存器 */
-} HW_I2C_TypeDef;
 
-typedef struct
-{
-	uint32_t I2C_ClockSpeed;         /*!< Specifies the clock frequency.
-                                        This parameter must be set to a value lower than 400kHz */
-
-	uint8_t I2C_Mode;                /*!< Specifies the HW_I2C mode.
-                                        This parameter can be a value of @ref I2C_mode */
-
-	uint8_t I2C_OwnAddress1;         /*!< Specifies the first device own address.
-                                        This parameter can be a 7-bit or 10-bit address. */
-
-	uint8_t I2C_BuslockCheckEn;    	 /*!< Set the HW_I2C buslock check function*/
-
-
-	uint8_t I2C_SlvAutoresetEn;		 /*!< Set the HW_I2C autoreset check function*/
-
-}HW_I2C_InitTypeDef;
-// ================================================================
-
-#define LS1C102_SPI_BASE         0xbfe70000   
-typedef struct
-{
-  volatile uint8_t SPCR;			/* 控制寄存器 */
-  volatile uint8_t SPSR;			/* 状态寄存器 */
-  volatile uint8_t DATA;			/* 数据寄存器 */
-  volatile uint8_t SPER;			/* 外部寄存器 */
-  volatile uint8_t PARAM;			/* 参数控制寄存器 */
-  volatile uint8_t SOFTCS;			/* 片选控制寄存器 */
-  volatile uint8_t TIMING;			/* 时序控制寄存器 */
-} HW_SPI_TypeDef;
-
-#define HW_SPI                 ((HW_SPI_TypeDef *) LS1C102_SPI_BASE)
 
 ////////////////////////
 #define LS1C102_PWM_BASE          0xBFEC0030    // the basic address of PWM register

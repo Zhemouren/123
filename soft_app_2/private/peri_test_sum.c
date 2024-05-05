@@ -699,7 +699,7 @@ int I2C_test(void) {
 	gpio_init(13, 1);
 	gpio_init(18, 1);
 
-    HW_I2C_InitTypeDef I2C_InitStruct0;
+    I2C_InitTypeDef I2C_InitStruct0;
     soc_I2C_StructInit(&I2C_InitStruct0);
     soc_I2C_Init(&I2C_InitStruct0);
 
@@ -797,42 +797,50 @@ void  my_GPIO_Init(){
 
     //输出引脚
 	gpio_init(1, 1);    //LED_red_Pin
-    gpio_init(2, 1);    //LED_blue_Pin
-    gpio_init(3, 1);    //C1_Pin
-    gpio_init(4, 1);    //C2_Pin
-    gpio_init(5, 1);    //C3_Pin
-    gpio_init(6, 1);    //C4_Pin
-    gpio_init(7, 1);    //Buzzer_Pin
-    gpio_init(8, 1);    //RC522-SDA ——GPIO 8可用于RC522模块的片选接口，即硬件NSS
-    gpio_init(9, 1);    //RC522-RST ——GPIO 9用于做RC522模块的复位接口
-    gpio_init(10,1);    //as608初始化设置成功引脚
-    gpio_init(11,1);    //as608报错灯
+    gpio_init(13, 1);    //LED_blue_Pin
+
+	// gpio_init(11, 1);    //SDA
+    // gpio_init(5, 1);    //SCL
+
+    gpio_init(18, 1);    //C1_Pin
+    gpio_init(19, 1);    //C2_Pin
+    gpio_init(20, 1);    //C3_Pin
+    gpio_init(34, 1);    //C4_Pin
+    gpio_init(35, 1);    //Buzzer_Pin
+    gpio_init(36, 1);    //RC522-SDA ——GPIO 8可用于RC522模块的片选接口，即硬件NSS
+    gpio_init(37, 1);    //RC522-RST ——GPIO 9用于做RC522模块的复位接口
+    gpio_init(38,1);    //as608初始化设置成功引脚
+    gpio_init(39,1);    //as608报错灯
 
     //输入引脚
-    // gpio_init(12, 0);
-    gpio_init(13, 0);//R1
-    gpio_init(14, 0);//R2
-    gpio_init(15, 0);//R3
-    gpio_init(16, 0);//R4
+
+  
+    gpio_init(14, 0);//R1
+    gpio_init(15, 0);//R2
+    gpio_init(16, 0);//R3
+    gpio_init(17, 0);//R4
 
 
-
+	my_delay_ms(1000);
     //设置led灯，PMOD套餐的led灯，设置高电平对应为熄灭LED灯
     gpio_write(1, 1);
-    gpio_write(2, 1);
-    gpio_write(10,1);
-    gpio_write(11,1);
+    gpio_write(13, 1);
+    gpio_write(18,1);
+    gpio_write(19,1);
 
+    // gpio_write(11, 1);
+    // gpio_write(5, 1);
     //按键部分引脚，设置为高电平输出
-    gpio_write(3, 1);
-    gpio_write(4, 1);
-    gpio_write(5, 1);
-    gpio_write(6, 1);
-    gpio_write(7, 1);
+    gpio_write(20, 1);
+    gpio_write(34, 1);
+    gpio_write(35, 0);
+    gpio_write(38, 1);
+    gpio_write(39, 1);
 
-    gpio_write(8, 0);
-    gpio_write(9, 0);
+    gpio_write(36, 0);
+    gpio_write(37, 0);
 
+	my_delay_ms(200);
     // gpio_write(38, 1);
     // gpio_write(39, 1);
     // gpio_write(40, 1);
@@ -844,7 +852,7 @@ void  my_GPIO_Init(){
 }
 
 void  my_I2C_Init(){
-    HW_I2C_InitTypeDef I2C_InitStruct0;
+    I2C_InitTypeDef I2C_InitStruct0;
     soc_I2C_StructInit(&I2C_InitStruct0); //结构体初始化 设置参考时钟，SCL输出速率
     soc_I2C_Init(&I2C_InitStruct0); //设置硬件初始化
     my_delay_ms(50);
@@ -858,7 +866,7 @@ void my_PWM_Init(){
 }
 
 void  my_SPI_Init(){
-    soc_Spi_Init(SPI_DIV_256);//分频系数设置为256，也可设置为2
+    soc_Spi_Init(SPI_DIV_2);//分频系数设置为256，也可设置为2
 	// return 0;
 }
 
@@ -874,7 +882,7 @@ void my_USART0_Init(){
     // return 0;
 }
 void  interrupt_fun(){
-    EnableInt();// 开总中断
+    // EnableInt();// 开总中断
     // uart1_interrupt();//开启uart1中断
     // uart0_interrupt();//开启uart0中断
     // timer_interrupt();//开启timer中断
@@ -889,11 +897,11 @@ void Init_main(void)
 //   HAL_TIM_PWM_Start(&htim3,TIM_CHANNEL_3);/*  定时器3初始化  舵机  */  
     
   SG90_Init();                             /*  舵机头初始化  */  
-//   OLED_Init();                             /*  OLED屏初始化  */
-//   OLED_CLS();                             /*  OLED清屏初始化 */
+  OLED_Init();                             /*  OLED屏初始化  */
+  OLED_CLS();                             /*  OLED清屏初始化 */
 //   RC522_Init();                             /*  RC522卡初始化*/
 //   as608_init();                             /*  AS608指纹模块初始化*/
-    my_recv_buf_init();
+    // my_recv_buf_init();
 	// return 0;
 }
 

@@ -14,7 +14,7 @@
 void AT24CXX_WriteByte(uint16_t u16Addr, uint8_t u8Data) {
 	soc_I2C_GenerateSTART(ENABLE);// 起始信号
 
-	soc_I2C_SendData(DEV_ADDR | WRITE_CMD);// 器件寻址+读/写选择
+	soc_I2C_SendData(DEV_ADDR );// 器件寻址+读/写选择
 	
 	soc_I2C_wait();
 	
@@ -65,11 +65,11 @@ uint8_t AT24CXX_ReadByte(uint16_t u16Addr) {
 
 	soc_I2C_wait();
 
-    HW_I2C->CR_SR = 0x28;// 不应答
+    I2C->CR_SR = 0x28;// 不应答
     
 	soc_I2C_wait();
 
-	u8Data = (uint8_t)HW_I2C->DR;
+	u8Data = (uint8_t)I2C->DR;
 
     soc_I2C_GenerateSTOP(ENABLE);// 停止信号
 
@@ -99,17 +99,17 @@ uint8_t AT24CXX_Read2Byte(uint16_t u16Addr) {
 
 	soc_I2C_wait();
 
-    HW_I2C->CR_SR = 0x20;// 应答
+    I2C->CR_SR = 0x20;// 应答
     
     soc_I2C_wait();
     
-    u8Data = (uint8_t)HW_I2C->DR;
+    u8Data = (uint8_t)I2C->DR;
     
-    HW_I2C->CR_SR = 0x28;// 不应答
+    I2C->CR_SR = 0x28;// 不应答
 
 	soc_I2C_wait();
 
-	u8Data = (uint8_t)HW_I2C->DR;
+	u8Data = (uint8_t)I2C->DR;
 
     soc_I2C_GenerateSTOP(ENABLE);// 停止信号
 

@@ -60,9 +60,9 @@ void delay_ns(uint32_t ns)
 char RC522_ReadWriteByte(uint8_t TxData)
 {					
   uint8_t  RxData;
-  HW_SPI->DATA = TxData;
+  SPI->DATA = TxData;
   while(!SPI_TXEMPTY) ;//等待写寄存器清空															//通过外设SPIx发送一个数据
-	RxData=HW_SPI->DATA;
+	RxData=SPI->DATA;
   while(SPI_RXEMPTY) ;//等待读寄存器清空		也许可以不用    
   
 	return RxData ; 															//返回通过SPIx最近接收的数据					    

@@ -692,41 +692,13 @@ int I2C_test(void) {
     soc_I2C_StructInit(&I2C_InitStruct0);
     soc_I2C_Init(&I2C_InitStruct0);
 
-    uint16_t u16Addr0 = 0x0;
+    uint16_t u16Addr0 = 0x040;
     uint8_t u8Data_t = 0xA5;
     uint8_t u8Data_r = 0x0;
 
     AT24CXX_WriteByte(u16Addr0, u8Data_t);
     my_delay_ms(10);
-    u8Data_r = AT24CXX_ReadByte(u16Addr0);
-    
-    if(u8Data_r == 0xA5)
-    {
-        gpio_write(18, 1);
-        my_delay_ms(1000);
-        gpio_write(18, 0);
-        my_delay_ms(1000);
-    }
-    
-    u16Addr0 = 0x01;
-    u8Data_t = 0xAA;
-    u8Data_r = 0x0;
 
-    AT24CXX_WriteByte(u16Addr0, u8Data_t);
-    my_delay_ms(10);
-    /*
-        Calling the write program(whether it is single byte write or page write)requires a delay of 10ms before
-    operating the device, otherwise the device will not respond to commands during this period;
-    */
-    u8Data_r = AT24CXX_ReadByte(u16Addr0);
-    
-    if(u8Data_r == 0xAA)
-    {
-        gpio_write(18, 1);
-        my_delay_ms(1000);
-        gpio_write(18, 0);
-        my_delay_ms(1000);
-    }
 
     while(1) {
         my_delay_ms(1000);

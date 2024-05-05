@@ -32,11 +32,12 @@
 #define SPI_BASE	        	PHYS_TO_UNCACHED(0xbfe70000)            //spi regs
 #define UART0_BASEADDR  		PHYS_TO_UNCACHED(0xbfe80000)            //uart0
 #define UART1_BASEADDR			PHYS_TO_UNCACHED(0xbfe88000)            //uart1
-#define UART2_BASEADDR			PHYS_TO_UNCACHED(0x1fe8c000)            //uart2
+#define UART2_BASEADDR			PHYS_TO_UNCACHED(0xbfe8c000)            //uart2
 #define I2C_BASE			    PHYS_TO_UNCACHED(0xbfe90000)            //i2c
-#define INTC_BASE			    PHYS_TO_UNCACHED(0x1fea0000)            //Interrupt_Regs_Baseadd
-#define PMU_BASE			    PHYS_TO_UNCACHED(0x1feb0000)            //PMU
-#define TSENSOR_BASE		    PHYS_TO_UNCACHED(0x1feb4000)            //tsensor
+#define INTC_BASE			    PHYS_TO_UNCACHED(0xbfea0000)            //Interrupt_Regs_Baseadd
+#define PMU_BASE			    PHYS_TO_UNCACHED(0xbfeb0000)            //PMU
+#define TSENSOR_BASE		    PHYS_TO_UNCACHED(0xbfeb4000)            //tsensor
+#define OLED_BASE               PHYS_TO_UNCACHED(0xbfeb4000)            //OLED
 #define RTC_BASE			    PHYS_TO_UNCACHED(0x1feb8000)            //rtc
 #define DMA_BASE		        PHYS_TO_UNCACHED(0x1fec0000)            //DMA
 #define VPWM_BASE		        PHYS_TO_UNCACHED(0x1fec0020)            //vpwm

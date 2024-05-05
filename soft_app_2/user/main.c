@@ -26,129 +26,139 @@ uint8_t flag1=1,flag2=0,flag3=0,flag4=0,flag5=0,flag6=0,flag7=0,flag8=0,flag9=0;
 uint8_t flag10=0,flag11=0,flag12=0,flag13=0,flag14=0,flag15=0,flag16=0,flag17=0,flag18=0,flag19=0,flag20=0;	        //进入界面的标志位
 
 // ================================================================
+/* OLED 图片显示字模 */
+const unsigned char gImage_cc[356] = { 0X00,0X00,0X00,0X00,0X00,0X00,
+0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,
+0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,
+0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,
+0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,
+0X00,0X00,0X00,0X00,0X00,0X00,0X80,0X80,0XC0,0XC0,0XC0,0XC0,0XC0,0X80,0X80,0X00,
+0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,
+0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,
+0X00,0X00,0X00,0X00,0X00,0X00,0XFC,0XFF,0X07,0X03,0X01,0X01,0X00,0X01,0X01,0X03,
+0X07,0XFF,0XFE,0XF0,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,
+0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,
+0X00,0X00,0X00,0X00,0X00,0XFE,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0X9F,0X0F,0X0F,0X0F,
+0X9F,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFE,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,
+0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,
+0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X07,0X1F,0X3F,0X7F,0X7F,0XFF,0XFF,0XFF,0XFF,
+0XF8,0XF8,0XFF,0XFF,0XFF,0X7F,0X7F,0X3F,0X1F,0X07,0X00,0X00,0X00,0X00,0X00,0X00,
+0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,
+0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,
+0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,
+0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,
+0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,
+0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,
+0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,};
 
+// int main(void) {
+
+//     EnableInt();// 开总中断
+
+// 	gpio_init(1, 1);
+// 	gpio_init(13, 1);
+// 	gpio_init(18, 1);
+
+// 	gpio_write(18, 1);
+// 	my_delay_ms(1000);
+// 	gpio_write(18, 0);
+// 	my_delay_ms(1000);
+
+//     I2C_InitTypeDef I2C_InitStruct0;
+//     soc_I2C_StructInit(&I2C_InitStruct0);
+//     soc_I2C_Init(&I2C_InitStruct0);
+
+
+
+// 	OLED_Init();
+// 	my_delay_ms(200);
+// 	// OLED_Fill(0x00);
+// 	OLED_CLS();
+// 	my_delay_ms(200);
+// 	// OLED_ShowNum(18,3,9,1,16);
+// 	// show_title();
+// 	OLED_DrawBMP(30, 0, 80, 5, (unsigned char *)gImage_cc);
+//     while(1) {
+//         my_delay_ms(1000);
+// 		gpio_write(18, 1);
+// 		// I2C_WriteByte(u16Addr0, u8Data_t);
+// 		// u8Data_t=u8Data_t+1;
+// 		// if(u8Data_t>255)u8Data_t=0;
+// 		// OLED_ShowChar(18,3,'9',16);
+// 		my_delay_ms(1000);
+// 		gpio_write(18, 0);
+//     }
+
+//     return 0;
+// }
 
 int main(void)
 {
-    EnableInt();// 开总中断
-  my_GPIO_Init();//初始化屏幕
-
-  my_PWM_Init();//用于舵机/电机
-  my_SPI_Init();//用于读卡器
-  my_I2C_Init();//用于oled屏幕
-  my_USART1_Init();//用于普通串口，1=波特率115200
-  my_USART0_Init();//用于指纹模块，波特率57600，需要更改硬件模块
-  interrupt_fun();//开启各项中断函数
-
-//   Init_main();
-  /* USER CODE BEGIN 2 */
-    my_delay_ms(500);
-  /* USER CODE END 2 */
-
-  while (1){
-        //设置led灯，PMOD套餐的led灯，设置高电平对应为熄灭LED灯
-    gpio_write(1, 1);
-    gpio_write(2, 1);
-    gpio_write(3,1);
-    gpio_write(4,1);
-
-    //按键部分引脚，设置为高电平输出
-    gpio_write(5, 1);
-    gpio_write(6, 1);
-    gpio_write(7, 1);
-    gpio_write(8, 1);
-    gpio_write(9, 1);
-
-    gpio_write(10, 1);
-    gpio_write(11, 1);
-    my_delay_ms(500);
-
-    gpio_write(1, 0);
-    gpio_write(2, 0);
-    gpio_write(3,0);
-    gpio_write(4,0);
-
-    //按键部分引脚，设置为高电平输出
-    gpio_write(5, 0);
-    gpio_write(6, 0);
-    gpio_write(7, 0);
-    gpio_write(8, 0);
-    gpio_write(9, 0);
-
-    gpio_write(10, 0);
-    gpio_write(11, 0);
-    my_delay_ms(500);
-  }
-  return 0;
-}
-
-// int main(void)
-// {
   
-//   my_GPIO_Init();//初始化屏幕
-//   my_I2C_Init();//用于oled屏幕
-//   my_PWM_Init();//用于舵机/电机
+  my_GPIO_Init();//初始化屏幕
+  my_I2C_Init();//用于oled屏幕
+  my_PWM_Init();//用于舵机/电机
 //   my_SPI_Init();//用于读卡器
 //   my_USART1_Init();//用于普通串口，1=波特率115200
 //   my_USART0_Init();//用于指纹模块，波特率57600，需要更改硬件模块
 //   interrupt_fun();//开启各项中断函数
 
-//   Init_main();
-//   /* USER CODE BEGIN 2 */
+  Init_main();
+  /* USER CODE BEGIN 2 */
 
-//   /* USER CODE END 2 */
+  /* USER CODE END 2 */
 
-//   while (1)
-//   {
-//       	KeyNum=MatrixKey();			//获取矩阵键盘键码
-//             switch(mode)
-//             {
-// /*1       显示智能门禁系统    解锁     设置        */
-//                 case 1:
-//                     if(flag1==1)
-//                     {
-//                        interface_display(1);
-//                        flag1=0;
-//                     }
-//                     if(KeyNum==13)mode=2;flag2=1;//进选择解锁方式界面
-//                     if(KeyNum==14)mode=8;flag8=1;//进输入管理员密码界面
-//                     break;
+  while (1)
+  {
+      	KeyNum=MatrixKey();			//获取矩阵键盘键码
+            switch(mode)
+            {
+/*1       显示智能门禁系统    解锁     设置        */
+                case 1:
+                    if(flag1==1)
+                    {
+                       interface_display(1);
+                       flag1=0;
+                    }
+                    if(KeyNum==13)mode=2;flag2=1;//进选择解锁方式界面
+                    if(KeyNum==14)mode=8;flag8=1;//进输入管理员密码界面
+                    break;
 
-// /*2        选择解锁方式    卡解锁     密码解锁  指纹解锁      */
-//                 case 2:	
-// 				if(flag2==1)
-// 				{
-// 					interface_display(2);					
-// 					flag2=0;
+/*2        选择解锁方式    卡解锁     密码解锁  指纹解锁      */
+                case 2:	
+				if(flag2==1)
+				{
+					interface_display(2);					
+					flag2=0;
 						
-// 				}
-// 				if(KeyNum==11) mode=3,flag3=1;	//进去卡解锁
-// 				if(KeyNum==12) mode=4,flag4=1;	//进去密码解锁
-//                 if(KeyNum==15) mode=15,flag15=1;	//进去指纹解锁
-//                 if(KeyNum==16) mode=1,flag1=1;	//返回键
-//                 break;
-// /*3             卡解锁       */
-//                 case 3:	
-// 				if(flag3==1)
-// 				{
-// 					interface_display(4);					
-// 					flag3=0;
+				}
+				if(KeyNum==11) mode=3,flag3=1;	//进去卡解锁
+				if(KeyNum==12) mode=4,flag4=1;	//进去密码解锁
+                if(KeyNum==15) mode=15,flag15=1;	//进去指纹解锁
+                if(KeyNum==16) mode=1,flag1=1;	//返回键
+                break;
+/*3             卡解锁       */
+                // case 3:	
+				// if(flag3==1)
+				// {
+				// 	interface_display(4);					
+				// 	flag3=0;
 						
-// 				}
-//                 Read_ID();
-//                 if(KeyNum==16) mode=2,flag2=1;	//返回键
-//                 break;
-// /*4            密码解锁        */
-//                 case 4:	
-// 				if(flag4==1)
-// 				{
-// 					interface_display(5);					
-// 					flag4=0;
+				// }
+                // Read_ID();
+                // if(KeyNum==16) mode=2,flag2=1;	//返回键
+                // break;
+/*4            密码解锁        */
+                case 4:	
+				if(flag4==1)
+				{
+					interface_display(5);					
+					flag4=0;
 						
-// 				}//具体的功能函数请转至
-//                 Key_main();
-//                 if(KeyNum==16) mode=2,flag2=1;	//返回键
-//                 break;
+				}//具体的功能函数请转至
+                Key_main();
+                if(KeyNum==16) mode=2,flag2=1;	//返回键
+                break;
 // /*5        设置    卡管理    密码管理   退出       */
 //                 case 5:	
 // 				if(flag5==1)
@@ -332,12 +342,13 @@ int main(void)
 //                 mode=16,flag16=1;
 //                 if(KeyNum==16) mode=16,flag16=1;	//返回
 //                 break;
+                    default : break;
                 
 
-//   }
-//   }
-//   /* USER CODE END 3 */
-// }
+  }
+  }
+  /* USER CODE END 3 */
+}
 
 
 

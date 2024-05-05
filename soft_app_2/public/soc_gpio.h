@@ -18,6 +18,7 @@
 extern "C" {
 #endif
 
+
 void gpio_init(int gpio, int io);
 void gpio_write(int gpio, int val);
 int gpio_read(int gpio);

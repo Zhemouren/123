@@ -14,8 +14,8 @@
  * @param {uint8_t} spr 分频系数
  */
 void soc_Spi_FreqDiv(uint8_t spr) {// spr 低四位有效
-    HW_SPI->SPCR = (spr & 0x03);
-    HW_SPI->SPER = ((spr>>2) & 0x03);
+    SPI->SPCR = (spr & 0x03);
+    SPI->SPER = ((spr>>2) & 0x03);
 }
 
 /**
@@ -31,7 +31,7 @@ void soc_Spi_Init(uint8_t spr) {
     soc_Spi_FreqDiv(spr);
     
 	// 系统工作使能，master 模式，
-    HW_SPI->SPCR |= 0x50; // 0x0101_0000 
+    SPI->SPCR |= 0x50; // 0x0101_0000 
 	// 系统工作使能，master 模式，
     
     while(!SPI_TXEMPTY); // wait till tx empty // 阻塞直到写寄存器为空
@@ -49,12 +49,12 @@ void soc_Spi_Init(uint8_t spr) {
 void soc_Spi_Write_Read_1to4(uint8_t* buf, int n) {
     uint32_t i;
     for (i = 0; i < n; i++) {
-		HW_SPI->DATA = buf[i];// 向 DATA 写入最多四个字节的数据
+		SPI->DATA = buf[i];// 向 DATA 写入最多四个字节的数据
 	}
 	while (!SPI_TXEMPTY);// 阻塞直到写寄存器为空，即发送结束
     
     for (i = 0; i < n; i++) {// 从 DATA 读出数据
-		buf[n - 1 - i] = HW_SPI->DATA;// received high bits first, so placed in the high bits of the array
+		buf[n - 1 - i] = SPI->DATA;// received high bits first, so placed in the high bits of the array
 	}
 }
 
@@ -69,17 +69,17 @@ void soc_Spi_Write_Read_1to4(uint8_t* buf, int n) {
 void soc_Spi_Write_Read_N(uint8_t* buf, int n)
 {
 	uint32_t i, j;
-    for (i=0; i<4; i++) HW_SPI->DATA = buf[i];
+    for (i=0; i<4; i++) SPI->DATA = buf[i];
     for (j=0; i<n; i++, j++) 
 	{
         while(SPI_RXEMPTY) ;
-        buf[j] =  HW_SPI->DATA;
-        HW_SPI->DATA = buf[i];
+        buf[j] =  SPI->DATA;
+        SPI->DATA = buf[i];
     }
     for (; j<n; j++) 
 	{
         while(SPI_RXEMPTY) ;
-        buf[j] = HW_SPI->DATA; 
+        buf[j] = SPI->DATA; 
     }
 }
 

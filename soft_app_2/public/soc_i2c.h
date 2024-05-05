@@ -8,29 +8,43 @@ extern "C" {
 #include "soc_ls1c102.h"
 #include "ls1x.h"
 
+/**
+ * @说明：I2C接口宏定义
+ *
+ */
+typedef struct
+{
+  volatile uint8_t PRERL;			/* 分频值低字节寄存器 */
+  volatile uint8_t PRERH;			/* 分频值高字节寄存器 */
+  volatile uint8_t CTRL;			/* 控制寄存器 */
+  volatile uint8_t DR;				/* 数据寄存器 */
+  volatile uint8_t CR_SR;			/* 命令寄存器 兼 状态寄存器 */
+  volatile uint8_t BLTOP;			/* 总线死锁时间寄存器 */
+  volatile uint8_t RESERVED0;		/* 保留字节  */
+  volatile uint8_t SADDR;			/* 从模式地址寄存器 */
+} I2C_TypeDef;
+
+#define I2C                 ((I2C_TypeDef *) I2C_BASE)
+
+typedef struct
+{
+	uint32_t I2C_ClockSpeed;         /*!< Specifies the clock frequency.
+                                        This parameter must be set to a value lower than 400kHz */
+
+	uint8_t I2C_Mode;                /*!< Specifies the I2C mode.
+                                        This parameter can be a value of @ref I2C_mode */
+
+	uint8_t I2C_OwnAddress1;         /*!< Specifies the first device own address.
+                                        This parameter can be a 7-bit or 10-bit address. */
+
+	uint8_t I2C_BuslockCheckEn;    	 /*!< Set the I2C buslock check function*/
 
 
-// #define HW_I2C                 ((I2C_TypeDef *) I2C_BASE)
+	uint8_t I2C_SlvAutoresetEn;		 /*!< Set the I2C autoreset check function*/
 
-// typedef struct
-// {
-// 	uint32_t I2C_ClockSpeed;         /*!< Specifies the clock frequency.
-//                                         This parameter must be set to a value lower than 400kHz */
+}I2C_InitTypeDef;
 
-// 	uint8_t I2C_Mode;                /*!< Specifies the HW_I2C mode.
-//                                         This parameter can be a value of @ref I2C_mode */
-
-// 	uint8_t I2C_OwnAddress1;         /*!< Specifies the first device own address.
-//                                         This parameter can be a 7-bit or 10-bit address. */
-
-// 	uint8_t I2C_BuslockCheckEn;    	 /*!< Set the HW_I2C buslock check function*/
-
-
-// 	uint8_t I2C_SlvAutoresetEn;		 /*!< Set the HW_I2C autoreset check function*/
-
-// }HW_I2C_InitTypeDef;
-
-// #define IS_I2C_ALL_PERIPH(PERIPH) ((PERIPH) == HW_I2C)
+// #define IS_I2C_ALL_PERIPH(PERIPH) ((PERIPH) == I2C)
 
 // #define IS_I2C_CLEAR_FLAG(FLAG) (((FLAG) & 0x01) == 0x01)
 // /** @defgroup I2C_mode
@@ -126,31 +140,31 @@ extern "C" {
 
 void soc_I2C_delay(volatile int j);
 
-// HW_I2C 初始化
-void soc_I2C_Init(HW_I2C_InitTypeDef* I2C_InitStruct);
-void soc_I2C_StructInit(HW_I2C_InitTypeDef* I2C_InitStruct);
-// HW_I2C 初始化
+// I2C 初始化
+void soc_I2C_Init(I2C_InitTypeDef* I2C_InitStruct);
+void soc_I2C_StructInit(I2C_InitTypeDef* I2C_InitStruct);
+// I2C 初始化
 
-// HW_I2C 时序
-void soc_I2C_GenerateSTART(FunctionalState NewState);	 // HW_I2C 主设备产生 start信号
-void soc_I2C_GenerateSTOP(FunctionalState NewState);     // HW_I2C 主设备产生 stop信号
-void soc_I2C_wait();									 // HW_I2C 等待传输完毕
-void soc_I2C_SendData(uint8_t Data);					 // HW_I2C 发送数据
-void soc_I2C_ReceiveData(FunctionalState ACK, FunctionalState STOP); // HW_I2C 接收数据
-void soc_I2C_Unlock();									 // HW_I2C 解除总线死锁
+// I2C 时序
+void soc_I2C_GenerateSTART(FunctionalState NewState);	 // I2C 主设备产生 start信号
+void soc_I2C_GenerateSTOP(FunctionalState NewState);     // I2C 主设备产生 stop信号
+void soc_I2C_wait();									 // I2C 等待传输完毕
+void soc_I2C_SendData(uint8_t Data);					 // I2C 发送数据
+void soc_I2C_ReceiveData(FunctionalState ACK, FunctionalState STOP); // I2C 接收数据
+void soc_I2C_Unlock();									 // I2C 解除总线死锁
 
 // void I2C_AcknowledgeConfig(FunctionalState NewState);// I2C主设备产生ack信号
 // void I2C_Send7bitAddress(uint8_t Address, uint8_t I2C_Direction);// I2C发送从设备地址
 // void I2C_BUSY();									 // I2C等待总线空闲
-// HW_I2C 时序
+// I2C 时序
 
-// HW_I2C 中断
+// I2C 中断
 // void I2C_ITConfig(FunctionalState NewState);		 // I2C中断设置
 // void I2C_ITCmd(FunctionalState NewState);			 // I2C中断开启
 // void I2C_ClearIT();									 // I2C清除中断标志
 // void I2C_ClearFlag(uint8_t I2C_FLAG);				 // I2C清除寄存器状态
 // ITStatus I2C_GetStatus(uint8_t I2C_STATUS);			 // I2C读取状态
-// HW_I2C 中断
+// I2C 中断
 
 // uint8_t I2C_ReadRegister(uint8_t I2C_Register);		 // I2C读取寄存器数值
 

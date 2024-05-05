@@ -12,7 +12,7 @@ extern "C" {
 
 // #define x24C32 // device name, AT24C32、AT24C64、AT24C128、AT24C256、AT24C512
 #define x24C64
-#define DEV_ADDR				0xAE					//设备硬件地址
+#define DEV_ADDR				0x78					//设备硬件地址
 // 因为硬件上 A2 A1 A0 连接到高电平，结合高四位是 4'b1010 ，所以设备硬件地址为 0xAE
 
 #ifdef x24C32

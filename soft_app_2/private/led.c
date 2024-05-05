@@ -11,27 +11,27 @@ void LEDred_OFF()
 }
 void LEDblue_ON()
 {
-    gpio_write(2,GPIO_PIN_RESET);
+    gpio_write(13,GPIO_PIN_RESET);
 }
 void LEDblue_OFF()
 {
-    gpio_write(2,GPIO_PIN_SET);
+    gpio_write(13,GPIO_PIN_SET);
 }
 void Buzzer()
 {
-      gpio_write(7, GPIO_PIN_RESET);
+      gpio_write(35, GPIO_PIN_SET);
       my_delay_ms(500);
-      gpio_write(7, GPIO_PIN_SET);
+      gpio_write(35, GPIO_PIN_RESET);
 }
 void Buzzer_one()
 {//门禁提示音
-      gpio_write(7, GPIO_PIN_RESET);
+      gpio_write(35, GPIO_PIN_SET);
       my_delay_ms(300);
-      gpio_write(7, GPIO_PIN_SET);
+      gpio_write(35, GPIO_PIN_RESET);
 }
 void Buzzer_two()
 {//按键提示音
-      gpio_write(7, GPIO_PIN_RESET);
+      gpio_write(35, GPIO_PIN_SET);
       my_delay_ms(50);
-      gpio_write(7, GPIO_PIN_SET);
+      gpio_write(35, GPIO_PIN_RESET);
 }
