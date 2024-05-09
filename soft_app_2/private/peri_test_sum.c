@@ -794,61 +794,46 @@ int SPI_test(void) {
 
 void  my_GPIO_Init(){
     // EnableInt();// 开总中断
-
     //输出引脚
 	gpio_init(1, 1);    //LED_red_Pin
     gpio_init(13, 1);    //LED_blue_Pin
-
-	// gpio_init(11, 1);    //SDA
-    // gpio_init(5, 1);    //SCL
 
     gpio_init(18, 1);    //C1_Pin
     gpio_init(19, 1);    //C2_Pin
     gpio_init(20, 1);    //C3_Pin
     gpio_init(34, 1);    //C4_Pin
+
     gpio_init(35, 1);    //Buzzer_Pin
+
     gpio_init(36, 1);    //RC522-SDA ——GPIO 8可用于RC522模块的片选接口，即硬件NSS
     gpio_init(37, 1);    //RC522-RST ——GPIO 9用于做RC522模块的复位接口
     gpio_init(38,1);    //as608初始化设置成功引脚
     gpio_init(39,1);    //as608报错灯
 
     //输入引脚
-
-  
     gpio_init(14, 0);//R1
     gpio_init(15, 0);//R2
     gpio_init(16, 0);//R3
     gpio_init(17, 0);//R4
 
+	my_delay_ms(1000);
+    //设置led灯，PMOD套餐的led灯，设置高电平对应为熄灭LED灯
+	gpio_write(36, 1);
+    gpio_write(37, 1);
+
+
+    //输入引脚
 
 	my_delay_ms(1000);
     //设置led灯，PMOD套餐的led灯，设置高电平对应为熄灭LED灯
     gpio_write(1, 1);
     gpio_write(13, 1);
-    gpio_write(18,1);
-    gpio_write(19,1);
-
-    // gpio_write(11, 1);
-    // gpio_write(5, 1);
-    //按键部分引脚，设置为高电平输出
-    gpio_write(20, 1);
-    gpio_write(34, 1);
-    gpio_write(35, 0);
+    // gpio_write(36, 1);
+    // gpio_write(37, 1);
     gpio_write(38, 1);
     gpio_write(39, 1);
 
-    gpio_write(36, 0);
-    gpio_write(37, 0);
-
-	my_delay_ms(200);
-    // gpio_write(38, 1);
-    // gpio_write(39, 1);
-    // gpio_write(40, 1);
-
-    // gpio_init(10, 1);   //
-    // gpio_init(11, 1);   //
-    // gpio_init(12, 1);   //
-    // return 0;
+    gpio_write(35, 0);//BZER
 }
 
 void  my_I2C_Init(){

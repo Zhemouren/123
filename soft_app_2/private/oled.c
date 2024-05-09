@@ -107,13 +107,13 @@ void WriteCmd(uint8_t I2C_Command) //写命令利用I2C通讯
 	soc_I2C_SendData(OLED_ADD);// 器件寻址+读/写选择
 	
 	soc_I2C_wait();
-	my_delay_us(5);
+	// my_delay_us(5);
 	
 	soc_I2C_SendData((uint8_t)(0x00 & 0Xff));
 	
 	soc_I2C_wait();
 	
-	my_delay_us(5);
+	// my_delay_us(5);
 	soc_I2C_SendData(I2C_Command);
 	
 	soc_I2C_wait();
@@ -121,7 +121,7 @@ void WriteCmd(uint8_t I2C_Command) //写命令利用I2C通讯
     soc_I2C_GenerateSTOP(ENABLE);// 停止信号
 
     soc_I2C_delay(20);// 需要延时 2u ，保证下次能正常开始传输
-	my_delay_us(5);
+	// my_delay_us(5);
 //    IIC_Start();
 //    Write_IIC_Byte(0x78);            //Slave address,SA0=0
 // 	IIC_Wait_Ack();	
@@ -142,13 +142,13 @@ void WriteDat(uint8_t I2C_Data)    //写数据利用I2C通讯
 	soc_I2C_SendData(OLED_ADD);// 器件寻址+读/写选择
 	
 	soc_I2C_wait();
-	my_delay_us(5);
+	// my_delay_us(5);
 	
 	soc_I2C_SendData((uint8_t)(0x40 & 0Xff));
 	
 	soc_I2C_wait();
 	
-	my_delay_us(5);
+	// my_delay_us(5);
 	soc_I2C_SendData(I2C_Data);
 	
 	soc_I2C_wait();
@@ -156,7 +156,7 @@ void WriteDat(uint8_t I2C_Data)    //写数据利用I2C通讯
     soc_I2C_GenerateSTOP(ENABLE);// 停止信号
 
     soc_I2C_delay(20);// 需要延时 2u ，保证下次能正常开始传输
-	my_delay_us(5);
+	// my_delay_us(5);
 	// my_delay_ms(10);
 //    IIC_Start();
 //    Write_IIC_Byte(0x78);			//D/C#=0; R/W#=0
@@ -209,7 +209,7 @@ void OLED_Init(void)
 	WriteCmd(0xaf); //--turn on oled panel
 }
  
-void OLED_SetPos(uint8_t x, uint8_t y) //设置起始点坐标
+void OLED_SetPos(uint32_t x, uint32_t y) //设置起始点坐标
 { 
 	WriteCmd(0xb0+y);
 	WriteCmd(((x&0xf0)>>4)|0x10);
@@ -252,9 +252,9 @@ void OLED_OFF(void)
 }
 // Parameters     : x,y -- 起始点坐标(x:0~127, y:0~7); ch[] -- 要显示的字符串; TextSize -- 字符大小(1:6*8 ; 2:8*16)
 // Description    : 显示oled_Font.h中的ASCII字符,有6*8和8*16可选择
-void OLED_ShowStr(uint8_t x, uint8_t y, uint8_t ch[], uint8_t TextSize)
+void OLED_ShowStr(uint32_t x, uint32_t y, uint8_t ch[], uint8_t TextSize)
 {
-	uint8_t c = 0,i = 0,j = 0;
+	uint32_t c = 0,i = 0,j = 0;
 	switch(TextSize)
 	{
 		case 1:
@@ -298,7 +298,7 @@ void OLED_ShowStr(uint8_t x, uint8_t y, uint8_t ch[], uint8_t TextSize)
 }
 // Parameters     : x,y -- 坐标(x:0~127, y:0~7); N:汉字序号(对应中文字库数组的索引号)
 // Description    : 显示16x16中文字符
-void OLED_ShowCN(uint8_t x, uint8_t y, uint8_t N)
+void OLED_ShowCN(uint32_t x, uint32_t y, uint8_t N)
 {
 	uint8_t wm=0;
 	unsigned int  adder=32*N;
@@ -321,15 +321,15 @@ void OLED_ShowCN(uint8_t x, uint8_t y, uint8_t N)
 //           num:显示的字符个数
 //           中文字库数组应包含在oled_Font.c文件中
 // 示例：假设中文字库中有0和1两个字符，显示0和1，调用方式为：x:0,y:2,begin:0,num:2
-void OLED_ShowCN_STR(u8 x , u8 y , u8 begin , u8 num)
+void OLED_ShowCN_STR(u32 x , u32 y , u32 begin , u32 num)
 {
-	u8 i;
+	u32 i;
 	for(i=0;i<num;i++){OLED_ShowCN(i*16+x,y,i+begin);}    //OLED显示
 }
 // 参数说明：x0,y0 -- 起始坐标(x0:0~127, y0:0~7); x1,y1 -- 结束坐标(注意是像素坐标，不是点阵坐标)(x1:1~128,y1:1~8)
 // 描述：显示BMP图片
 //eg: OLED_DrawBMP(30, 2, 80, 7, (uint8_t *)gImage_cc);
-void OLED_DrawBMP(int x0, int y0, int x1, int y1, const uint8_t *BMP)
+void OLED_DrawBMP(uint32_t x0, uint32_t y0, uint32_t x1, uint32_t y1, const uint8_t *BMP)
 {
 	uint32_t j=0;
 	uint32_t x,y;
@@ -356,7 +356,7 @@ void OLED_DrawBMP(int x0, int y0, int x1, int y1, const uint8_t *BMP)
  * @retval None
  */
 
-void OLED_ShowChar(u8 x,u8 y,u8 chr,u8 Char_Size)
+void OLED_ShowChar(u32 x,u32 y,u8 chr,u8 Char_Size)
 {      	
 	uint32_t c=0,i=0;	
 		c=chr-' ';// 将字符转换为字库中对应的索引			
@@ -383,7 +383,7 @@ void OLED_ShowChar(u8 x,u8 y,u8 chr,u8 Char_Size)
  * @param n 指数
  * @retval 计算结果
  */
-u32 oled_pow(u8 m, u8 n)
+u32 oled_pow(u32 m, u32 n)
 {
 	u32 result = 1;	 
 	while (n--) {
@@ -397,10 +397,10 @@ u32 oled_pow(u8 m, u8 n)
 //size：字体大小 
 //mode：对齐方式，0表示不填充空格，1表示左对齐填充空格
 //num：要显示的数值（范围：0~4294967295）	 		  
-void OLED_ShowNum(u8 x,u8 y,u32 num,u8 len,u8 size2)
+void OLED_ShowNum(u32 x,u32 y,u32 num,u8 len,u8 size2)
 {         	
-	uint32_t t,temp;
-	uint32_t enshow=0;						   
+	uint8_t t,temp;
+	uint8_t enshow=0;						   
 	for(t=0;t<len;t++)
 	{
 		temp=(num/oled_pow(10,len-t-1))%10;
