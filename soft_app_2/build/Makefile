@@ -26,6 +26,7 @@ PUBLIC	  = $(ROOT_DIR)/public
 USER      = $(ROOT_DIR)/user
 DRIVER    = $(ROOT_DIR)/driver
 TOOL   	  = $(ROOT_DIR)/tool
+
 BOARD = 1c102
 BOARDNAME = LS1C102
 IMAGENAME = 1c102_demo

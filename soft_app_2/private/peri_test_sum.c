@@ -5,7 +5,7 @@
 
 #include "oled.h"
 #include "duoji.h"
-#include "rc522.h"
+// #include "rc522.h"
 #include "as608.h"
 #include "led.h"
 #include "key.h"
@@ -807,7 +807,7 @@ void  my_GPIO_Init(){
 
     gpio_init(36, 1);    //RC522-SDA ——GPIO 8可用于RC522模块的片选接口，即硬件NSS
     gpio_init(37, 1);    //RC522-RST ——GPIO 9用于做RC522模块的复位接口
-    gpio_init(38,1);    //as608初始化设置成功引脚
+    gpio_init(38,0);    //as608初始化设置成功引脚 //暂时作为人体雷达感应模块引脚
     gpio_init(39,1);    //as608报错灯
 
     //输入引脚
@@ -816,7 +816,7 @@ void  my_GPIO_Init(){
     gpio_init(16, 0);//R3
     gpio_init(17, 0);//R4
 
-	my_delay_ms(1000);
+	my_delay_ms(500);
     //设置led灯，PMOD套餐的led灯，设置高电平对应为熄灭LED灯
 	gpio_write(36, 1);
     gpio_write(37, 1);
@@ -824,7 +824,7 @@ void  my_GPIO_Init(){
 
     //输入引脚
 
-	my_delay_ms(1000);
+	// my_delay_ms(1000);
     //设置led灯，PMOD套餐的led灯，设置高电平对应为熄灭LED灯
     gpio_write(1, 1);
     gpio_write(13, 1);
@@ -851,7 +851,7 @@ void my_PWM_Init(){
 }
 
 void  my_SPI_Init(){
-    soc_Spi_Init(SPI_DIV_2);//分频系数设置为256，也可设置为2
+    soc_Spi_Init(SPI_DIV_8);//分频系数设置为256，也可设置为2
 	// return 0;
 }
 
@@ -884,7 +884,7 @@ void Init_main(void)
   SG90_Init();                             /*  舵机头初始化  */  
   OLED_Init();                             /*  OLED屏初始化  */
   OLED_CLS();                             /*  OLED清屏初始化 */
-//   RC522_Init();                             /*  RC522卡初始化*/
+  RC522_Init();                             /*  RC522卡初始化*/
 //   as608_init();                             /*  AS608指纹模块初始化*/
     // my_recv_buf_init();
 	// return 0;

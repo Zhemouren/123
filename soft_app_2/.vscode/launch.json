@@ -1,31 +1,21 @@
 {
     "configurations": [
         {
-            "name": "C/C++: gcc.exe 生成和调试活动文件",
-            "type": "cppdbg",
+            "showDevDebugOutput": "parsed",
+            "cwd": "${workspaceRoot}",
+            "executable": "./build/1c102_demo.elf",
+            "name": "Debug LoongArch",
             "request": "launch",
-            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "D:\\minGW\\migw\\bin",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
-            "miDebuggerPath": "D:\\minGW\\migw\\bin\\gdb.exe",
-            "setupCommands": [
-                {
-                    "description": "为 gdb 启用整齐打印",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                },
-                {
-                    "description": "将反汇编风格设置为 Intel",
-                    "text": "-gdb-set disassembly-flavor intel",
-                    "ignoreFailures": true
-                }
-            ],
-            "preLaunchTask": "C/C++: gcc.exe 生成活动文件"
+            "type": "debugger-for-loongarch",
+            "servertype": "openocd",
+            "toolchainPrefix":"loongarch32-newlib-elf",
+            "toolchainPath": "F:/GOWIN/LAIDE/buildtool/la32-tool/bin",
+            "serverpath": "F:/GOWIN/LAIDE/openocd/openocd.exe",
+            "device": "1c102",
+            "configFiles": [
+                "F:/GOWIN/LAIDE/openocd/lalink.cfg",
+                "F:/GOWIN/LAIDE/openocd/la132.cfg"
+            ]
         }
-    ],
-    "version": "2.0.0"
+    ]
 }

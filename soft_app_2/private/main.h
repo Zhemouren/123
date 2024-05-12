@@ -1,4 +1,4 @@
-
+#include "stdio.h"
 
 #include "calIn8M.h"
 #include "Config.h"
@@ -22,7 +22,6 @@
 #include "soc_i2c.h"
 #include "my_delay.h"
 #include "soc_spi.h"
-
 
 
 /*   OLED屏界面显示函数  */

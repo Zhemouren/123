@@ -1,18 +1,18 @@
 #ifndef __RC522_H
 #define __RC522_H 		
 
-#include "main.h"
+
 #include "soc_ls1c102.h"
 #include "soc_spi.h"
 
 //------------------------------- RC522引脚定义 ------------------------------//
 
-#define RC522_SDA_HIGH  gpio_write(8, 1);
-#define RC522_SDA_LOW  	gpio_write(8, 0);
+#define RC522_SDA_HIGH  gpio_write(36, 1);
+#define RC522_SDA_LOW  	gpio_write(36, 0);
 
 
-#define RC522_RST_HIGH	gpio_write(9, 1);
-#define RC522_RST_LOW	gpio_write(9, 0);
+#define RC522_RST_HIGH	gpio_write(37, 1);
+#define RC522_RST_LOW	gpio_write(37, 0);
 
 
 #define MAXRLEN        18
@@ -210,46 +210,45 @@
 //                         函数定义                                 /
 //******************************************************************/
 void RC522_Init(void);
-char RC522_ReadWriteByte(uint8_t TxData);
+uint8_t RC522_ReadWriteByte(uint8_t TxData);
 void delay_ns(uint32_t ns);
-
-char PcdHalt(void)                                                           ;
-char PcdReset(void)                                                          ;
+int8_t  PcdHalt(void)                                                           ;
+int8_t  PcdReset(void)                                                          ;
 void PcdAntennaOn(void)                                                      ;
 void PcdAntennaOff(void)                                                     ;
-char PcdRequest(unsigned char req_code,unsigned char *pTagType)              ;
+int8_t  PcdRequest(uint8_t req_code,uint8_t *pTagType)              ;
 
-char PcdAnticoll(unsigned char *pSnr)                                        ;
-char PcdSelect(unsigned char *pSnr)                                          ;         
-char PcdAuthState(unsigned char auth_mode,unsigned char addr,
-                  unsigned char *pKey,unsigned char *pSnr)                   ;     
-char PcdRead(unsigned char addr,unsigned char *pData)                        ;     
-char PcdWrite(unsigned char addr,unsigned char *pData)                       ;    
-char PcdValue(unsigned char dd_mode,unsigned char addr,unsigned char *pValue);   
-char PcdBakValue(unsigned char sourceaddr, unsigned char goaladdr)           ;  
-char MF522PcdConfigISOType(unsigned char  type);
-char PcdComMF522(unsigned char Command, unsigned char *pInData, 
-                 unsigned char InLenByte,unsigned char *pOutData, 
-                 unsigned int  *pOutLenBit                       )           ;
-void CalulateCRC(unsigned char *pIndata,unsigned char len,
-                 unsigned char *pOutData                  )                  ;
-void WriteRawRC(unsigned char Address,unsigned char value)                   ;
-unsigned char ReadRawRC(unsigned char Address)                               ; 
-void SetBitMask(unsigned char reg,unsigned char mask)                        ; 
-void ClearBitMask(unsigned char reg,unsigned char mask)                      ; 
-char Read_Block(unsigned char Block,unsigned char *Buf)                      ;
-char Write_Block(unsigned char Block)                                        ;
+int8_t  PcdAnticoll(uint8_t *pSnr)                                        ;
+int8_t  PcdSelect(uint8_t *pSnr)                                          ;         
+int8_t  PcdAuthState(uint8_t auth_mode,uint8_t addr,
+                  uint8_t *pKey,uint8_t *pSnr)                   ;     
+int8_t  PcdRead(uint8_t addr,uint8_t *pData)                        ;     
+int8_t  PcdWrite(uint8_t addr,uint8_t *pData)                       ;    
+int8_t  PcdValue(uint8_t dd_mode,uint8_t addr,uint8_t *pValue);   
+int8_t  PcdBakValue(uint8_t sourceaddr, uint8_t goaladdr)           ;  
+int8_t  MF522PcdConfigISOType(uint8_t  type);
+int8_t  PcdComMF522(uint8_t Command, uint8_t *pInData, 
+                 uint8_t InLenByte,uint8_t *pOutData, 
+                 volatile int *pOutLenBit                       )           ;
+void CalulateCRC(uint8_t *pIndata,uint8_t len,
+                 uint8_t *pOutData                  )                  ;
+void WriteRawRC(uint8_t Address,uint8_t value)                   ;
+uint8_t ReadRawRC(uint8_t Address)                               ; 
+void SetBitMask(uint8_t reg,uint8_t mask)                        ; 
+void ClearBitMask(uint8_t reg,uint8_t mask)                      ; 
+int8_t  Read_Block(uint8_t Block,uint8_t *Buf)                      ;
+int8_t  Write_Block(uint8_t Block)                                        ;
 void PcdAntennaTestOn(void)                                                  ;
 
 
-extern char KK[8]                                                            ; // 数据加密密钥
-extern unsigned char RF_Buffer[18]                                           ; // 射频卡数据缓冲区
-extern unsigned char UID[5]                                                  ;
-extern unsigned char Password_Buffer[6]                                      ;
-extern void Uart1_SendByte(uint32_t ch);
+extern int8_t  KK[8]                                                            ; // 数据加密密钥
+extern uint8_t RF_Buffer[18]                                           ; // 射频卡数据缓冲区
+extern uint8_t UID[5]                                                  ;
+extern uint8_t Password_Buffer[6]                                      ;
+
 // extern void Des_Encrypt(char* In, char* K,char* Out)                         ;
 // extern void Des_Decrypt(char* In, char* K,char* Out)                         ;
-extern unsigned char des_on                                                  ; // DES加密标志
+extern uint8_t des_on                                                  ; // DES加密标志
 
 void ReaderCard(void);
 uint16_t Return_Card(void);

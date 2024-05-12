@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "soc_ls1c102.h": "c",
+        "stdint.h": "c"
+    }
+}

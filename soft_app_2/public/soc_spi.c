@@ -31,7 +31,8 @@ void soc_Spi_Init(uint8_t spr) {
     soc_Spi_FreqDiv(spr);
     
 	// 系统工作使能，master 模式，
-    SPI->SPCR |= 0x50; // 0x0101_0000 
+    // SPI->SPCR = 0x50; // 0x0101_0000 
+    SPI->SPCR |= 0b01010000; // 0x0101_0000 
 	// 系统工作使能，master 模式，
     
     while(!SPI_TXEMPTY); // wait till tx empty // 阻塞直到写寄存器为空

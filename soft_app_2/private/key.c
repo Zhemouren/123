@@ -1,7 +1,6 @@
 #include "key.h"
 // #include "main.h"
 #include "my_delay.h"
-// #include "soc_gpio.h"
 /**
 
  * 引脚连接  A11 A12 A15 B3 B4 B5 B6 B7 
@@ -29,28 +28,28 @@ uint8_t MatrixKey()
 //      uint8_t KeyNumber=0;
       clkey();//将所有行置一
       my_delay_ms(20);
-      gpio_write(34,GPIO_PIN_RESET);//选中C4行
+      gpio_write(18 ,GPIO_PIN_RESET);//选中C1行
       if(R1==0){my_delay_ms(20);while(R1==0){}my_delay_ms(20);return 1;}//R1
       if(R2==0){my_delay_ms(20);while(R2==0){}my_delay_ms(20);return 5;}//R2
       if(R3==0){my_delay_ms(20);while(R3==0){}my_delay_ms(20);return 9;}//R3
       if(R4==0){my_delay_ms(20);while(R4==0){}my_delay_ms(20);return 13;}//R4
          
       clkey();
-      gpio_write(20,GPIO_PIN_RESET);//选中C3行
+      gpio_write(19,GPIO_PIN_RESET);//选中C2行
       if(R1==0){my_delay_ms(20);while(R1==0){}my_delay_ms(20);return 2;}
       if(R2==0){my_delay_ms(20);while(R2==0){}my_delay_ms(20);return 6;}
       if(R3==0){my_delay_ms(20);while(R3==0){}my_delay_ms(20);return 10;}
       if(R4==0){my_delay_ms(20);while(R4==0){}my_delay_ms(20);return 14;}
       
       clkey();
-      gpio_write(19,GPIO_PIN_RESET);//选中C2行
+      gpio_write(20,GPIO_PIN_RESET);//选中C3行
       if(R1==0){my_delay_ms(20);while(R1==0){}my_delay_ms(20);return 3;}
       if(R2==0){my_delay_ms(20);while(R2==0){}my_delay_ms(20);return 7;}
       if(R3==0){my_delay_ms(20);while(R3==0){}my_delay_ms(20);return 11;}
       if(R4==0){my_delay_ms(20);while(R4==0){}my_delay_ms(20);return 15;}
       
       clkey();
-      gpio_write(18,GPIO_PIN_RESET);//选中C1行
+      gpio_write(34,GPIO_PIN_RESET);//选中C4行
       if(R1==0){my_delay_ms(20);while(R1==0){}my_delay_ms(20);return 4;}
       if(R2==0){my_delay_ms(20);while(R2==0){}my_delay_ms(20);return 8;}
       if(R3==0){my_delay_ms(20);while(R3==0){}my_delay_ms(20);return 12;}
