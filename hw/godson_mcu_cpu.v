@@ -59,6 +59,14 @@ module godson_mcu_cpu (
     output [31:0] apb6_pwdata,
     input  [31:0] apb6_prdata,
     input         apb6_ack,
+	
+	output        apb7_psel,
+	output [31:0] apb7_paddr,
+	output        apb7_pwrite,
+	output        apb7_penable,
+	output [31:0] apb7_pwdata,
+	input  [31:0] apb7_prdata,
+	input         apb7_ack,
 
     input [5:0]   interrupt,
 
@@ -369,7 +377,7 @@ module godson_mcu_cpu (
 		.test_mode        (1'b0                )
 	);
 
-	axi_slave_mux_cpu A_cpu_mux
+	axi_slave_mux A_cpu_mux
     (
 		.axi_s_aclk       (clock               ),
 		.axi_s_aresetn    (reset           	   ),
@@ -611,7 +619,16 @@ module godson_mcu_cpu (
 		.apb6_enab        (apb6_penable        ),
 		.apb6_addr        (apb6_paddr          ),
 		.apb6_datai       (apb6_pwdata         ),
-		.apb6_datao       (apb6_prdata         )
+		.apb6_datao       (apb6_prdata         ),
+		
+		.apb7_req         (                    ),
+		.apb7_ack         (apb7_ack            ),
+		.apb7_rw          (apb7_pwrite         ),
+		.apb7_psel        (apb7_psel           ),
+		.apb7_enab        (apb7_penable        ),
+		.apb7_addr        (apb7_paddr          ),
+		.apb7_datai       (apb7_pwdata         ),
+		.apb7_datao       (apb7_prdata         )		
 	);
 
 	

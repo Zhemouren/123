@@ -20,7 +20,7 @@
 `endif
 `endif
 
-module axi_slave_mux_cpu(
+module axi_slave_mux(
 axi_s_aclk,
 axi_s_awid,
 axi_s_awaddr,

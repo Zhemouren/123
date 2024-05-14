@@ -10,96 +10,96 @@ z2
 cModel Technology
 Z0 dE:/EDA/GOWIN/01_sopc/1C102/src/hw
 vDram_8k
-Z1 !s110 1712845061
+Z1 !s110 1714664241
 !i10b 1
-!s100 U[6^MX`ZhnGXeIe6S:c;U2
+!s100 IFHdB?4`TC69XbPEhLlaD1
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IEJUh6LjIR7;jSmAV^9Ji00
+I6LjGRejdfzJid:zWhf:fV1
 R0
-Z3 w1712845058
+Z3 w1714664237
 Z4 8E:\EDA\GOWIN\01_sopc\1C102\src\hw\godson_mcu_cpu.v
 Z5 FE:\EDA\GOWIN\01_sopc\1C102\src\hw\godson_mcu_cpu.v
-!i122 5
-L0 621 41
+!i122 8
+L0 638 41
 Z6 VDg1SIo80bB@j0V0VzS_@n1
 Z7 OL;L;2020.4;71
 r1
 !s85 0
 31
-Z8 !s108 1712845061.000000
-Z9 !s107 config.v|E:\EDA\GOWIN\01_sopc\1C102\src\hw\godson_mcu_cpu.v|
-Z10 !s90 E:\EDA\GOWIN\01_sopc\1C102\src\hw\godson_mcu_cpu.v|
+Z8 !s108 1714664241.000000
+!s107 config.v|E:\EDA\GOWIN\01_sopc\1C102\src\hw\godson_mcu_cpu.v|
+Z9 !s90 E:\EDA\GOWIN\01_sopc\1C102\src\hw\godson_mcu_cpu.v|
 !i113 0
-Z11 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z12 tCvgOpt 0
+Z10 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z11 tCvgOpt 0
 n@dram_8k
 vFlash_128k
 R1
 !i10b 1
-!s100 @c_mJ_CD0eE75B<C3X:463
+!s100 MDM[@80RzBDCUM3ijm9V;2
 R2
-Im0J]>iODj2;gnBdKAHU:72
+IWmZhNB;D[i6K@5b9jCCi91
 R0
 R3
 R4
 R5
-!i122 5
-L0 663 44
+!i122 8
+L0 680 44
 R6
 R7
 r1
 !s85 0
 31
 R8
+Z12 !s107 config.v|E:\EDA\GOWIN\01_sopc\1C102\src\hw\godson_mcu_cpu.v|
 R9
-R10
 !i113 0
+R10
 R11
-R12
 n@flash_128k
 vgodson_mcu_cpu
 R1
 !i10b 1
-!s100 MbZ^jY>X]ah<5UceDTOmz0
+!s100 McYe4[BIFY>>aVb0clY9I1
 R2
-IBZDcD9XK0_8[7c2]W9ofP2
+I`kO[X_Z1=0IBOXJ2zYYCQ3
 R0
 R3
 R4
 R5
-!i122 5
-L0 3 616
+!i122 8
+L0 3 633
 R6
 R7
 r1
 !s85 0
 31
 R8
-R9
-R10
-!i113 0
-R11
 R12
+R9
+!i113 0
+R10
+R11
 vgodson_mcu_top
-!s110 1712842831
+!s110 1714664213
 !i10b 1
-!s100 RgMMigIWY>dFzV7GTiMk[2
+!s100 U7bdQ3]cHK_lAlD1Zfdl12
 R2
-IQX`2E3m^TFR2`2H_D=ODl3
+Id;fXJNJP3Qn<:<Ckm4Q331
 R0
-w1712842824
+w1714664208
 8E:\EDA\GOWIN\01_sopc\1C102\src\hw\godson_mcu_top.v
 FE:\EDA\GOWIN\01_sopc\1C102\src\hw\godson_mcu_top.v
-!i122 3
-L0 2 349
+!i122 6
+L0 2 721
 R6
 R7
 r1
 !s85 0
 31
-!s108 1712842831.000000
+!s108 1714664213.000000
 !s107 config.v|E:\EDA\GOWIN\01_sopc\1C102\src\hw\godson_mcu_top.v|
 !s90 E:\EDA\GOWIN\01_sopc\1C102\src\hw\godson_mcu_top.v|
 !i113 0
+R10
 R11
-R12

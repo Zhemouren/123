@@ -9,6 +9,7 @@ module godson_mcu_top (
 
 	output        led0,
 	
+	//add by zhemou 
 	inout		  GPIO01,
 	inout         GPIO13,
 	inout         GPIO18,
@@ -21,17 +22,17 @@ module godson_mcu_top (
 	inout         GPIO38,
 	inout         GPIO39,
 	inout         GPIO40,
-	
+	//add by zhemou 
 	inout		  SPI_CLK,
 	inout         SPI_MISO,
 	inout         SPI_MOSI,
 	inout         SPI_CSN1,
 	inout         SPI_CSN2,
 	inout         SPI_CSN3,
-	
+	//add by zhemou 
 	inout		  I2C_SCL,
 	inout         I2C_SDA,
-	
+	//add by zhemou 
 	inout		  RsRx,
 	inout		  RsTx
 );
@@ -80,6 +81,7 @@ module godson_mcu_top (
 	wire [DATA_APB_32-1:0]    apb0_prdata;
 	wire           apb0_ack = apb0_penable;
 	
+	//add by zhemou 
 	wire          			  apb1_psel;
 	wire [ADDR_APB-1:0]       apb1_paddr;
 	wire           			  apb1_pwrite;
@@ -88,6 +90,7 @@ module godson_mcu_top (
 	wire [DATA_APB_32-1:0]    apb1_prdata;
 	wire           apb1_ack = apb1_penable;
 	
+	//add by zhemou 
 	wire          			  apb2_psel;
 	wire [ADDR_APB-1:0]       apb2_paddr;
 	wire           			  apb2_pwrite;
@@ -96,6 +99,7 @@ module godson_mcu_top (
 	wire [DATA_APB_32-1:0]    apb2_prdata;
 	wire           apb2_ack = apb2_penable;
 	
+	//add by zhemou 
 	wire          			  apb3_psel;
 	wire [ADDR_APB-1:0]       apb3_paddr;
 	wire           			  apb3_pwrite;
@@ -104,6 +108,7 @@ module godson_mcu_top (
 	wire [DATA_APB_32-1:0]    apb3_prdata;
 	wire           apb3_ack = apb3_penable;
 	
+	//add by zhemou 
 	wire          			  apb4_psel;
 	wire [ADDR_APB-1:0]       apb4_paddr;
 	wire           			  apb4_pwrite;
@@ -112,6 +117,7 @@ module godson_mcu_top (
 	wire [DATA_APB_32-1:0]    apb4_prdata;
 	wire           apb4_ack = apb4_penable;
 	
+	//add by zhemou 
 	wire          			  apb5_psel;
 	wire [ADDR_APB-1:0]       apb5_paddr;
 	wire           			  apb5_pwrite;
@@ -120,6 +126,7 @@ module godson_mcu_top (
 	wire [DATA_APB_32-1:0]    apb5_prdata;
 	wire           apb5_ack = apb5_penable;
 	
+	//add by zhemou 
 	wire          			  apb6_psel;
 	wire [ADDR_APB-1:0]       apb6_paddr;
 	wire           			  apb6_pwrite;
@@ -127,6 +134,15 @@ module godson_mcu_top (
 	wire [DATA_APB_32-1:0]    apb6_pwdata;
 	wire [DATA_APB_32-1:0]    apb6_prdata;
 	wire           apb6_ack = apb6_penable;
+	
+	//add by zhemou 
+	wire          			  apb7_psel;
+	wire [ADDR_APB-1:0]       apb7_paddr;
+	wire           			  apb7_pwrite;
+	wire           			  apb7_penable;
+	wire [DATA_APB_32-1:0]    apb7_pwdata;
+	wire [DATA_APB_32-1:0]    apb7_prdata;
+	wire           apb7_ack = apb7_penable;
 	
 	wire [`LID         -1 :0] s1_awid;
 	wire [`Lawaddr     -1 :0] s1_awaddr;
@@ -165,6 +181,11 @@ module godson_mcu_top (
 	wire                      s1_rvalid;
 	wire                      s1_rready;
 	
+
+	
+	
+
+	
 	//GPIO WIRE add by zhemou
 	//wire 					  GPIO01;
 	//wire 					  GPIO13;
@@ -183,8 +204,8 @@ module godson_mcu_top (
 	wire					  PWM01;
 	
 	//uart wire add be zhemou 
-	wire					  RsRx;
-	wire					  RsTx;
+	//wire					  RsRx;
+	//wire					  RsTx;
 	wire					  uart_irq;
 	
 	//I2C wire add by zhemou
@@ -209,9 +230,15 @@ module godson_mcu_top (
   //wire					  flash_int;
   //wire					  spi_int;		//前面有了
   //wire					  vpwm_int;
-  //wire					  dma_int;
-	
-	
+   
+	//dma add by zhemou
+    wire					  dma_int;
+    wire					  dma0_gnt;
+	wire					  dma_req;
+	wire					  dma_ack;
+	wire	[31:0]			  order_addr_in;
+	wire					  write_dma_end;
+	wire					  finish_read_order;
 	
 	
 	godson_mcu_cpu A_cpu
@@ -224,7 +251,7 @@ module godson_mcu_top (
 		.ljtag_tdo_o      (LJTAG_TDO        ),
 		.ljtag_tdi_i      (LJTAG_TDI        ),
 		.ljtag_tck_i      (LJTAG_TCK        ),
-
+	
 		.apb0_psel        (apb0_psel        ),
 		.apb0_paddr       (apb0_paddr       ),
 		.apb0_pwrite      (apb0_pwrite      ),
@@ -233,6 +260,7 @@ module godson_mcu_top (
 		.apb0_prdata      (apb0_prdata      ),
 		.apb0_ack         (apb0_ack         ),
 		
+		//add by zhemou 
 		.apb1_psel        (apb1_psel        ),
 		.apb1_paddr       (apb1_paddr       ),
 		.apb1_pwrite      (apb1_pwrite      ),
@@ -241,6 +269,7 @@ module godson_mcu_top (
 		.apb1_prdata      (apb1_prdata      ),
 		.apb1_ack         (apb1_ack         ),
 		
+		//add by zhemou 
 		.apb2_psel        (apb2_psel        ),
 		.apb2_paddr       (apb2_paddr       ),
 		.apb2_pwrite      (apb2_pwrite      ),
@@ -249,6 +278,7 @@ module godson_mcu_top (
 		.apb2_prdata      (apb2_prdata      ),
 		.apb2_ack         (apb2_ack         ),
 		
+		//add by zhemou 
 		.apb3_psel        (apb3_psel        ),
 		.apb3_paddr       (apb3_paddr       ),
 		.apb3_pwrite      (apb3_pwrite      ),
@@ -257,6 +287,7 @@ module godson_mcu_top (
 		.apb3_prdata      (apb3_prdata      ),
 		.apb3_ack         (apb3_ack         ),
 		
+		//add by zhemou 
 		.apb4_psel        (apb4_psel        ),
 		.apb4_paddr       (apb4_paddr       ),
 		.apb4_pwrite      (apb4_pwrite      ),
@@ -265,6 +296,7 @@ module godson_mcu_top (
 		.apb4_prdata      (apb4_prdata      ),
 		.apb4_ack         (apb4_ack         ),
 		
+		//add by zhemou 
 		.apb5_psel        (apb5_psel        ),
 		.apb5_paddr       (apb5_paddr       ),
 		.apb5_pwrite      (apb5_pwrite      ),
@@ -272,7 +304,25 @@ module godson_mcu_top (
 		.apb5_pwdata      (apb5_pwdata      ),
 		.apb5_prdata      (apb5_prdata      ),
 		.apb5_ack         (apb5_ack         ),
-
+		
+		//add by zhemou 
+		.apb6_psel        (apb6_psel        ),
+		.apb6_paddr       (apb6_paddr       ),
+		.apb6_pwrite      (apb6_pwrite      ),
+		.apb6_penable     (apb6_penable     ),
+		.apb6_pwdata      (apb6_pwdata      ),
+		.apb6_prdata      (apb6_prdata      ),
+		.apb6_ack         (apb6_ack         ),
+		
+		//add by zhemou 
+		.apb7_psel        (apb7_psel        ),
+		.apb7_paddr       (apb7_paddr       ),
+		.apb7_pwrite      (apb7_pwrite      ),
+		.apb7_penable     (apb7_penable     ),
+		.apb7_pwdata      (apb7_pwdata      ),
+		.apb7_prdata      (apb7_prdata      ),
+		.apb7_ack         (apb7_ack         ),		
+		
 		.s1_awid  		  (s1_awid  		),
 		.s1_awaddr		  (s1_awaddr		),
 		.s1_awlen 		  (s1_awlen 		),
@@ -438,7 +488,7 @@ module godson_mcu_top (
 	
 	);
 	
-	//
+	//HEPT add_by_zhemou
 	HPET_TOP hept_z(
 	.apb_pclk			  (clk_ext8m		),
 	.apb_prstn			  (pll_lock 		),
