@@ -43,7 +43,8 @@
 		"gimage_cc.h": "c",
 		"oled_font.h": "c",
 		"led.h": "c",
-		"key.h": "c"
+		"key.h": "c",
+		"hbirdv2_uart.h": "c"
 	},
 	"C_Cpp.errorSquiggles": "disabled"
 }

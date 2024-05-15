@@ -8,6 +8,8 @@
 #include "as608.h"
 #include "led.h"
 #include "key.h"
+// #include "hbirdv2_uart.h"
+
 /*串口接收中断处理在user\1c102_Interrupt.c里面*/
 typedef unsigned char INT8U;
 uint32_t AS608Addr = 0XFFFFFFFF;//默认
@@ -20,12 +22,55 @@ char str2[6] = {0};
 
  uint8_t USART0_RX_STA= 0;//串口是否接收到数据
 
+
+uint8_t* my_strstr(const uint8_t* p1, const uint8_t*p2)//参照strstr函数原型构建自己的strstr函数
+{ 
+   
+	// assert(p1 != NULL);//断言该指针不为空指针
+	// assert(p2 != NULL);
+	uint8_t *s1 = NULL;//创建一个空指针；
+	uint8_t *s2 = NULL;
+	uint8_t *cur = p1;
+	if (*p2 == '\0')
+	{ 
+   
+		return (char*)p1;                    //如果我们所要找的子串p2为'\0',返回总串的首元素地址
+	}
+
+	while (*cur)//cur代表指向的是子串第一次出现的首元素地址
+	{ 
+   
+		s1 = cur;                      //把cur指向字符串的首元素地址赋给s1
+		s2 = (char*)p2;                    //把p2指向的首元素地址赋给s2，每一次循环都要从p2的首元素地址开始重新比较
+		while ((*s1 != 0) && (*s2 != 0) && *s1 == *s2)           //只有在s1指向的首元素地址，s2指向的首元素地址都不为'\0'的时候，才可以在总串中找子串的首地址第一次出现的时候
+		{ 
+                                               // 比较s1，s2指向的地址所对应的字符是否相等，若相等，各自指向的地址向后跳一个字节比较下一位是否相等在满足以上的条件下不断循环，若不满足，
+			s1++;                                    //开始一下比较
+			s2++;
+		}
+		if (*s2 == '\0')             //若经过上面的比较，s2指向的内容恰好是'\0',代表找到子串首次出现的地址
+		{ 
+                                 //若不满足以上情况的比较，开始以下比较
+			return (char*)cur;
+		}
+		if (*s1 == '\0')  
+		{ 
+   
+			return NULL;            //若在s2指向的内容不为'\0'时，s1指向的内容率先为0，代表总串长度比子串长度短，必不存在子串，返回一个空指针
+		}
+		cur++;//代表当前cur指向的并不是子串第一次出现的首元素地址，指向的地址要往后跳一个字节
+	}
+
+	return NULL;//如果经过以上比较都不能得出结果，代表找不到子串，要返回空指针
+
+}
 //串口发送一个字节
-static uint8_t MYUSART_SendData(uint8_t data)
+void MYUSART_SendData(uint8_t data)
 {
-  UART0_FIFO = data ;//发送一字节
-  my_delay_ms(25);
-  return 0;
+  // UART0_FIFO = data ;//发送一字节
+  // my_delay_ms(25);
+   uart_write(data);//发送一字节数据
+  // return 0;
 }
 //发送包头
 static void SendHead(void)
@@ -71,7 +116,7 @@ static void SendCheck(uint16_t check)
 功能描述：模块是否连接检测 
 返回值：模块连接了返回0 否则返回1
 *****************************************/
-static uint8_t AS608_Check(void)
+ uint8_t AS608_Check(void)
 {
 	USART0_RX_BUF[9] = 1;
 	
@@ -81,8 +126,15 @@ static uint8_t AS608_Check(void)
 	{
 		MYUSART_SendData(Get_Device_Code[i]);
 	}
-	//HAL_UART_Receive(&AS608_UART,USART0_RX_BUF,12,100);//串口0接收12个数据
-	my_delay_ms(200);//等待200ms
+  	// my_delay_ms(200);//等待200ms
+	//串口0接收12个数据
+  for (uint32_t i = 0; i < 12; i++)
+  {
+    USART0_RX_BUF[i]=uart_read();
+    /* code */
+  }
+  
+
 	if(USART0_RX_BUF[9] == 0)
 		return 0;
 
@@ -91,19 +143,15 @@ static uint8_t AS608_Check(void)
 /*指纹模块初始化*/
 uint8_t as608_init(void)
 {
-	// //设置uart0接收中断
-	// HAL_UART_Receive_IT(&AS608_UART,USART0_RX_BUF,sizeof( USART0_RX_BUF));//接收数据，且产生中断
-	// //使能空闲中断
-	// __HAL_UART_ENABLE_IT(&AS608_UART,UART_IT_IDLE);//
 	
 	return AS608_Check();
 }
-//判断中断接收的数组有没有应答包
-//waittime为等待中断接收数据的时间（单位1ms）
+//判断接收的数组有没有应答包
+//waittime为等待接收数据的时间（单位1ms）
 //返回值：数据包首地址
 static uint8_t *JudgeStr(uint16_t waittime)
 {
-  char *data;
+  uint8_t *data;
   uint8_t str[8];
   str[0] = 0xef;
   str[1] = 0x01;
@@ -116,14 +164,24 @@ static uint8_t *JudgeStr(uint16_t waittime)
   USART0_RX_STA = 0;
   while(--waittime)
   {
-    my_delay_ms(1);
-    if(USART0_RX_STA) //接收到一次数据
+    
+    // my_delay_ms(1);
+    if((uart->LSR & 0x1) == 0){
+      USART0_RX_STA=1;
+      for (uint32_t i = 0; i < 9; i++)
+      {
+        while ((uart->LSR & 0x1) == 0);
+        USART0_RX_BUF[i]= ((uart->RBR)&0xff);
+      }
+    }
+    else if(USART0_RX_STA) //接收到一次数据
     {
       USART0_RX_STA = 0;
-      data = strstr((const uint8_t*)USART0_RX_BUF, (const uint8_t)str, 8);
+      data = my_strstr((const uint8_t*)USART0_RX_BUF, (const uint8_t*)str);
       if(data)
         return (uint8_t*)data;
     }
+    
   }
   return 0;
 }
@@ -393,20 +451,20 @@ uint8_t PS_ReadSysPara(SysPara *p)
     ensure = 0xff;
   if(ensure == 0x00)
   {
-    // soc_printf("\r\n模块最大指纹容量=%d", p->PS_max);
+    // soc_printf("模块最大指纹容量=%d\r\n", p->PS_max);
     // my_delay_ms(25);
-    // soc_printf("\r\n对比等级=%d", p->PS_level);
+    // soc_printf("对比等级=%d\r\n", p->PS_level);
     // my_delay_ms(25);
-    // soc_printf("\r\n地址=%x", p->PS_addr);
+    // soc_printf("地址=%x\r\n", p->PS_addr);
     // my_delay_ms(25);
-    // soc_printf("\r\n波特率=%d", p->PS_N * 9600);
-    // my_delay_ms(25);
-    gpio_write(10,0);
+    // soc_printf("波特率=%d\r\n", p->PS_N * 9600);
+    my_delay_ms(25);
+    // gpio_write(10,0);
   }
   else
-    gpio_write(11,0);
-    // soc_printf("\r\n%s", EnsureMessage(ensure));//
-    // my_delay_ms(25);
+    // gpio_write(11,0);
+    // soc_printf("%s\r\n", EnsureMessage(ensure));//
+    my_delay_ms(25);
 
   return ensure;
 }
@@ -867,8 +925,8 @@ void press_FR(void)
   uint8_t ensure;
     OLED_CLS(); 
     OLED_ShowCN_STR(30,2,58,4);  //显示请按手指
-  while(1)
-  {
+  // while(1)
+  // {
     ensure = PS_GetImage();
     if(ensure == 0x00) //获取图像成功
     {
@@ -888,7 +946,7 @@ void press_FR(void)
         my_delay_ms(1500);
         my_delay_ms(1500);
           //退出指纹识别
-            break;
+            // break;
         }
         else
         {
@@ -903,7 +961,7 @@ void press_FR(void)
 		      OLED_CLS();  
       OLED_ShowCN_STR(30,2,58,4);  //显示请按手指
     }
-  }
+  // }
 }
 
 //删除单个指纹

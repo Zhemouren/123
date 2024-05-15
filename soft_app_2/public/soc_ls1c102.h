@@ -116,10 +116,36 @@ typedef struct
 #define UART1_FIFO *(volatile int*) 0xbfe88000
 #define UART1_FIFO_CTRL *(volatile int*) 0xbfe88004
 
-
-
-
-
+#define     __IOM    volatile
+/**
+  * @brief UART
+  */
+typedef struct {
+    union {
+        __IOM unsigned char RBR;
+        __IOM unsigned char DLL;
+        __IOM unsigned char THR;
+    };
+    union {
+        __IOM unsigned char DLM;
+        __IOM unsigned char IER;
+    };
+    union {
+        __IOM unsigned char IIR;
+        __IOM unsigned char FCR;
+    };
+    __IOM unsigned char LCR;
+    __IOM unsigned char MCR;
+    __IOM unsigned char LSR;
+    __IOM unsigned char MSR;
+    __IOM unsigned char SCR;
+} HW_UART_TypeDef;
+#define LS1C102_UART_BASE          0xbfe80000
+#define uart                 ((HW_UART_TypeDef *) LS1C102_UART_BASE)
+/** \brief provide the compiler with branch prediction information, the branch is rarely true */
+#ifndef   __RARELY
+  #define __RARELY(exp)                          __builtin_expect((exp), 0)
+#endif 
 
 #ifdef __cplusplus
 }

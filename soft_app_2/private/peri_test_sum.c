@@ -5,7 +5,7 @@
 
 #include "oled.h"
 #include "duoji.h"
-// #include "rc522.h"
+#include "rc522.h"
 #include "as608.h"
 #include "led.h"
 #include "key.h"

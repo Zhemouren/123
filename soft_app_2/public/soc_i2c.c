@@ -55,7 +55,8 @@ void soc_I2C_StructInit(I2C_InitTypeDef* I2C_InitStruct) {
   *         that contains the configuration information for the specified I2C peripheral.
   * @retval None
   */
-void soc_I2C_Init(I2C_InitTypeDef* I2C_InitStruct) {
+void 
+soc_I2C_Init(I2C_InitTypeDef* I2C_InitStruct) {
 	uint32_t tmp = 0;
 	uint32_t pclk1 = 8000000;// 8MHz 时钟
 

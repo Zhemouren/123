@@ -32,7 +32,7 @@ typedef struct
 	uint8_t  PS_N;//波特率基数N
 }SysPara;
 
-
+ uint8_t AS608_Check(void);//确认是否存在
 uint8_t as608_init(void);
 	
 uint8_t PS_GetImage(void); //录入图像 

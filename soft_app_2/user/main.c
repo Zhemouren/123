@@ -55,214 +55,218 @@ uint8_t flag =0;//oled擦除标志
 // uint8_t flag10=0,flag11=0,flag12=0,flag13=0,flag14=0,flag15=0,flag16=0,flag17=0,flag18=0,flag19=0,flag20=0;	        //进入界面的标志位
 uint8_t mode = 1;//运行界面
 
-int main(void) {
+// int main(void) {
 
-    EnableInt();// 开总中断
+//     EnableInt();// 开总中断
+
+//     my_GPIO_Init();
+//     my_PWM_Init();
+//     my_I2C_Init();
+//     my_SPI_Init();
+
+// 	my_delay_ms(500);
+//     Init_main();
+//     my_delay_ms(500);
+//   while (1)
+//   {
+//     if(HLK_IO==1)//如果人体雷达感应模块感应到人体，唤醒OLED面板
+//     {   
+//         flag=0;
+//         KeyNum=MatrixKey();
+//         switch(mode)
+//         {
+// /*1       显示智能门禁系统    解锁     设置        */
+//             case 1:
+//                     if(flag1==1){interface_display(1);flag1=0;}
+//                     if(KeyNum==13){mode=2;flag1=2;}//进选择解锁方式界面
+//                     else if (KeyNum==14){mode=8;flag1=8;}//进输入管理员密码界面
+//                     else ;
+//                     break;
+// /*2        选择解锁方式    卡解锁     密码解锁  指纹解锁      */
+//             case 2:
+//                     if(flag1==2){interface_display(2);flag1=0;}
+//                     if(KeyNum==11){     mode=3;flag1=3;}//进去卡解锁
+//                     else if (KeyNum==12){mode=4;flag1=4; }//密码解锁
+//                     else if(KeyNum==15){mode =15;flag1=15;}//进去指纹解锁
+//                     else if(KeyNum==16){mode =1;flag1=1;}//返回
+//                     else ;
+//                 break;
+// // /*3             卡解锁       */
+//             case 3:
+//                     if(flag1==3){interface_display(4);flag1=0;}
+//                     Read_ID();
+//                     if(KeyNum==16){mode =2;flag1=2; }//返回
+//                     else ;
+//                 break;
+// // /*4           密码解锁        */
+//             case 4:
+//                     if(flag1==4){interface_display(5);flag1=0;}
+//                     Key_main();//按键解锁函数
+//                     if(KeyNum==16){mode =2;flag1=2;}//返回
+//                     else ;
+//                 break;
+// // /*5 设置    卡管理    密码管理   退出  */
+//             case 5:
+//                     if(flag1==5){interface_display(3);flag1=0;}
+//                     if(KeyNum==11){     mode =6;flag1=6;    }//卡管理
+//                     else if(KeyNum==12){mode =7;flag1=7;    }//密码管理
+//                     else if(KeyNum==15){mode =16;flag1=16;  }//指纹管理
+//                     else if(KeyNum==16){mode =1;flag1=1;    }//返回
+//                     else ;
+//                 break;
+// // /*6           卡管理        */
+//             case 6:
+//                     if(flag1==6){interface_display(10);flag1=0;}
+//                     if(KeyNum==11){     mode =9;flag1=9;}//添加卡
+//                     else if(KeyNum==12){mode =13;flag1=13;}//清空卡库
+//                     else if(KeyNum==15){mode =5; flag1=5; }//返回
+//                     else if(KeyNum==16){mode =5; flag1=5; }//返回
+//                     else ;
+//                 break;
+// // /*7      密码管理        */
+//             case 7:
+//                     if(flag1==7){interface_display(11);flag1=0;}
+//                     if(KeyNum==11){     mode =10;flag1=10;    }//添加密码
+//                     else if(KeyNum==12){mode =11;flag1=11;    }//清空密码库
+//                     else if(KeyNum==15){mode =5; flag1=5;     }//返回
+//                     else if(KeyNum==16){mode =5; flag1=5;     }//返回
+//                     else ;
+//                 break;
+// // /*8     请输入管理员界面       */
+//             case 8:
+//                     if(flag1==8){interface_display(7);flag1=0;}
+//                     Key();
+//                     if(KeyNum==16){mode =1; flag1=1;        }//返回
+//                     else ;
+//                 break;
+// // /*9     添加卡界面       */
+//             case 9:
+//                     if(flag1==9){interface_display(12);flag1=0;}
+//                     Write_ID();
+//                     if(KeyNum==16){mode =6; flag1=6;            }//返回
+//                     else ;
+//                 /* code */
+//                 break;
+// // /*10     添加密码界面       */
+//             case 10:
+//                     if(flag1==10){interface_display(13);flag1=0;}
+//                     Add_Key();	//添加密码功能
+//                     if(KeyNum==16){mode =7;flag1=7;    }//返回
+//                     else ;
+//                 break;
+// // /*11     清空密码库界面       */
+//             case 11:
+//                     if(flag1==11){interface_display(17);flag1=0;}
+//                     if(KeyNum==13){     mode=12;flag1=12;  }//“是”键
+//                     else if(KeyNum==14){mode =7;flag1=7;    }//“否”键
+//                     else if(KeyNum==16){mode =7;flag1=7;    }//返回
+//                     else ;
+//                 break;
+// // /*12     已清空界面 ----密码解锁   */
+//             case 12:
+//                     if(flag1==12){interface_display(14);Delete_key();flag1=0;}
+//                     if(KeyNum==16){mode =7;flag1=7;    }//返回
+//                     else ;
+//                 break;
+// // /*13     清空卡库界面    */
+//             case 13:
+//                     if(flag1==13){interface_display(16);flag1=0;}
+//                     if(KeyNum==13){mode =14;flag1=14;    }//是
+//                     else if(KeyNum==14){mode =6;flag1=6;}//否键
+//                     else if(KeyNum==16){mode =6;flag1=6;}//返回
+//                     else ;
+//                 break;
+// // /*14     已清空界面 ----卡解锁   */
+//             case 14:
+//                     if(flag1==14){interface_display(14);Delate_ID();flag1=0;}
+//                     //清空卡库
+//                     if(KeyNum==16){mode =6;flag1=6;}//返回
+//                     else ;
+//                 break;
+// // /*15     已清空界面 ----卡解锁   */
+//             case 15:
+//                     if(flag1==15){interface_display(18);mode =1;flag1=1;}
+//                     press_FR();
+//                     if(KeyNum==16){mode =2;flag1=2;}//返回
+//                     else ;
+//                 break;
+// // /*16     指纹管理   */
+//             case 16:
+//                     if(flag1==16){interface_display(19);flag1=0;}
+//                     if(KeyNum==11){     mode =17;flag1=17;  }//指纹
+//                     else if(KeyNum==12){mode =18;flag1=18;  }//返清空指纹库
+//                     else if(KeyNum==15){mode =5;flag1=5;    }//清空指纹库
+//                     else if(KeyNum==16){mode =5;flag1=5;    }//返回
+//                     else ;
+//                 break;
+// // /*17     添加指纹界面       */
+//             case 17:
+//                     if(flag1==17){interface_display(21);mode =16;flag1=16;}
+//                     Add_FR();
+//                     if(KeyNum==16){mode =16;flag1=16;}//返回
+//                     else ;
+//                 break;
+// // /*18     清空指纹库界面   */
+//             case 18:
+//                     if(flag1==18){interface_display(20);flag1=0;}
+//                     if(KeyNum==13){     mode =19;flag1=19;}//是键
+//                     else if(KeyNum==14){mode =16;flag1=16;}//否 键
+//                     else if(KeyNum==16){mode =16;flag1=16;}//返回
+//                     else ;
+//                 break;
+// // /*19     已清空界面 ----指纹解锁   */
+//             case 19:
+//                     if(flag1==19){interface_display(14);Del_FR_Lib();mode=16;flag1=16;}
+//                     //清空指纹库函数 
+//                     if(KeyNum==16){mode =16;flag1=16;}//否 键
+//                     else ;
+//                 break;
+//             default:
+//                 break;
+//         }
+//     }
+//     else
+//     {
+//         if(flag==0){OLED_CLS();flag=1;}
+//         // mode=1;
+//         // flag1=1;
+//         }
+//     }
+//     return 0;
+// }
+
+int main(void)
+{
+    // EnableInt();// 开总中断
+
 
     my_GPIO_Init();
     my_PWM_Init();
     my_I2C_Init();
     my_SPI_Init();
-
+    my_delay_ms(500);
+    hw_uart_init(57600);//设置波特率
+  uint8_t  ensure;
 	my_delay_ms(500);
     Init_main();
     my_delay_ms(500);
-  while (1)
-  {
-    if(HLK_IO==1)//如果人体雷达感应模块感应到人体，唤醒OLED面板
-    {   
-        flag=0;
-        KeyNum=MatrixKey();
-        switch(mode)
-        {
-/*1       显示智能门禁系统    解锁     设置        */
-            case 1:
-                    if(flag1==1){interface_display(1);flag1=0;}
-                    if(KeyNum==13){mode=2;flag1=2;}//进选择解锁方式界面
-                    else if (KeyNum==14){mode=8;flag1=8;}//进输入管理员密码界面
-                    else ;
-                    break;
-/*2        选择解锁方式    卡解锁     密码解锁  指纹解锁      */
-            case 2:
-                    if(flag1==2){interface_display(2);flag1=0;}
-                    if(KeyNum==11){     mode=3;flag1=3;}//进去卡解锁
-                    else if (KeyNum==12){mode=4;flag1=4; }//密码解锁
-                    else if(KeyNum==15){mode =15;flag1=15;}//进去指纹解锁
-                    else if(KeyNum==16){mode =1;flag1=1;}//返回
-                    else ;
-                break;
-// /*3             卡解锁       */
-            case 3:
-                    if(flag1==3){interface_display(4);flag1=0;}
-                    Read_ID();
-                    if(KeyNum==16){mode =2;flag1=2; }//返回
-                    else ;
-                break;
-// /*4           密码解锁        */
-            case 4:
-                    if(flag1==4){interface_display(5);flag1=0;}
-                    Key_main();//按键解锁函数
-                    if(KeyNum==16){mode =2;flag1=2;}//返回
-                    else ;
-                break;
-// /*5 设置    卡管理    密码管理   退出  */
-            case 5:
-                    if(flag1==5){interface_display(3);flag1=0;}
-                    if(KeyNum==11){     mode =6;flag1=6;    }//卡管理
-                    else if(KeyNum==12){mode =7;flag1=7;    }//密码管理
-                    else if(KeyNum==15){mode =16;flag1=16;  }//指纹管理
-                    else if(KeyNum==16){mode =1;flag1=1;    }//返回
-                    else ;
-                break;
-// /*6           卡管理        */
-            case 6:
-                    if(flag1==6){interface_display(10);flag1=0;}
-                    if(KeyNum==11){     mode =9;flag1=9;}//添加卡
-                    else if(KeyNum==12){mode =13;flag1=13;}//清空卡库
-                    else if(KeyNum==15){mode =5; flag1=5; }//返回
-                    else if(KeyNum==16){mode =5; flag1=5; }//返回
-                    else ;
-                break;
-// /*7      密码管理        */
-            case 7:
-                    if(flag1==7){interface_display(11);flag1=0;}
-                    if(KeyNum==11){     mode =10;flag1=10;    }//添加密码
-                    else if(KeyNum==12){mode =11;flag1=11;    }//清空密码库
-                    else if(KeyNum==15){mode =5; flag1=5;     }//返回
-                    else if(KeyNum==16){mode =5; flag1=5;     }//返回
-                    else ;
-                break;
-// /*8     请输入管理员界面       */
-            case 8:
-                    if(flag1==8){interface_display(7);flag1=0;}
-                    Key();
-                    if(KeyNum==16){mode =1; flag1=1;        }//返回
-                    else ;
-                break;
-// /*9     添加卡界面       */
-            case 9:
-                    if(flag1==9){interface_display(12);flag1=0;}
-                    Write_ID();
-                    if(KeyNum==16){mode =6; flag1=6;            }//返回
-                    else ;
-                /* code */
-                break;
-// /*10     添加密码界面       */
-            case 10:
-                    if(flag1==10){interface_display(13);flag1=0;}
-                    Add_Key();	//添加密码功能
-                    if(KeyNum==16){mode =7;flag1=7;    }//返回
-                    else ;
-                break;
-// /*11     清空密码库界面       */
-            case 11:
-                    if(flag1==11){interface_display(17);flag1=0;}
-                    if(KeyNum==13){     mode=12;flag1=12;  }//“是”键
-                    else if(KeyNum==14){mode =7;flag1=7;    }//“否”键
-                    else if(KeyNum==16){mode =7;flag1=7;    }//返回
-                    else ;
-                break;
-// /*12     已清空界面 ----密码解锁   */
-            case 12:
-                    if(flag1==12){interface_display(14);Delete_key();flag1=0;}
-                    if(KeyNum==16){mode =7;flag1=7;    }//返回
-                    else ;
-                break;
-// /*13     清空卡库界面    */
-            case 13:
-                    if(flag1==13){interface_display(16);flag1=0;}
-                    if(KeyNum==13){mode =14;flag1=14;    }//是
-                    else if(KeyNum==14){mode =6;flag1=6;}//否键
-                    else if(KeyNum==16){mode =6;flag1=6;}//返回
-                    else ;
-                break;
-// /*14     已清空界面 ----卡解锁   */
-            case 14:
-                    if(flag1==14){interface_display(14);Delate_ID();flag1=0;}
-                    //清空卡库
-                    if(KeyNum==16){mode =6;flag1=6;}//返回
-                    else ;
-                break;
-// /*15     已清空界面 ----卡解锁   */
-            case 15:
-                    if(flag1==15){interface_display(18);mode =1;flag1=1;}
-                    press_FR();
-                    if(KeyNum==16){mode =2;flag1=2;}//返回
-                    else ;
-                break;
-// /*16     指纹管理   */
-            case 16:
-                    if(flag1==16){interface_display(19);flag1=0;}
-                    if(KeyNum==11){     mode =17;flag1=17;  }//指纹
-                    else if(KeyNum==12){mode =18;flag1=18;  }//返清空指纹库
-                    else if(KeyNum==15){mode =5;flag1=5;    }//清空指纹库
-                    else if(KeyNum==16){mode =5;flag1=5;    }//返回
-                    else ;
-                break;
-// /*17     添加指纹界面       */
-            case 17:
-                    if(flag1==17){interface_display(21);mode =16;flag1=16;}
-                    Add_FR();
-                    if(KeyNum==16){mode =16;flag1=16;}//返回
-                    else ;
-                break;
-// /*18     清空指纹库界面   */
-            case 18:
-                    if(flag1==18){interface_display(20);flag1=0;}
-                    if(KeyNum==13){     mode =19;flag1=19;}//是键
-                    else if(KeyNum==14){mode =16;flag1=16;}//否 键
-                    else if(KeyNum==16){mode =16;flag1=16;}//返回
-                    else ;
-                break;
-// /*19     已清空界面 ----指纹解锁   */
-            case 19:
-                    if(flag1==19){interface_display(14);Del_FR_Lib();mode=16;flag1=16;}
-                    //清空指纹库函数 
-                    if(KeyNum==16){mode =16;flag1=16;}//否 键
-                    else ;
-                break;
-            default:
-                break;
-        }
-    }
-    else
+    // Add_FR();
+    while (1)
     {
-        if(flag==0){OLED_CLS();flag=1;}
-        // mode=1;
-        // flag1=1;
-        }
+        /* code */
+        // cardID = Return_Card(); // 从卡片中读取ID
+        //     // my_delay_ms(500);
+            OLED_CLS();
+            // ensure=PS_ReadNotepad();
+            // press_FR();
+            OLED_ShowNum(45,3,(uint32_t)ensure,5,16);
+        //    soc_printf("hello\r\n");
+        //     if(cardID==62)OLED_ShowNum(45,3,1,1,16);
+        //     else    OLED_ShowNum(45,3,(uint32_t)cardID,5,16);
+            my_delay_ms(500);
     }
-    return 0;
+  return 0;
 }
-
-// int main(void)
-// {
-//     EnableInt();// 开总中断
-
-//   my_GPIO_Init();//初始化屏幕
-//   my_delay_ms(500);
-//   my_I2C_Init();//用于oled屏幕
-//   my_delay_ms(500);
-// //   my_PWM_Init();//用于舵机/电机
-// // my_USART1_Init();
-// //   my_delay_ms(500);
-//   my_SPI_Init();//用于读卡器
-// //   my_USART1_Init();//用于普通串口，1=波特率115200
-//     while (1)
-//     {
-//         /* code */
-//         // cardID = Return_Card(); // 从卡片中读取ID
-//         //     // my_delay_ms(500);
-//             OLED_CLS();
-//         //     if(cardID==62)OLED_ShowNum(45,3,1,1,16);
-//         //     else    OLED_ShowNum(45,3,(uint32_t)cardID,5,16);
-//         //     my_delay_ms(500);
-
-    
-
-//     }
-//   return 0;
-// }
 
 
 
@@ -557,7 +561,7 @@ void Read_ID()
 /*      按键密码锁功能函数        */
 void Key_main()
 {
-    int32 i;
+    int32_t i;
    uint32_t success = 0; // 标志位，用于判断密码锁功能密码是否输入成功
     if(KeyNum)
 		{

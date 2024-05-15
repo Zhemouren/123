@@ -1,9 +1,9 @@
 /**
  * @file oled.c
- * @author Lu Li (2622088559@qq.com)
+ * @author huangjin
  * @brief    oled∆¡ƒªœ‘ æ”≤º˛I2C
- * @version 1.0
- * @date 2023-7-25
+ * @version 2.0
+ * @date 2025-5-14
  *
  * @copyright Copyright (c) 2023
  *

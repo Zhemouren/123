@@ -1,6 +1,6 @@
 /**
  * @file rc522.c
- * @author 
+ * @author  by huangjin
  * @brief    门禁识别驱动代码
  * @version 1.0
  * @date 

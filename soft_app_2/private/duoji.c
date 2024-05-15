@@ -1,9 +1,9 @@
 /**
  * @file motor.c
- * @author Lu Li (2622088559@qq.com)
+ * @author by huangjintao
  * @brief    舵机转动驱动代码
- * @version 1.0
- * @date 2023-7-25
+ * @version 2.0
+ * @date 2024-5-14
  *
  * @copyright Copyright (c) 2023
  *
