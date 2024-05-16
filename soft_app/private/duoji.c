@@ -28,7 +28,7 @@ void SG90_Init()
 }
 void SG90_Open()
 {
-   SG90_GetAngle(180); 
+   SG90_GetAngle(175); //此处对转动值进行一定修正， 实测转180度
 }
 void SG90_Close()
 {

@@ -3,8 +3,8 @@
 clear;
 width = 32; % 数据位宽
 % bin_filename = '1c102_demo.bin'; % 二进制文件名 ?
-% bin_filename = 'F:\\GOWIN\\Project\\loongxin2\\sw\\soft_app_2\\build\\1c102_demo.bin';
-bin_filename = 'F:\\GOWIN\\TangMega-138KPro-example-main\\gowin_version_ip_introduction\\06_uart\\sw\\uart\\build\\1c102_demo.bin';
+bin_filename = 'F:\\GOWIN\\Project\\loongxin2\\sw\\soft_app\\build\\1c102_demo.bin';
+% bin_filename = 'F:\\GOWIN\\TangMega-138KPro-example-main\\gowin_version_ip_introduction\\06_uart\\sw\\uart\\build\\1c102_demo.bin';
 
 % bin_filename = 'F:\\GOWIN\\TangMega-138KPro-example-main\\gowin_version_ip_introduction\\i2c_AT24CXX_plus\\build\\1c102_demo.bin';
 % bin_filename = 'F:\\GOWIN\\Project\\loongxin2\\sw\\ls1c102_demo\\build\\ls1c102_demo.bin';

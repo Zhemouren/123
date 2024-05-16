@@ -5,7 +5,7 @@
 
 #include "oled.h"
 #include "duoji.h"
-// #include "rc522.h"
+#include "rc522.h"
 #include "as608.h"
 #include "led.h"
 #include "key.h"
@@ -851,8 +851,7 @@ void my_PWM_Init(){
 }
 
 void  my_SPI_Init(){
-    // soc_Spi_Init(SPI_DIV_8);//8MHz下分频系数设置为8
-	soc_Spi_Init(SPI_DIV_32);//32MHz下分频系数设置为32
+    soc_Spi_Init(SPI_DIV_16);//分频系数设置为256，也可设置为2
 	// return 0;
 }
 
@@ -886,7 +885,7 @@ void Init_main(void)
   OLED_Init();                             /*  OLED屏初始化  */
   OLED_CLS();                             /*  OLED清屏初始化 */
   RC522_Init();                             /*  RC522卡初始化*/
-//   as608_init();                             /*  AS608指纹模块初始化*/
+  as608_init();                             /*  AS608指纹模块初始化*/
     // my_recv_buf_init();
 	// return 0;
 }

@@ -12,12 +12,14 @@
 // ================================================================
 
 void soc_myputchar(unsigned char chr) {
-	volatile char uart_fifo0_ctrl;
-    uart_fifo0_ctrl = UART1_FIFO_CTRL;
-    while((uart_fifo0_ctrl & 0x02) == 0x02) {
-        ;
-    }
-    UART1_FIFO = chr;
+	// volatile char uart_fifo0_ctrl;
+    // uart_fifo0_ctrl = UART1_FIFO_CTRL;
+    // while((uart_fifo0_ctrl & 0x02) == 0x02) {
+    //     ;
+    // }
+    // UART1_FIFO = chr;
+	// while ((uart->LSR & 0x20) == 0);
+	// uart->THR = chr;
 }
 
 int soc_puts(char *s) {

@@ -32,9 +32,28 @@ typedef struct
 	uint8_t  PS_N;//波特率基数N
 }SysPara;
 
+ uint8_t AS608_Check(void);//确认是否存在
 
 uint8_t as608_init(void);
-	
+//串口发送一个字节
+void MYUSART_SendData(uint8_t data);
+//发送校验位
+void SendHead(void);
+//发送地址
+void SendAddr(void);
+//发送包标识,
+void SendFlag(uint8_t flag);
+//发送包长度
+void SendLength(int length);
+//发送指令码
+void Sendcmd(uint8_t cmd);
+//发送校验和
+void SendCheck(uint16_t check);
+//串口发送一个字节
+void MYUSART_SendData(uint8_t data);
+
+uint8_t *JudgeStr(uint16_t waittime);//返回值：数据包首地址
+
 uint8_t PS_GetImage(void); //录入图像 
  
 uint8_t PS_GenChar(uint8_t BufferID);//生成特征 

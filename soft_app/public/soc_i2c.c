@@ -34,7 +34,7 @@ void soc_I2C_delay(volatile int j) {
 void soc_I2C_StructInit(I2C_InitTypeDef* I2C_InitStruct) {
     /*---------------- Reset I2C init structure parameters values ----------------*/
     /* initialize the I2C_ClockSpeed member */
-    I2C_InitStruct->I2C_ClockSpeed = 200000;// IIC 标准速率100k，快速速率400k。
+    I2C_InitStruct->I2C_ClockSpeed = 100000;// IIC 标准速率100k，快速速率400k。
     // I2C_InitStruct->I2C_ClockSpeed = 400000;// 
     
     /* Initialize the I2C_Mode member */
@@ -65,8 +65,8 @@ soc_I2C_Init(I2C_InitTypeDef* I2C_InitStruct) {
 	/*---------------------------- I2C Configuration ------------------------*/
 	I2C->CTRL = 0x20;// 选择主模式，访问分频寄存器
 
-	tmp = pclk1 / I2C_InitStruct->I2C_ClockSpeed;// 8M / 400k = 20, 8M / 100k = 80
-
+	// tmp = pclk1 / I2C_InitStruct->I2C_ClockSpeed;// 8M / 400k = 20, 8M / 100k = 80
+  tmp=40;
 	tmp = (tmp >> 2) - 1;// 20 / 4 - 1 = 4 = 0x04, 80 / 4 - 1 = 19 = 0x13
 
 	I2C->PRERL = tmp;// 8MHz时钟，如果使用的是100k，那么分频系数 tmp = 0x13，所以低字节寄存器就够了，高字节寄存器为0。
@@ -81,7 +81,7 @@ soc_I2C_Init(I2C_InitTypeDef* I2C_InitStruct) {
 		I2C->CR_SR = 0x04;
 	}
 	
-	soc_I2C_wait();
+	// soc_I2C_wait();
 }
 
 /**

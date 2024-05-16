@@ -10,6 +10,7 @@
 #include "as608.h"
 #include "led.h"
 #include "key.h"
+#include "hbirdv2_uart.h"
 // ================================================================
 
 // ================================================================
@@ -59,18 +60,18 @@ int main(void) {
 
     EnableInt();// 开总中断
 
-    my_GPIO_Init();
-    my_PWM_Init();
-    my_I2C_Init();
-    my_SPI_Init();
-
+    my_GPIO_Init();//初始化GPIO
+    my_PWM_Init(); //初始化PWM
+    my_I2C_Init(); //初始化IIC
+    my_SPI_Init(); //初始化SPI
+    hw_uart_init(57600);//设置波特率
 	my_delay_ms(500);
     Init_main();
     my_delay_ms(500);
   while (1)
   {
-    if(HLK_IO==1)//如果人体雷达感应模块感应到人体，唤醒OLED面板
-    {   
+    // if(HLK_IO==1)//如果人体雷达感应模块感应到人体，唤醒OLED面板
+    // {   
         flag=0;
         KeyNum=MatrixKey();
         switch(mode)
@@ -225,41 +226,51 @@ int main(void) {
                 break;
         }
     }
-    else
-    {
-        if(flag==0){OLED_CLS();flag=1;}
-        // mode=1;
-        // flag1=1;
-        }
-    }
+    // else
+    // {
+    //     if(flag==0){OLED_CLS();flag=1;}
+    //     // mode=1;
+    //     // flag1=1;
+    //     }
+    // }
     return 0;
 }
 
 // int main(void)
 // {
-//     EnableInt();// 开总中断
+//     // EnableInt();// 开总中断
 
-//   my_GPIO_Init();//初始化屏幕
-//   my_delay_ms(500);
-//   my_I2C_Init();//用于oled屏幕
-//   my_delay_ms(500);
-// //   my_PWM_Init();//用于舵机/电机
-// // my_USART1_Init();
-// //   my_delay_ms(500);
-//   my_SPI_Init();//用于读卡器
-// //   my_USART1_Init();//用于普通串口，1=波特率115200
+
+//     my_GPIO_Init();
+//     my_PWM_Init();
+//     my_I2C_Init();
+//     my_SPI_Init();
+//     my_delay_ms(500);
+//     hw_uart_init(57600);//设置波特率
+// //   uint8_t ensure;
+//     // uint16_t temp;
+//     // SearchResult seach;
+// 	my_delay_ms(500);
+//     Init_main();
+//     my_delay_ms(500);
+//     // Add_FR();
+//     // press_FR();
 //     while (1)
 //     {
 //         /* code */
 //         // cardID = Return_Card(); // 从卡片中读取ID
 //         //     // my_delay_ms(500);
 //             OLED_CLS();
-//         //     if(cardID==62)OLED_ShowNum(45,3,1,1,16);
-//         //     else    OLED_ShowNum(45,3,(uint32_t)cardID,5,16);
-//         //     my_delay_ms(500);
 
-    
-
+//         //     // ensure = PS_GetImage();
+//         //     // press_FR();
+//         //     press_FR();
+//         //     // OLED_ShowNum(45,3,,5,16);
+//            soc_printf("hello\r\n");
+//         //     // if(ensure == 0x00){ensure = PS_GenChar(CharBuffer1);OLED_ShowNum(45,3,(uint32_t)ensure,4,16);my_delay_ms(1000);}
+//         //     // else    OLED_ShowNum(45,3,6,4,16);
+//             OLED_ShowNum(45,3,1,4,16);
+//             my_delay_ms(1000);
 //     }
 //   return 0;
 // }
@@ -557,7 +568,7 @@ void Read_ID()
 /*      按键密码锁功能函数        */
 void Key_main()
 {
-    int32 i;
+    int32_t i;
    uint32_t success = 0; // 标志位，用于判断密码锁功能密码是否输入成功
     if(KeyNum)
 		{

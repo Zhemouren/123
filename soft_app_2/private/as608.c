@@ -10,77 +10,53 @@
 #include "key.h"
 // #include "hbirdv2_uart.h"
 
-/*串口接收中断处理在user\1c102_Interrupt.c里面*/
-typedef unsigned char INT8U;
+
 uint32_t AS608Addr = 0XFFFFFFFF;//默认
 
 char str2[6] = {0};
 
  uint8_t USART0_RX_BUF[USART0_MAX_RECV_LEN]; 				//接收缓冲,USART0T3_MAX_RECV_LEN个字节.
+uint8_t  USART0_TX_BUF[USART0_MAX_RECV_LEN]; 				//接收缓冲,USART0T3_MAX_RECV_LEN个字节.
 
  uint8_t Get_Device_Code[10] ={0x01,0x00,0x07,0x13,0x00,0x00,0x00,0x00,0x00,0x1b};//口令验证
 
  uint8_t USART0_RX_STA= 0;//串口是否接收到数据
 
 
-uint8_t* my_strstr(const uint8_t* p1, const uint8_t*p2)//参照strstr函数原型构建自己的strstr函数
-{ 
-   
-	// assert(p1 != NULL);//断言该指针不为空指针
-	// assert(p2 != NULL);
-	uint8_t *s1 = NULL;//创建一个空指针；
-	uint8_t *s2 = NULL;
-	uint8_t *cur = p1;
-	if (*p2 == '\0')
-	{ 
-   
-		return (char*)p1;                    //如果我们所要找的子串p2为'\0',返回总串的首元素地址
-	}
-
-	while (*cur)//cur代表指向的是子串第一次出现的首元素地址
-	{ 
-   
-		s1 = cur;                      //把cur指向字符串的首元素地址赋给s1
-		s2 = (char*)p2;                    //把p2指向的首元素地址赋给s2，每一次循环都要从p2的首元素地址开始重新比较
-		while ((*s1 != 0) && (*s2 != 0) && *s1 == *s2)           //只有在s1指向的首元素地址，s2指向的首元素地址都不为'\0'的时候，才可以在总串中找子串的首地址第一次出现的时候
-		{ 
-                                               // 比较s1，s2指向的地址所对应的字符是否相等，若相等，各自指向的地址向后跳一个字节比较下一位是否相等在满足以上的条件下不断循环，若不满足，
-			s1++;                                    //开始一下比较
-			s2++;
-		}
-		if (*s2 == '\0')             //若经过上面的比较，s2指向的内容恰好是'\0',代表找到子串首次出现的地址
-		{ 
-                                 //若不满足以上情况的比较，开始以下比较
-			return (char*)cur;
-		}
-		if (*s1 == '\0')  
-		{ 
-   
-			return NULL;            //若在s2指向的内容不为'\0'时，s1指向的内容率先为0，代表总串长度比子串长度短，必不存在子串，返回一个空指针
-		}
-		cur++;//代表当前cur指向的并不是子串第一次出现的首元素地址，指向的地址要往后跳一个字节
-	}
-
-	return NULL;//如果经过以上比较都不能得出结果，代表找不到子串，要返回空指针
-
+char *my_strstr(const char *str1, const char *str2) {
+    char *cp = (char *) str1;
+    char *s1, *s2;
+    if (!*str2)
+        return ((char *) str1);
+    while (*cp) {
+        s1 = cp;
+        s2 = (char *) str2;
+        while (*s1 && *s2 && !(*s1 - *s2))
+            s1++, s2++;
+        if (!*s2)
+            return (cp);
+        cp++;
+    }
+    return 0;
 }
+
 //串口发送一个字节
 void MYUSART_SendData(uint8_t data)
 {
-  // UART0_FIFO = data ;//发送一字节
-  // my_delay_ms(25);
-   uart_write(data);//发送一字节数据
+
+   while ((uart->LSR & 0x20) == 0);
+   uart->THR = data;
   // return 0;
 }
 //发送包头
-static void SendHead(void)
+void SendHead(void)
 {
 	memset(USART0_RX_BUF,0,sizeof(USART0_RX_BUF));//发送前清空数据，因为所有都要发送包头，所以只需要在发送包头前清空即可
   MYUSART_SendData(0xEF);
   MYUSART_SendData(0x01);
 }
 //发送地址
-static void SendAddr(void)
+void SendAddr(void)
 {
   MYUSART_SendData(AS608Addr >> 24);
   MYUSART_SendData(AS608Addr >> 16);
@@ -88,23 +64,23 @@ static void SendAddr(void)
   MYUSART_SendData(AS608Addr);
 }
 //发送包标识,
-static void SendFlag(uint8_t flag)
+void SendFlag(uint8_t flag)
 {
   MYUSART_SendData(flag);
 }
 //发送包长度
-static void SendLength(int length)
+void SendLength(int length)
 {
   MYUSART_SendData(length >> 8);
   MYUSART_SendData(length);
 }
 //发送指令码
-static void Sendcmd(uint8_t cmd)
+void Sendcmd(uint8_t cmd)
 {
   MYUSART_SendData(cmd);
 }
 //发送校验和
-static void SendCheck(uint16_t check)
+void SendCheck(uint16_t check)
 {
   MYUSART_SendData(check >> 8);
   MYUSART_SendData(check);
@@ -118,6 +94,7 @@ static void SendCheck(uint16_t check)
 *****************************************/
  uint8_t AS608_Check(void)
 {
+  int32_t j=10000;
 	USART0_RX_BUF[9] = 1;
 	
   SendHead();
@@ -126,12 +103,22 @@ static void SendCheck(uint16_t check)
 	{
 		MYUSART_SendData(Get_Device_Code[i]);
 	}
-  	// my_delay_ms(200);//等待200ms
+  	// my_delay_us(500);//等待200ms
 	//串口0接收12个数据
-  for (uint32_t i = 0; i < 12; i++)
+ 
+ while ((uart->LSR & 0x1) == 0);
+  for (uint32_t i = 0; i < 12; i++)//接收12个数据
   {
-    USART0_RX_BUF[i]=uart_read();
-    /* code */
+    while ((uart->LSR & 0x1) == 0)//等待直到rx接收到数据
+		{
+		  j--;
+			if(j==0){uart->FCR |= 0xbd;break;}//如果计数超过j 那么强行跳出
+		}
+		if(j==0)USART0_RX_BUF[i]= 0;
+		else USART0_RX_BUF[i]= (uint8_t)((uart->RBR)&0xff);
+    
+    uart_write(USART0_RX_BUF[i]);//打印
+    j=30000;//重置
   }
   
 
@@ -143,46 +130,47 @@ static void SendCheck(uint16_t check)
 /*指纹模块初始化*/
 uint8_t as608_init(void)
 {
-	
+    uart_set_rx_th(2);//设置接收8bit 触发RX
 	return AS608_Check();
 }
 //判断接收的数组有没有应答包
 //waittime为等待接收数据的时间（单位1ms）
 //返回值：数据包首地址
-static uint8_t *JudgeStr(uint16_t waittime)
+uint8_t *JudgeStr(uint16_t waittime)
 {
-  uint8_t *data;
+  int32_t j=waittime;
+  int8_t *data;
   uint8_t str[8];
   str[0] = 0xef;
   str[1] = 0x01;
-  str[2] = AS608Addr >> 24;
-  str[3] = AS608Addr >> 16;
-  str[4] = AS608Addr >> 8;
-  str[5] = AS608Addr;
+  str[2] = (uint8_t)(AS608Addr >> 24);
+  str[3] = (uint8_t)(AS608Addr >> 16);
+  str[4] = (uint8_t)(AS608Addr >> 8);
+  str[5] = (uint8_t)(AS608Addr);
   str[6] = 0x07;
   str[7] = '\0';
-  USART0_RX_STA = 0;
-  while(--waittime)
+  // USART0_RX_STA = 0;
+while ((uart->LSR & 0x1) == 0);//确保一定有一个数据被接收
+  // my_delay_us(500);
+  for (uint32_t i = 0; i < (USART0_MAX_RECV_LEN/16); i++)//接收12个数据
   {
-    
-    // my_delay_ms(1);
-    if((uart->LSR & 0x1) == 0){
-      USART0_RX_STA=1;
-      for (uint32_t i = 0; i < 9; i++)
-      {
-        while ((uart->LSR & 0x1) == 0);
-        USART0_RX_BUF[i]= ((uart->RBR)&0xff);
-      }
-    }
-    else if(USART0_RX_STA) //接收到一次数据
-    {
-      USART0_RX_STA = 0;
-      data = my_strstr((const uint8_t*)USART0_RX_BUF, (const uint8_t*)str);
-      if(data)
-        return (uint8_t*)data;
-    }
-    
+    while ((uart->LSR & 0x1) == 0)//等待直到rx接收到数据
+		{
+		  j--;
+			if(j==0){uart->FCR |= 0xbd;break;}//如果计数超过j 那么强行跳出
+		}
+		if(j==0)USART0_RX_BUF[i]= 0;
+		else USART0_RX_BUF[i]= (uint8_t)((uart->RBR)&0xff);
+    uart_write(USART0_RX_BUF[i]);//打印
+    j=waittime;//重载
   }
+
+  // if(!memcmp(str,USART0_RX_BUF,8))//如果数据相同
+  // {
+    data = my_strstr((const uint8_t*)USART0_RX_BUF, (const uint8_t*)str);
+    if(data)return (uint8_t*)data;
+  // }
+
   return 0;
 }
 //录入图像 PS_GetImage
@@ -198,9 +186,9 @@ uint8_t PS_GetImage(void)
   SendFlag(0x01);//命令包标识
   SendLength(0x03);
   Sendcmd(0x01);
-  temp =  0x01 + 0x03 + 0x01;
+  temp =  (0x01 + 0x03 + 0x01);
   SendCheck(temp);
-  data = JudgeStr(2000);
+  data = JudgeStr(10000);
   if(data)
     ensure = data[9];
   else
@@ -222,9 +210,9 @@ uint8_t PS_GenChar(uint8_t BufferID)
   SendLength(0x04);
   Sendcmd(0x02);
   MYUSART_SendData(BufferID);
-  temp = 0x01 + 0x04 + 0x02 + BufferID;
+  temp = (0x01 + 0x04 + 0x02 + BufferID);
   SendCheck(temp);
-  data = JudgeStr(2000);
+  data = JudgeStr(10000);
   if(data)
     ensure = data[9];
   else
@@ -246,7 +234,7 @@ uint8_t PS_Match(void)
   Sendcmd(0x03);
   temp = 0x01 + 0x03 + 0x03;
   SendCheck(temp);
-  data = JudgeStr(2000);
+  data = JudgeStr(10000);
   if(data)
     ensure = data[9];
   else
@@ -272,11 +260,9 @@ uint8_t PS_Search(uint8_t BufferID, uint16_t StartPage, uint16_t PageNum, Search
   MYUSART_SendData(StartPage);
   MYUSART_SendData(PageNum >> 8);
   MYUSART_SendData(PageNum);
-  temp = 0x01 + 0x08 + 0x04 + BufferID
-         + (StartPage >> 8) + (uint8_t)StartPage
-         + (PageNum >> 8) + (uint8_t)PageNum;
+  temp =( 0x01 + 0x08 + 0x04 + BufferID  + (StartPage >> 8) + (uint8_t)StartPage + (PageNum >> 8) + (uint8_t)PageNum);
   SendCheck(temp);
-  data = JudgeStr(2000);
+  data = JudgeStr(10000);
   if(data)
   {
     ensure = data[9];
@@ -302,7 +288,7 @@ uint8_t PS_RegModel(void)
   Sendcmd(0x05);
   temp = 0x01 + 0x03 + 0x05;
   SendCheck(temp);
-  data = JudgeStr(2000);
+  data = JudgeStr(10000);
   if(data)
     ensure = data[9];
   else
@@ -327,10 +313,9 @@ uint8_t PS_StoreChar(uint8_t BufferID, uint16_t PageID)
   MYUSART_SendData(BufferID);
   MYUSART_SendData(PageID >> 8);
   MYUSART_SendData(PageID);
-  temp = 0x01 + 0x06 + 0x06 + BufferID
-         + (PageID >> 8) + (uint8_t)PageID;
+  temp = (0x01 + 0x06 + 0x06 + BufferID + (uint8_t)(PageID >> 8) + (uint8_t)PageID);
   SendCheck(temp);
-  data = JudgeStr(2000);
+  data = JudgeStr(10000);
   if(data)
     ensure = data[9];
   else
@@ -359,7 +344,7 @@ uint8_t PS_DeletChar(uint16_t PageID, uint16_t N)
          + (PageID >> 8) + (uint8_t)PageID
          + (N >> 8) + (uint8_t)N;
   SendCheck(temp);
-  data = JudgeStr(2000);
+  data = JudgeStr(10000);
   if(data)
     ensure = data[9];
   else
@@ -382,7 +367,7 @@ uint8_t PS_Empty(void)
   Sendcmd(0x0D);
   temp = 0x01 + 0x03 + 0x0D;
   SendCheck(temp);
-  data = JudgeStr(2000);
+  data = JudgeStr(10000);
   if(data)
     ensure = data[9];
   else
@@ -407,7 +392,7 @@ uint8_t PS_WriteReg(uint8_t RegNum, uint8_t DATA)
   MYUSART_SendData(DATA);
   temp = RegNum + DATA + 0x01 + 0x05 + 0x0E;
   SendCheck(temp);
-  data = JudgeStr(2000);
+  data = JudgeStr(10000);
   if(data)
     ensure = data[9];
   else
@@ -458,13 +443,13 @@ uint8_t PS_ReadSysPara(SysPara *p)
     // soc_printf("地址=%x\r\n", p->PS_addr);
     // my_delay_ms(25);
     // soc_printf("波特率=%d\r\n", p->PS_N * 9600);
-    my_delay_ms(25);
-    // gpio_write(10,0);
+    // my_delay_ms(25);
+    gpio_write(10,0);
   }
   else
-    // gpio_write(11,0);
+    gpio_write(11,0);
     // soc_printf("%s\r\n", EnsureMessage(ensure));//
-    my_delay_ms(25);
+    // my_delay_ms(25);
 
   return ensure;
 }
@@ -486,12 +471,10 @@ uint8_t PS_SetAddr(uint32_t PS_addr)
   MYUSART_SendData(PS_addr >> 16);
   MYUSART_SendData(PS_addr >> 8);
   MYUSART_SendData(PS_addr);
-  temp = 0x01 + 0x07 + 0x15
-         + (uint8_t)(PS_addr >> 24) + (uint8_t)(PS_addr >> 16)
-         + (uint8_t)(PS_addr >> 8) + (uint8_t)PS_addr;
+  temp = 0x01 + 0x07 + 0x15+ (uint8_t)(PS_addr >> 24) + (uint8_t)(PS_addr >> 16)+ (uint8_t)(PS_addr >> 8) + (uint8_t)PS_addr;
   SendCheck(temp);
   AS608Addr = PS_addr; //发送完指令，更换地址
-  data = JudgeStr(2000);
+  data = JudgeStr(10000);
   if(data)
     ensure = data[9];
   else
@@ -527,7 +510,7 @@ uint8_t PS_WriteNotepad(uint8_t NotePageNum, uint8_t *Byte32)
   }
   temp = 0x01 + 36 + 0x18 + NotePageNum + temp;
   SendCheck(temp);
-  data = JudgeStr(2000);
+  data = JudgeStr(10000);
   if(data)
     ensure = data[9];
   else
@@ -551,7 +534,7 @@ uint8_t PS_ReadNotepad(uint8_t NotePageNum, uint8_t *Byte32)
   MYUSART_SendData(NotePageNum);
   temp = 0x01 + 0x04 + 0x19 + NotePageNum;
   SendCheck(temp);
-  data = JudgeStr(2000);
+  data = JudgeStr(10000);
   if(data)
   {
     ensure = data[9];
@@ -589,7 +572,7 @@ uint8_t PS_HighSpeedSearch(uint8_t BufferID, uint16_t StartPage, uint16_t PageNu
          + (StartPage >> 8) + (uint8_t)StartPage
          + (PageNum >> 8) + (uint8_t)PageNum;
   SendCheck(temp);
-  data = JudgeStr(2000);
+  data = JudgeStr(10000);
   if(data)
   {
     ensure = data[9];
@@ -616,7 +599,7 @@ uint8_t PS_ValidTempleteNum(uint16_t *ValidN)
   Sendcmd(0x1d);
   temp = 0x01 + 0x03 + 0x1d;
   SendCheck(temp);
-  data = JudgeStr(2000);
+  data = JudgeStr(10000);
   if(data)
   {
     ensure = data[9];
@@ -645,17 +628,20 @@ uint8_t PS_HandShake(uint32_t *PS_Addr)
   MYUSART_SendData(0X01);
   MYUSART_SendData(0X00);
   MYUSART_SendData(0X00);
-  my_delay_ms(200);
+  for (uint32_t i = 0; i < USART0_MAX_RECV_LEN; i++)//接收数据
+  {
+    while ((uart->LSR & 0x1) == 0);//等待直到rx接收到数据
+    USART0_RX_BUF[i]= (uint8_t)((uart->RBR)&0xff);
+    USART0_RX_STA=1;
+  }
+  // my_delay_ms(200);
   if(USART0_RX_STA & 0X8000) //接收到数据
   {
     if(//判断是不是模块返回的应答包
-      USART0_RX_BUF[0] == 0XEF
-      && USART0_RX_BUF[1] == 0X01
-      && USART0_RX_BUF[6] == 0X07
+      USART0_RX_BUF[0] == 0XEF&& USART0_RX_BUF[1] == 0X01 && USART0_RX_BUF[6] == 0X07
     )
     {
-      *PS_Addr = (USART0_RX_BUF[2] << 24) + (USART0_RX_BUF[3] << 16)
-                 + (USART0_RX_BUF[4] << 8) + (USART0_RX_BUF[5]);
+      *PS_Addr =( (USART0_RX_BUF[2] << 24) + (USART0_RX_BUF[3] << 16)  + (USART0_RX_BUF[4] << 8) + (USART0_RX_BUF[5]));
       USART0_RX_STA = 0;
       return 0;
     }
@@ -925,8 +911,8 @@ void press_FR(void)
   uint8_t ensure;
     OLED_CLS(); 
     OLED_ShowCN_STR(30,2,58,4);  //显示请按手指
-  // while(1)
-  // {
+  while(1)
+  {
     ensure = PS_GetImage();
     if(ensure == 0x00) //获取图像成功
     {
@@ -946,7 +932,7 @@ void press_FR(void)
         my_delay_ms(1500);
         my_delay_ms(1500);
           //退出指纹识别
-            // break;
+            break;
         }
         else
         {
@@ -956,12 +942,11 @@ void press_FR(void)
           my_delay_ms(1500);
         }
       }
-      else
-			{};
-		      OLED_CLS();  
+      else  ;
+		  OLED_CLS();  
       OLED_ShowCN_STR(30,2,58,4);  //显示请按手指
     }
-  // }
+  }
 }
 
 //删除单个指纹

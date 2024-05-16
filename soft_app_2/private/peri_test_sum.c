@@ -885,7 +885,7 @@ void Init_main(void)
   OLED_Init();                             /*  OLED屏初始化  */
   OLED_CLS();                             /*  OLED清屏初始化 */
   RC522_Init();                             /*  RC522卡初始化*/
-//   as608_init();                             /*  AS608指纹模块初始化*/
+  as608_init();                             /*  AS608指纹模块初始化*/
     // my_recv_buf_init();
 	// return 0;
 }

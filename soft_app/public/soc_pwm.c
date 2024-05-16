@@ -35,15 +35,16 @@ void pwm_set(int div_freq, int comp) {
 
 void pwm_steering_engine_init(void) {
     g_pwm->state = 0;
-    g_pwm->div_freq = 160000;
+    g_pwm->div_freq = 640000;//此处分频系数更改为640_000 原来为160_000
     /*
-		g_pwm->comp =  4000;// duty = 1/40 0 degree,
-		g_pwm->comp =  8000;// duty = 2/40 45 degree,
-		g_pwm->comp = 12000;// duty = 3/40 90 degree,
-		g_pwm->comp = 16000;// duty = 4/40 145 degree,
-		g_pwm->comp = 20000;// duty = 5/40 180 degree, actually, it turns back to 0 degrees.
+		g_pwm->comp =  4000;// duty = 1/40 0 degree, 16 000
+		g_pwm->comp =  8000;// duty = 2/40 45 degree,32 000
+		g_pwm->comp = 12000;// duty = 3/40 90 degree, 48 000
+		g_pwm->comp = 16000;// duty = 4/40 145 degree,64 000
+		g_pwm->comp = 20000;// duty = 5/40 180 degree, actually, it turns back to 0 degrees. 80 000
     */
-    g_pwm->comp = 4000;
+    // g_pwm->comp = 4000;     
+    g_pwm->comp = 16000;//时钟更改为32M后为了保持相同角度 要乘以4
     g_pwm->state = 1;
 }
 
@@ -54,7 +55,8 @@ void pwm_steering_engine_init(void) {
  * Return: None
  */
 void pwm_steering_engine_set(int angle) {
-    g_pwm->comp = 4000 + 800 * angle / 9;
+    // g_pwm->comp = 4000 + 800 * angle / 9;
+     g_pwm->comp = 16000 + 3200 * angle / 9;//时钟更改为32M后为了保持相同角度 要乘以4
 }
     
 
