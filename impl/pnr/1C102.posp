@@ -1,0 +1,48 @@
+//Copyright (C)2014-2023 Gowin Semiconductor Corporation.
+//All rights reserved.
+//File Title: Post-Place file
+//Tool Version: V1.9.9 (64-bit)
+//Part Number: GW5A-LV25MG121NES
+//Device: GW5A-25
+//Device Version: A
+//Created Time: Fri May 17 16:24:28 2024
+
+A_cpu/A_dram/ram_8k_inst/sp_inst_0 PLACE_BSRAM_R10[24]
+A_cpu/A_dram/ram_8k_inst/sp_inst_1 PLACE_BSRAM_R10[25]
+A_cpu/A_dram/ram_8k_inst/sp_inst_2 PLACE_BSRAM_R10[26]
+A_cpu/A_dram/ram_8k_inst/sp_inst_3 PLACE_BSRAM_R10[27]
+A_cpu/A_flash/flash_128k_inst/sp_inst_16 PLACE_BSRAM_R10[15]
+A_cpu/A_flash/flash_128k_inst/sp_inst_17 PLACE_BSRAM_R10[16]
+A_cpu/A_flash/flash_128k_inst/sp_inst_18 PLACE_BSRAM_R10[17]
+A_cpu/A_flash/flash_128k_inst/sp_inst_19 PLACE_BSRAM_R10[18]
+A_cpu/A_flash/flash_128k_inst/sp_inst_20 PLACE_BSRAM_R10[19]
+A_cpu/A_flash/flash_128k_inst/sp_inst_21 PLACE_BSRAM_R10[20]
+A_cpu/A_flash/flash_128k_inst/sp_inst_22 PLACE_BSRAM_R10[21]
+A_cpu/A_flash/flash_128k_inst/sp_inst_23 PLACE_BSRAM_R28[21]
+A_cpu/A_flash/flash_128k_inst/sp_inst_24 PLACE_BSRAM_R10[22]
+A_cpu/A_flash/flash_128k_inst/sp_inst_25 PLACE_BSRAM_R28[22]
+A_cpu/A_flash/flash_128k_inst/sp_inst_26 PLACE_BSRAM_R10[23]
+A_cpu/A_flash/flash_128k_inst/sp_inst_27 PLACE_BSRAM_R28[23]
+A_cpu/A_flash/flash_128k_inst/sp_inst_28 PLACE_BSRAM_R28[24]
+A_cpu/A_flash/flash_128k_inst/sp_inst_29 PLACE_BSRAM_R28[25]
+A_cpu/A_flash/flash_128k_inst/sp_inst_30 PLACE_BSRAM_R28[26]
+A_cpu/A_flash/flash_128k_inst/sp_inst_31 PLACE_BSRAM_R28[27]
+A_cpu/A_flash/flash_128k_inst/sp_inst_0 PLACE_BSRAM_R10[7]
+A_cpu/A_flash/flash_128k_inst/sp_inst_1 PLACE_BSRAM_R10[8]
+A_cpu/A_flash/flash_128k_inst/sp_inst_2 PLACE_BSRAM_R10[9]
+A_cpu/A_flash/flash_128k_inst/sp_inst_3 PLACE_BSRAM_R10[10]
+A_cpu/A_flash/flash_128k_inst/sp_inst_4 PLACE_BSRAM_R10[11]
+A_cpu/A_flash/flash_128k_inst/sp_inst_5 PLACE_BSRAM_R10[12]
+A_cpu/A_flash/flash_128k_inst/sp_inst_6 PLACE_BSRAM_R10[13]
+A_cpu/A_flash/flash_128k_inst/sp_inst_7 PLACE_BSRAM_R28[13]
+A_cpu/A_flash/flash_128k_inst/sp_inst_8 PLACE_BSRAM_R10[14]
+A_cpu/A_flash/flash_128k_inst/sp_inst_9 PLACE_BSRAM_R28[14]
+A_cpu/A_flash/flash_128k_inst/sp_inst_10 PLACE_BSRAM_R28[15]
+A_cpu/A_flash/flash_128k_inst/sp_inst_11 PLACE_BSRAM_R28[16]
+A_cpu/A_flash/flash_128k_inst/sp_inst_12 PLACE_BSRAM_R28[17]
+A_cpu/A_flash/flash_128k_inst/sp_inst_13 PLACE_BSRAM_R28[18]
+A_cpu/A_flash/flash_128k_inst/sp_inst_14 PLACE_BSRAM_R28[19]
+A_cpu/A_flash/flash_128k_inst/sp_inst_15 PLACE_BSRAM_R28[20]
+gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/mem_mem_0_0_s PLACE_BSRAM_R10[5]
+gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/mem_mem_0_1_s PLACE_BSRAM_R10[6]
+gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/mem_mem_0_2_s PLACE_BSRAM_R28[12]

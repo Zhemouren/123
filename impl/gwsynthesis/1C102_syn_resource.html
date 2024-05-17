@@ -1,0 +1,548 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Hierarchy Module Resource</title>
+<style type="text/css">
+body { font-family: Verdana, Arial, sans-serif; font-size: 14px; }
+div#main_wrapper{ width: 100%; }
+h1 {text-align: center; }
+h1 {margin-top: 36px; }
+table, th, td { border: 1px solid #aaa; }
+table { border-collapse:collapse; margin-top: 10px; margin-bottom: 20px; width: 100%; }
+th, td { align = "center"; padding: 5px 2px 5px 5px; }
+th { color: #fff; font-weight: bold; background-color: #0084ff; }
+table td.label { width: 20%; white-space: nowrap; min-width: 20px; background-color: #dee8f4; }
+</style>
+</head>
+<body>
+<div id="main_wrapper">
+<div id="content">
+<h1>Hierarchy Module Resource</h1>
+<table>
+<tr>
+<th class="label">MODULE NAME</th>
+<th class="label">REG NUMBER</th>
+<th class="label">ALU NUMBER</th>
+<th class="label">LUT NUMBER</th>
+<th class="label">DSP NUMBER</th>
+<th class="label">BSRAM NUMBER</th>
+<th class="label">SSRAM NUMBER</th>
+</tr>
+<tr>
+<td class="label">godson_mcu_top (F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_top.v)</td>
+<td align = "center">22</td>
+<td align = "center">21</td>
+<td align = "center">3</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp|--gw_gao_inst_0
+ (F:/GOWIN/Project/loongxin2/impl/gwsynthesis/RTL_GAO/gw_gao_top.v)</td>
+<td align = "center">303</td>
+<td align = "center">10</td>
+<td align = "center">368</td>
+<td align = "center">-</td>
+<td align = "center">3</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp|--pll
+ (F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_top.v)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp|--A_cpu
+ (F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_top.v)</td>
+<td align = "center">3112</td>
+<td align = "center">644</td>
+<td align = "center">11820</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--A_flash
+ (F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--flash_128k_inst
+ (F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v)</td>
+<td align = "center">4</td>
+<td align = "center">-</td>
+<td align = "center">497</td>
+<td align = "center">-</td>
+<td align = "center">32</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--A_dram
+ (F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--ram_8k_inst
+ (F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v)</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">32</td>
+<td align = "center">-</td>
+<td align = "center">4</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--A_cpu_mux
+ (F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v)</td>
+<td align = "center">2</td>
+<td align = "center">-</td>
+<td align = "center">99</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--wr_fifo
+ (F:/GOWIN/Project/loongxin2/src/hw/amba/axi_mux.v)</td>
+<td align = "center">8</td>
+<td align = "center">-</td>
+<td align = "center">12</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">1</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--rd_fifo
+ (F:/GOWIN/Project/loongxin2/src/hw/amba/axi_mux.v)</td>
+<td align = "center">8</td>
+<td align = "center">-</td>
+<td align = "center">14</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">1</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--A_axi2apb
+ (F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v)</td>
+<td align = "center">107</td>
+<td align = "center">-</td>
+<td align = "center">127</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--A_apb_mux_cpu
+ (F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">229</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--gpio1
+ (F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v)</td>
+<td align = "center">160</td>
+<td align = "center">-</td>
+<td align = "center">129</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--pad_GPIO01
+ (F:/GOWIN/Project/loongxin2/src/gpio.v)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--pad_GPIO13
+ (F:/GOWIN/Project/loongxin2/src/gpio.v)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--pad_GPIO14
+ (F:/GOWIN/Project/loongxin2/src/gpio.v)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--pad_GPIO15
+ (F:/GOWIN/Project/loongxin2/src/gpio.v)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--pad_GPIO16
+ (F:/GOWIN/Project/loongxin2/src/gpio.v)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--pad_GPIO17
+ (F:/GOWIN/Project/loongxin2/src/gpio.v)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--pad_GPIO18
+ (F:/GOWIN/Project/loongxin2/src/gpio.v)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--pad_GPIO19
+ (F:/GOWIN/Project/loongxin2/src/gpio.v)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--pad_GPIO20
+ (F:/GOWIN/Project/loongxin2/src/gpio.v)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--pad_GPIO34
+ (F:/GOWIN/Project/loongxin2/src/gpio.v)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--pad_GPIO35
+ (F:/GOWIN/Project/loongxin2/src/gpio.v)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--pad_GPIO36
+ (F:/GOWIN/Project/loongxin2/src/gpio.v)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--pad_GPIO37
+ (F:/GOWIN/Project/loongxin2/src/gpio.v)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--pad_GPIO38
+ (F:/GOWIN/Project/loongxin2/src/gpio.v)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--pad_GPIO39
+ (F:/GOWIN/Project/loongxin2/src/gpio.v)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--pad_GPIO40
+ (F:/GOWIN/Project/loongxin2/src/gpio.v)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--pwm1
+ (F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v)</td>
+<td align = "center">161</td>
+<td align = "center">93</td>
+<td align = "center">238</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--hept1
+ (F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v)</td>
+<td align = "center">132</td>
+<td align = "center">64</td>
+<td align = "center">196</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--confreg1
+ (F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v)</td>
+<td align = "center">24</td>
+<td align = "center">-</td>
+<td align = "center">17</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--int0
+ (F:/GOWIN/Project/loongxin2/src/confreg.v)</td>
+<td align = "center">2</td>
+<td align = "center">-</td>
+<td align = "center">6</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--int1
+ (F:/GOWIN/Project/loongxin2/src/confreg.v)</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--int2
+ (F:/GOWIN/Project/loongxin2/src/confreg.v)</td>
+<td align = "center">2</td>
+<td align = "center">-</td>
+<td align = "center">3</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--int3
+ (F:/GOWIN/Project/loongxin2/src/confreg.v)</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--int4
+ (F:/GOWIN/Project/loongxin2/src/confreg.v)</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--int5
+ (F:/GOWIN/Project/loongxin2/src/confreg.v)</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--int6
+ (F:/GOWIN/Project/loongxin2/src/confreg.v)</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--int7
+ (F:/GOWIN/Project/loongxin2/src/confreg.v)</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--uart1
+ (F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v)</td>
+<td align = "center">48</td>
+<td align = "center">-</td>
+<td align = "center">20</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--uart_rx_i
+ (F:/GOWIN/Project/loongxin2/src/uart_top.v)</td>
+<td align = "center">36</td>
+<td align = "center">16</td>
+<td align = "center">64</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--uart_tx_i
+ (F:/GOWIN/Project/loongxin2/src/uart_top.v)</td>
+<td align = "center">32</td>
+<td align = "center">16</td>
+<td align = "center">59</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--uart_rx_fifo_i
+ (F:/GOWIN/Project/loongxin2/src/uart_top.v)</td>
+<td align = "center">30</td>
+<td align = "center">4</td>
+<td align = "center">57</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">3</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--uart_tx_fifo_i
+ (F:/GOWIN/Project/loongxin2/src/uart_top.v)</td>
+<td align = "center">30</td>
+<td align = "center">4</td>
+<td align = "center">53</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">2</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--uart_interrupt_i
+ (F:/GOWIN/Project/loongxin2/src/uart_top.v)</td>
+<td align = "center">2</td>
+<td align = "center">-</td>
+<td align = "center">15</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--i2c1
+ (F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v)</td>
+<td align = "center">84</td>
+<td align = "center">23</td>
+<td align = "center">59</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--pad_I2C_SCL
+ (F:/GOWIN/Project/loongxin2/src/i2c_top.v)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">2</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--pad_I2C_SDA
+ (F:/GOWIN/Project/loongxin2/src/i2c_top.v)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">2</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--master_byte_controller
+ (F:/GOWIN/Project/loongxin2/src/i2c_top.v)</td>
+<td align = "center">20</td>
+<td align = "center">-</td>
+<td align = "center">47</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--bit_controller
+ (F:/GOWIN/Project/loongxin2/src/i2c_master_byte_ctrl.v)</td>
+<td align = "center">49</td>
+<td align = "center">-</td>
+<td align = "center">122</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--i_sda_i_sync
+ (F:/GOWIN/Project/loongxin2/src/i2c_top.v)</td>
+<td align = "center">2</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--i_scl_i_sync
+ (F:/GOWIN/Project/loongxin2/src/i2c_top.v)</td>
+<td align = "center">2</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--spi1
+ (F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v)</td>
+<td align = "center">72</td>
+<td align = "center">-</td>
+<td align = "center">97</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--rfifo
+ (F:/GOWIN/Project/loongxin2/src/spi_top.v)</td>
+<td align = "center">5</td>
+<td align = "center">-</td>
+<td align = "center">8</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">2</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--wfifo
+ (F:/GOWIN/Project/loongxin2/src/spi_top.v)</td>
+<td align = "center">5</td>
+<td align = "center">-</td>
+<td align = "center">7</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">2</td>
+</tr>
+</table>
+</div><!-- content -->
+</div><!-- main_wrapper -->
+</body>
+</html>

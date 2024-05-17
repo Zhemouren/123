@@ -1,0 +1,28 @@
+Reading netlist file: "F:\GOWIN\Project\loongxin2\impl\gwsynthesis\1C102.vg"
+Parsing netlist file "F:\GOWIN\Project\loongxin2\impl\gwsynthesis\1C102.vg" completed
+Processing netlist completed
+Reading constraint file: "F:\GOWIN\Project\loongxin2\src\hw\constraints\102.cst"
+Physical Constraint parsed completed
+Running placement......
+[10%] Placement Phase 0 completed
+[20%] Placement Phase 1 completed
+[30%] Placement Phase 2 completed
+[50%] Placement Phase 3 completed
+Running routing......
+[60%] Routing Phase 0 completed
+[70%] Routing Phase 1 completed
+[80%] Routing Phase 2 completed
+[90%] Routing Phase 3 completed
+Running timing analysis......
+[95%] Timing analysis completed
+Placement and routing completed
+Bitstream generation in progress......
+Bitstream generation completed
+Generate file "F:\GOWIN\Project\loongxin2\impl\pnr\1C102.pin.html" completed
+Generate file "F:\GOWIN\Project\loongxin2\impl\pnr\1C102.rpt.html" completed
+Generate file "F:\GOWIN\Project\loongxin2\impl\pnr\1C102.rpt.txt" completed
+Generate file "F:\GOWIN\Project\loongxin2\impl\pnr\1C102.vo" completed
+Generate file "F:\GOWIN\Project\loongxin2\impl\pnr\1C102.tr.html" completed
+Generate file "F:\GOWIN\Project\loongxin2\impl\pnr\1C102.posp" completed
+Fri May 17 16:24:28 2024
+

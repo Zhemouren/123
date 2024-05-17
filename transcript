@@ -1,0 +1,501 @@
+# Reading D:/modelsim/tcl/vsim/pref.tcl
+# OpenFile F:/GOWIN/Project/loongxin2/loongxin.mpf
+# Loading project loongxin
+# Compile of baudgen.v was successful.
+# Compile of confreg.v was successful.
+# Compile of gpio.v was successful.
+# Compile of hpet.v was successful.
+# Compile of i2c_master_bit_ctrl.v was successful.
+# Compile of i2c_master_byte_ctrl.v was successful.
+# Compile of i2c_slave_bit_ctrl.v was successful.
+# Compile of i2c_slave_byte_ctrl.v was successful.
+# Compile of i2c_top.v was successful.
+# Compile of pwm.v was successful.
+# Compile of simple_spi_top.v was successful.
+# Compile of spi_fifo4.v was successful.
+# Compile of spi_top.v was successful.
+# Compile of uart_rfifo.v was successful.
+# Compile of uart_rx.v was successful.
+# Compile of uart_tfifo.v was successful.
+# Compile of uart_top.v was successful.
+# Compile of uart_tx.v was successful.
+# Compile of apb_mux9.v was successful.
+# Compile of axi_mux.v was successful.
+# Compile of axi2apb.v was successful.
+# Compile of blk_mem_gen_1.v was successful.
+# Compile of la132_top_sim.v was successful.
+# Compile of config.v was successful.
+# Compile of godson_mcu_cpu.v was successful.
+# Compile of godson_mcu_top.v was successful.
+# Compile of godson_rcg_module.v was successful.
+# Compile of io_tools.v was successful.
+# Compile of gowin_pll.v was successful.
+# Compile of tb.v was successful.
+# Compile of prim_sim.v was successful.
+# Compile of iic_dri.v was successful.
+# Compile of oled_top.v was successful.
+# Compile of gowin_sp.v was successful.
+# 34 compiles, 0 failed with no errors.
+vsim -gui work.test
+# vsim -gui work.test 
+# Start time: 14:01:38 on May 07,2024
+# //  ModelSim DE-64 10.6c Jul 26 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim DE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.test
+# Loading work.GSR
+# Loading work.godson_mcu_top
+# Loading work.Gowin_PLL
+# Loading work.PLLA
+# Loading work.godson_mcu_cpu
+# Loading work.Flash_128k
+# Loading work.Gowin_SP
+# Loading work.LUT4
+# Loading work.MUX16
+# Loading work.MUX8
+# Loading work.MUX4
+# Loading work.MUX2
+# Loading work.SP
+# Loading work.DFFRE
+# Loading work.Dram_8k
+# Loading work.blk_mem_gen_1
+# Loading work.la132_top
+# Loading work.VCC
+# Loading work.GND
+# Loading work.OBUF
+# Loading work.LUT2
+# Loading work.LUT3
+# Loading work.DFFSE
+# Loading work.LUT1
+# Loading work.ALU
+# Loading work.MUX2_LUT5
+# Loading work.MUX2_LUT6
+# Loading work.MUX2_LUT7
+# Loading work.MUX2_LUT8
+# Loading work.INV
+# Loading work.DFFCE
+# Loading work.DFFPE
+# Loading work.axi_slave_mux_cpu
+# Loading work.nb_sync_fifo_mux
+# Loading work.axi2apb_bridge
+# Loading work.apb_mux9
+# Loading work.GPIO_TOP
+# Loading work.GPIO_IOBUF
+# Loading work.PWM_TOP
+# Loading work.UART_TOP
+# Loading work.BAUDGEN
+# Loading work.UART_TFIFO
+# Loading work.UART_RFIFO
+# Loading work.UART_RX
+# Loading work.UART_TX
+# Loading work.I2C_TOP
+# Loading work.I2C_IOBUF
+# Loading work.i2c_master_byte_ctrl
+# Loading work.i2c_master_bit_ctrl
+# Loading work.i2c_sync_module
+# ** Warning: (vsim-3017) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Too few port connections. Expected 37, found 24.
+#    Time: 0 ps  Iteration: 0  Instance: /test/godson_mcu_top1 File: F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_top.v
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'LJTAG_TRST'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'LJTAG_TMS'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'LJTAG_TDO'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'LJTAG_TDI'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'LJTAG_TCK'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'SPI_CLK'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'SPI_MISO'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'SPI_MOSI'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'SPI_CSN1'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'SPI_CSN2'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'SPI_CSN3'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'RsRx'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'RsTx'.
+# Loading work.mux2
+# ** Warning: (vsim-3017) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Too few port connections. Expected 119, found 102.
+#    Time: 0 ps  Iteration: 0  Instance: /test/godson_mcu_top1/A_cpu/A_la132 File: F:/GOWIN/Project/loongxin2/src/hw/la132_top_pack/la132_top_sim.v
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'dcc_ram_tagv_resp_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'dcc_ram_data_resp_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'dcc_ram_lrud_resp_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'icc_ram_tagv_resp_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'icc_ram_data_resp_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'icc_ram_lrud_resp_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'can_high_freq'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'cpu_debug_mode'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'dcc_ram_tagv_req_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'dcc_ram_data_req_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'dcc_ram_lrud_req_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'icc_ram_tagv_req_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'icc_ram_data_req_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'icc_ram_lrud_req_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'wb_rf_dest'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'wb_rf_wen'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'wb_rf_value'.
+# ** Warning: (vsim-3015) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(810): [PCDPC] - Port size (3) does not match connection size (32) for port 'apb_paddr'. The port definition is at: F:/GOWIN/Project/loongxin2/src/i2c_top.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /test/godson_mcu_top1/A_cpu/i2c1 File: F:/GOWIN/Project/loongxin2/src/i2c_top.v
+# ** Warning: (vsim-3015) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(810): [PCDPC] - Port size (8) does not match connection size (32) for port 'apb_pwdata'. The port definition is at: F:/GOWIN/Project/loongxin2/src/i2c_top.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /test/godson_mcu_top1/A_cpu/i2c1 File: F:/GOWIN/Project/loongxin2/src/i2c_top.v
+# ** Warning: (vsim-3015) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(810): [PCDPC] - Port size (8) does not match connection size (32) for port 'apb_prdata'. The port definition is at: F:/GOWIN/Project/loongxin2/src/i2c_top.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /test/godson_mcu_top1/A_cpu/i2c1 File: F:/GOWIN/Project/loongxin2/src/i2c_top.v
+add wave -position insertpoint  \
+sim:/test/godson_mcu_top1/A_cpu/inst_sram_en \
+sim:/test/godson_mcu_top1/A_cpu/inst_sram_strb \
+sim:/test/godson_mcu_top1/A_cpu/inst_sram_wdata \
+sim:/test/godson_mcu_top1/A_cpu/inst_sram_rdata \
+sim:/test/godson_mcu_top1/A_cpu/inst_sram_wr \
+sim:/test/godson_mcu_top1/A_cpu/inst_sram_fetch \
+sim:/test/godson_mcu_top1/A_cpu/inst_sram_addr \
+sim:/test/godson_mcu_top1/A_cpu/inst_sram_rrdy \
+sim:/test/godson_mcu_top1/A_cpu/inst_sram_ack \
+sim:/test/godson_mcu_top1/A_cpu/inst_sram_resp \
+sim:/test/godson_mcu_top1/A_cpu/inst_ram_clk \
+sim:/test/godson_mcu_top1/A_cpu/data_sram_en \
+sim:/test/godson_mcu_top1/A_cpu/data_sram_strb \
+sim:/test/godson_mcu_top1/A_cpu/data_sram_wdata \
+sim:/test/godson_mcu_top1/A_cpu/data_sram_rdata \
+sim:/test/godson_mcu_top1/A_cpu/data_sram_wr \
+sim:/test/godson_mcu_top1/A_cpu/data_sram_fetch \
+sim:/test/godson_mcu_top1/A_cpu/data_sram_addr \
+sim:/test/godson_mcu_top1/A_cpu/data_sram_ack \
+sim:/test/godson_mcu_top1/A_cpu/data_sram_rrdy \
+sim:/test/godson_mcu_top1/A_cpu/data_sram_resp \
+sim:/test/godson_mcu_top1/A_cpu/data_ram_clk
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Administrator  Hostname: CH-202402231522  ProcessID: 16484
+#           Attempting to use alternate WLF file "./wlfts5h4r6".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfts5h4r6
+add wave -position insertpoint  \
+sim:/test/godson_mcu_top1/A_cpu/interrupt \
+sim:/test/godson_mcu_top1/A_cpu/fetch_pc \
+sim:/test/godson_mcu_top1/A_cpu/sleeping_o \
+sim:/test/godson_mcu_top1/A_cpu/debug_pc
+restart
+# ** Warning: (vsim-3017) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Too few port connections. Expected 37, found 24.
+#    Time: 0 ps  Iteration: 0  Instance: /test/godson_mcu_top1 File: F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_top.v
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'LJTAG_TRST'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'LJTAG_TMS'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'LJTAG_TDO'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'LJTAG_TDI'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'LJTAG_TCK'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'SPI_CLK'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'SPI_MISO'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'SPI_MOSI'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'SPI_CSN1'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'SPI_CSN2'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'SPI_CSN3'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'RsRx'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'RsTx'.
+# ** Warning: (vsim-3017) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Too few port connections. Expected 119, found 102.
+#    Time: 0 ps  Iteration: 0  Instance: /test/godson_mcu_top1/A_cpu/A_la132 File: F:/GOWIN/Project/loongxin2/src/hw/la132_top_pack/la132_top_sim.v
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'dcc_ram_tagv_resp_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'dcc_ram_data_resp_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'dcc_ram_lrud_resp_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'icc_ram_tagv_resp_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'icc_ram_data_resp_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'icc_ram_lrud_resp_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'can_high_freq'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'cpu_debug_mode'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'dcc_ram_tagv_req_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'dcc_ram_data_req_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'dcc_ram_lrud_req_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'icc_ram_tagv_req_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'icc_ram_data_req_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'icc_ram_lrud_req_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'wb_rf_dest'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'wb_rf_wen'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'wb_rf_value'.
+# ** Warning: (vsim-3015) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(810): [PCDPC] - Port size (3) does not match connection size (32) for port 'apb_paddr'. The port definition is at: F:/GOWIN/Project/loongxin2/src/i2c_top.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /test/godson_mcu_top1/A_cpu/i2c1 File: F:/GOWIN/Project/loongxin2/src/i2c_top.v
+# ** Warning: (vsim-3015) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(810): [PCDPC] - Port size (8) does not match connection size (32) for port 'apb_pwdata'. The port definition is at: F:/GOWIN/Project/loongxin2/src/i2c_top.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /test/godson_mcu_top1/A_cpu/i2c1 File: F:/GOWIN/Project/loongxin2/src/i2c_top.v
+# ** Warning: (vsim-3015) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(810): [PCDPC] - Port size (8) does not match connection size (32) for port 'apb_prdata'. The port definition is at: F:/GOWIN/Project/loongxin2/src/i2c_top.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /test/godson_mcu_top1/A_cpu/i2c1 File: F:/GOWIN/Project/loongxin2/src/i2c_top.v
+run -all
+# ** Note: $finish    : F:/GOWIN/Project/loongxin2/src/tb/tb.v(73)
+#    Time: 10 us  Iteration: 0  Instance: /test
+# 1
+# Break in Module test at F:/GOWIN/Project/loongxin2/src/tb/tb.v line 73
+run continue
+# Invalid time value: continue
+run -continue
+# Compile of baudgen.v was successful.
+# Compile of confreg.v was successful.
+# Compile of gpio.v was successful.
+# Compile of hpet.v was successful.
+# Compile of i2c_master_bit_ctrl.v was successful.
+# Compile of i2c_master_byte_ctrl.v was successful.
+# Compile of i2c_slave_bit_ctrl.v was successful.
+# Compile of i2c_slave_byte_ctrl.v was successful.
+# Compile of i2c_top.v was successful.
+# Compile of pwm.v was successful.
+# Compile of simple_spi_top.v was successful.
+# Compile of spi_fifo4.v was successful.
+# Compile of spi_top.v was successful.
+# Compile of uart_rfifo.v was successful.
+# Compile of uart_rx.v was successful.
+# Compile of uart_tfifo.v was successful.
+# Compile of uart_top.v was successful.
+# Compile of uart_tx.v was successful.
+# Compile of apb_mux9.v was successful.
+# Compile of axi_mux.v was successful.
+# Compile of axi2apb.v was successful.
+# Compile of blk_mem_gen_1.v was successful.
+# Compile of la132_top_sim.v was successful.
+# Compile of config.v was successful.
+# Compile of godson_mcu_cpu.v was successful.
+# Compile of godson_mcu_top.v was successful.
+# Compile of godson_rcg_module.v was successful.
+# Compile of io_tools.v was successful.
+# Compile of gowin_pll.v was successful.
+# Compile of tb.v was successful.
+# Compile of prim_sim.v was successful.
+# Compile of iic_dri.v was successful.
+# Compile of oled_top.v was successful.
+# Compile of gowin_sp.v was successful.
+# 34 compiles, 0 failed with no errors.
+restart
+# Loading work.test
+# Loading work.GSR
+# Loading work.godson_mcu_top
+# Loading work.Gowin_PLL
+# Loading work.PLLA
+# Loading work.godson_mcu_cpu
+# Loading work.Flash_128k
+# Loading work.Gowin_SP
+# Loading work.LUT4
+# Loading work.MUX16
+# Loading work.MUX8
+# Loading work.MUX4
+# Loading work.MUX2
+# Loading work.SP
+# Loading work.DFFRE
+# Loading work.Dram_8k
+# Loading work.blk_mem_gen_1
+# Loading work.la132_top
+# Loading work.VCC
+# Loading work.GND
+# Loading work.OBUF
+# Loading work.LUT2
+# Loading work.LUT3
+# Loading work.DFFSE
+# Loading work.LUT1
+# Loading work.ALU
+# Loading work.MUX2_LUT5
+# Loading work.MUX2_LUT6
+# Loading work.MUX2_LUT7
+# Loading work.MUX2_LUT8
+# Loading work.INV
+# Loading work.DFFCE
+# Loading work.DFFPE
+# Loading work.axi_slave_mux_cpu
+# Loading work.nb_sync_fifo_mux
+# Loading work.axi2apb_bridge
+# Loading work.apb_mux9
+# Loading work.GPIO_TOP
+# Loading work.GPIO_IOBUF
+# Loading work.PWM_TOP
+# Loading work.UART_TOP
+# Loading work.BAUDGEN
+# Loading work.UART_TFIFO
+# Loading work.UART_RFIFO
+# Loading work.UART_RX
+# Loading work.UART_TX
+# Loading work.I2C_TOP
+# Loading work.I2C_IOBUF
+# Loading work.i2c_master_byte_ctrl
+# Loading work.i2c_master_bit_ctrl
+# Loading work.i2c_sync_module
+# ** Warning: (vsim-3017) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Too few port connections. Expected 37, found 24.
+#    Time: 0 ps  Iteration: 0  Instance: /test/godson_mcu_top1 File: F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_top.v
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'LJTAG_TRST'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'LJTAG_TMS'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'LJTAG_TDO'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'LJTAG_TDI'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'LJTAG_TCK'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'SPI_CLK'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'SPI_MISO'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'SPI_MOSI'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'SPI_CSN1'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'SPI_CSN2'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'SPI_CSN3'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'RsRx'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'RsTx'.
+# Loading work.mux2
+# ** Warning: (vsim-3017) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Too few port connections. Expected 119, found 102.
+#    Time: 0 ps  Iteration: 0  Instance: /test/godson_mcu_top1/A_cpu/A_la132 File: F:/GOWIN/Project/loongxin2/src/hw/la132_top_pack/la132_top_sim.v
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'dcc_ram_tagv_resp_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'dcc_ram_data_resp_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'dcc_ram_lrud_resp_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'icc_ram_tagv_resp_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'icc_ram_data_resp_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'icc_ram_lrud_resp_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'can_high_freq'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'cpu_debug_mode'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'dcc_ram_tagv_req_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'dcc_ram_data_req_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'dcc_ram_lrud_req_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'icc_ram_tagv_req_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'icc_ram_data_req_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'icc_ram_lrud_req_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'wb_rf_dest'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'wb_rf_wen'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'wb_rf_value'.
+# ** Warning: (vsim-3015) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(810): [PCDPC] - Port size (3) does not match connection size (32) for port 'apb_paddr'. The port definition is at: F:/GOWIN/Project/loongxin2/src/i2c_top.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /test/godson_mcu_top1/A_cpu/i2c1 File: F:/GOWIN/Project/loongxin2/src/i2c_top.v
+# ** Warning: (vsim-3015) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(810): [PCDPC] - Port size (8) does not match connection size (32) for port 'apb_pwdata'. The port definition is at: F:/GOWIN/Project/loongxin2/src/i2c_top.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /test/godson_mcu_top1/A_cpu/i2c1 File: F:/GOWIN/Project/loongxin2/src/i2c_top.v
+# ** Warning: (vsim-3015) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(810): [PCDPC] - Port size (8) does not match connection size (32) for port 'apb_prdata'. The port definition is at: F:/GOWIN/Project/loongxin2/src/i2c_top.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /test/godson_mcu_top1/A_cpu/i2c1 File: F:/GOWIN/Project/loongxin2/src/i2c_top.v
+run -all
+# ** Note: $finish    : F:/GOWIN/Project/loongxin2/src/tb/tb.v(73)
+#    Time: 100 us  Iteration: 0  Instance: /test
+# 1
+# Break in Module test at F:/GOWIN/Project/loongxin2/src/tb/tb.v line 73
+run -contimue
+# Unknown option: contimue
+# ** Error: (vsim-4005) Invalid argument '-contimue'.
+# Usage: run [<timesteps> [<time_units>]] | -all | -continue | -next | -step | -over | -out | -init | -final
+run -continue
+add wave -position insertpoint  \
+sim:/test/godson_mcu_top1/A_cpu/reset
+run -all
+restart
+# ** Warning: (vsim-3017) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Too few port connections. Expected 37, found 24.
+#    Time: 0 ps  Iteration: 0  Instance: /test/godson_mcu_top1 File: F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_top.v
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'LJTAG_TRST'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'LJTAG_TMS'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'LJTAG_TDO'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'LJTAG_TDI'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'LJTAG_TCK'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'SPI_CLK'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'SPI_MISO'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'SPI_MOSI'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'SPI_CSN1'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'SPI_CSN2'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'SPI_CSN3'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'RsRx'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'RsTx'.
+# ** Warning: (vsim-3017) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Too few port connections. Expected 119, found 102.
+#    Time: 0 ps  Iteration: 0  Instance: /test/godson_mcu_top1/A_cpu/A_la132 File: F:/GOWIN/Project/loongxin2/src/hw/la132_top_pack/la132_top_sim.v
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'dcc_ram_tagv_resp_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'dcc_ram_data_resp_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'dcc_ram_lrud_resp_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'icc_ram_tagv_resp_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'icc_ram_data_resp_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'icc_ram_lrud_resp_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'can_high_freq'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'cpu_debug_mode'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'dcc_ram_tagv_req_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'dcc_ram_data_req_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'dcc_ram_lrud_req_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'icc_ram_tagv_req_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'icc_ram_data_req_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'icc_ram_lrud_req_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'wb_rf_dest'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'wb_rf_wen'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'wb_rf_value'.
+# ** Warning: (vsim-3015) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(810): [PCDPC] - Port size (3) does not match connection size (32) for port 'apb_paddr'. The port definition is at: F:/GOWIN/Project/loongxin2/src/i2c_top.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /test/godson_mcu_top1/A_cpu/i2c1 File: F:/GOWIN/Project/loongxin2/src/i2c_top.v
+# ** Warning: (vsim-3015) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(810): [PCDPC] - Port size (8) does not match connection size (32) for port 'apb_pwdata'. The port definition is at: F:/GOWIN/Project/loongxin2/src/i2c_top.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /test/godson_mcu_top1/A_cpu/i2c1 File: F:/GOWIN/Project/loongxin2/src/i2c_top.v
+# ** Warning: (vsim-3015) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(810): [PCDPC] - Port size (8) does not match connection size (32) for port 'apb_prdata'. The port definition is at: F:/GOWIN/Project/loongxin2/src/i2c_top.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /test/godson_mcu_top1/A_cpu/i2c1 File: F:/GOWIN/Project/loongxin2/src/i2c_top.v
+run 1ms
+# ** Note: $finish    : F:/GOWIN/Project/loongxin2/src/tb/tb.v(73)
+#    Time: 100 us  Iteration: 0  Instance: /test
+# 1
+# Break in Module test at F:/GOWIN/Project/loongxin2/src/tb/tb.v line 73
+run 10s
+# Invalid time value: 10s
+run 100ms
+add wave -position insertpoint  \
+sim:/test/godson_mcu_top1/A_cpu/A_flash/NB \
+sim:/test/godson_mcu_top1/A_cpu/A_flash/NA \
+sim:/test/godson_mcu_top1/A_cpu/A_flash/NW \
+sim:/test/godson_mcu_top1/A_cpu/A_flash/DO \
+sim:/test/godson_mcu_top1/A_cpu/A_flash/DI \
+sim:/test/godson_mcu_top1/A_cpu/A_flash/STRB \
+sim:/test/godson_mcu_top1/A_cpu/A_flash/AD \
+sim:/test/godson_mcu_top1/A_cpu/A_flash/EN \
+sim:/test/godson_mcu_top1/A_cpu/A_flash/R_WB \
+sim:/test/godson_mcu_top1/A_cpu/A_flash/CLKin \
+sim:/test/godson_mcu_top1/A_cpu/A_flash/reset
+add wave -position insertpoint  \
+sim:/test/godson_mcu_top1/A_cpu/A_la132/bid \
+sim:/test/godson_mcu_top1/A_cpu/A_la132/bresp \
+sim:/test/godson_mcu_top1/A_cpu/A_la132/bvalid \
+sim:/test/godson_mcu_top1/A_cpu/A_la132/inst_sram_rdata \
+sim:/test/godson_mcu_top1/A_cpu/A_la132/data_sram_rdata \
+sim:/test/godson_mcu_top1/A_cpu/A_la132/inst_sram_ack \
+sim:/test/godson_mcu_top1/A_cpu/A_la132/inst_sram_rrdy \
+sim:/test/godson_mcu_top1/A_cpu/A_la132/inst_sram_resp \
+sim:/test/godson_mcu_top1/A_cpu/A_la132/test_mode \
+sim:/test/godson_mcu_top1/A_cpu/A_la132/sleeping \
+sim:/test/godson_mcu_top1/A_cpu/A_la132/inst_sram_en \
+sim:/test/godson_mcu_top1/A_cpu/A_la132/inst_sram_strb \
+sim:/test/godson_mcu_top1/A_cpu/A_la132/inst_sram_wr \
+sim:/test/godson_mcu_top1/A_cpu/A_la132/inst_sram_fetch \
+sim:/test/godson_mcu_top1/A_cpu/A_la132/inst_sram_addr \
+sim:/test/godson_mcu_top1/A_cpu/A_la132/inst_sram_wdata
+run -100ms
+# Unknown option: 100ms
+# ** Error: (vsim-4005) Invalid argument '-100ms'.
+# Usage: run [<timesteps> [<time_units>]] | -all | -continue | -next | -step | -over | -out | -init | -final
+run 100ms
+restart
+# ** Warning: (vsim-3017) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Too few port connections. Expected 37, found 24.
+#    Time: 0 ps  Iteration: 0  Instance: /test/godson_mcu_top1 File: F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_top.v
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'LJTAG_TRST'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'LJTAG_TMS'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'LJTAG_TDO'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'LJTAG_TDI'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'LJTAG_TCK'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'SPI_CLK'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'SPI_MISO'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'SPI_MOSI'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'SPI_CSN1'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'SPI_CSN2'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'SPI_CSN3'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'RsRx'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/tb/tb.v(41): [TFMPC] - Missing connection for port 'RsTx'.
+# ** Warning: (vsim-3017) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Too few port connections. Expected 119, found 102.
+#    Time: 0 ps  Iteration: 0  Instance: /test/godson_mcu_top1/A_cpu/A_la132 File: F:/GOWIN/Project/loongxin2/src/hw/la132_top_pack/la132_top_sim.v
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'dcc_ram_tagv_resp_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'dcc_ram_data_resp_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'dcc_ram_lrud_resp_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'icc_ram_tagv_resp_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'icc_ram_data_resp_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'icc_ram_lrud_resp_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'can_high_freq'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'cpu_debug_mode'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'dcc_ram_tagv_req_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'dcc_ram_data_req_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'dcc_ram_lrud_req_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'icc_ram_tagv_req_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'icc_ram_data_req_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'icc_ram_lrud_req_bus'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'wb_rf_dest'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'wb_rf_wen'.
+# ** Warning: (vsim-3722) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(319): [TFMPC] - Missing connection for port 'wb_rf_value'.
+# ** Warning: (vsim-3015) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(810): [PCDPC] - Port size (3) does not match connection size (32) for port 'apb_paddr'. The port definition is at: F:/GOWIN/Project/loongxin2/src/i2c_top.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /test/godson_mcu_top1/A_cpu/i2c1 File: F:/GOWIN/Project/loongxin2/src/i2c_top.v
+# ** Warning: (vsim-3015) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(810): [PCDPC] - Port size (8) does not match connection size (32) for port 'apb_pwdata'. The port definition is at: F:/GOWIN/Project/loongxin2/src/i2c_top.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /test/godson_mcu_top1/A_cpu/i2c1 File: F:/GOWIN/Project/loongxin2/src/i2c_top.v
+# ** Warning: (vsim-3015) F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v(810): [PCDPC] - Port size (8) does not match connection size (32) for port 'apb_prdata'. The port definition is at: F:/GOWIN/Project/loongxin2/src/i2c_top.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /test/godson_mcu_top1/A_cpu/i2c1 File: F:/GOWIN/Project/loongxin2/src/i2c_top.v
+run -all
+# ** Note: $finish    : F:/GOWIN/Project/loongxin2/src/tb/tb.v(73)
+#    Time: 100 us  Iteration: 0  Instance: /test
+# 1
+# Break in Module test at F:/GOWIN/Project/loongxin2/src/tb/tb.v line 73
+run -all
+# End time: 17:01:19 on May 07,2024, Elapsed time: 2:59:41
+# Errors: 4, Warnings: 0

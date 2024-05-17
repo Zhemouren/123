@@ -1,0 +1,17 @@
+-d F:\GOWIN\Project\loongxin2\impl\gwsynthesis\1C102.vg
+-p GW5A-25A-MBGA121N-1
+-pn GW5A-LV25MG121NES
+-cst F:\GOWIN\Project\loongxin2\src\hw\constraints\102.cst
+-cfg F:\GOWIN\Project\loongxin2\impl\pnr\device.cfg
+-sdc F:\GOWIN\Project\loongxin2\src\1C102.sdc
+-gao_crc 0001101000111000
+-bit
+-tr
+-ph
+-posp
+-o
+-timing
+-cst_error
+-correct_hold 1
+-route_maxfan 23
+-rtl_gao

@@ -1,0 +1,1544 @@
+[
+ {
+  "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_mcu_top.v",
+  "InstLine" : 2,
+  "InstName" : "godson_mcu_top",
+  "Mode" : 1,
+  "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_mcu_top.v",
+  "ModuleLine" : 2,
+  "ModuleName" : "godson_mcu_top",
+  "Process" : 0,
+  "SetMode" : false,
+  "SetProcess" : false,
+  "SubNodes" : [
+   {
+    "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_mcu_top.v",
+    "InstLine" : 69,
+    "InstName" : "pll_CLK50M_to_10M",
+    "Mode" : 1,
+    "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/gowin_pll/gowin_pll.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "Gowin_PLL",
+    "Process" : 0,
+    "SetMode" : false,
+    "SetProcess" : false
+   },
+   {
+    "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_mcu_top.v",
+    "InstLine" : 86,
+    "InstName" : "A_cpu",
+    "Mode" : 1,
+    "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_mcu_cpu.v",
+    "ModuleLine" : 2,
+    "ModuleName" : "godson_mcu_cpu",
+    "Process" : 0,
+    "SetMode" : false,
+    "SetProcess" : false,
+    "SubNodes" : [
+     {
+      "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_mcu_cpu.v",
+      "InstLine" : 174,
+      "InstName" : "A_flash",
+      "Mode" : 1,
+      "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_mcu_cpu.v",
+      "ModuleLine" : 597,
+      "ModuleName" : "Flash_128k",
+      "Process" : 0,
+      "SetMode" : false,
+      "SetProcess" : false,
+      "SubNodes" : [
+       {
+        "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_mcu_cpu.v",
+        "InstLine" : 625,
+        "InstName" : "flash_128k_inst",
+        "Mode" : 1,
+        "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/ip_repo/blk_mem_gen_0/blk_mem_gen_0.v",
+        "ModuleLine" : 10,
+        "ModuleName" : "blk_mem_gen_0",
+        "Process" : 0,
+        "SetMode" : false,
+        "SetProcess" : false
+       }
+      ]
+     },
+     {
+      "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_mcu_cpu.v",
+      "InstLine" : 186,
+      "InstName" : "A_dram",
+      "Mode" : 1,
+      "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_mcu_cpu.v",
+      "ModuleLine" : 555,
+      "ModuleName" : "Dram_8k",
+      "Process" : 0,
+      "SetMode" : false,
+      "SetProcess" : false,
+      "SubNodes" : [
+       {
+        "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_mcu_cpu.v",
+        "InstLine" : 583,
+        "InstName" : "ram_8k_inst",
+        "Mode" : 1,
+        "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/ip_repo/blk_mem_gen_1/blk_mem_gen_1.v",
+        "ModuleLine" : 10,
+        "ModuleName" : "blk_mem_gen_1",
+        "Process" : 0,
+        "SetMode" : false,
+        "SetProcess" : false
+       }
+      ]
+     },
+     {
+      "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_mcu_cpu.v",
+      "InstLine" : 237,
+      "InstName" : "A_la132",
+      "Mode" : 1,
+      "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_top.v",
+      "ModuleLine" : 4,
+      "ModuleName" : "la132_top",
+      "Process" : 0,
+      "SetMode" : false,
+      "SetProcess" : false,
+      "SubNodes" : [
+       {
+        "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_top.v",
+        "InstLine" : 248,
+        "InstName" : "la132_rst_gen",
+        "Mode" : 1,
+        "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+        "ModuleLine" : 1127,
+        "ModuleName" : "la132_rst_gen",
+        "Process" : 0,
+        "SetMode" : false,
+        "SetProcess" : false
+       },
+       {
+        "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_top.v",
+        "InstLine" : 313,
+        "InstName" : "la132_cg_all",
+        "Mode" : 1,
+        "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+        "ModuleLine" : 1147,
+        "ModuleName" : "la132_cg_all",
+        "Process" : 0,
+        "SetMode" : false,
+        "SetProcess" : false,
+        "SubNodes" : [
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "InstLine" : 1180,
+          "InstName" : "clock_core",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 1271,
+          "ModuleName" : "la132_cg_cell_wrap",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false,
+          "SubNodes" : [
+           {
+            "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+            "InstLine" : 1295,
+            "InstName" : "cg_cell",
+            "Mode" : 1,
+            "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_rcg_module.v",
+            "ModuleLine" : 706,
+            "ModuleName" : "FUNC_CG_CELL",
+            "Process" : 0,
+            "SetMode" : false,
+            "SetProcess" : false,
+            "SubNodes" : [
+             {
+              "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_rcg_module.v",
+              "InstLine" : 712,
+              "InstName" : "cg",
+              "Mode" : 1,
+              "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_rcg_module.v",
+              "ModuleLine" : 550,
+              "ModuleName" : "TECH_ICG",
+              "Process" : 0,
+              "SetMode" : false,
+              "SetProcess" : false
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "InstLine" : 1187,
+          "InstName" : "clock_gpr",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 1271,
+          "ModuleName" : "la132_cg_cell_wrap",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false,
+          "SubNodes" : [
+           {
+            "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+            "InstLine" : 1295,
+            "InstName" : "cg_cell",
+            "Mode" : 1,
+            "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_rcg_module.v",
+            "ModuleLine" : 706,
+            "ModuleName" : "FUNC_CG_CELL",
+            "Process" : 0,
+            "SetMode" : false,
+            "SetProcess" : false,
+            "SubNodes" : [
+             {
+              "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_rcg_module.v",
+              "InstLine" : 712,
+              "InstName" : "cg",
+              "Mode" : 1,
+              "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_rcg_module.v",
+              "ModuleLine" : 550,
+              "ModuleName" : "TECH_ICG",
+              "Process" : 0,
+              "SetMode" : false,
+              "SetProcess" : false
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "InstLine" : 1194,
+          "InstName" : "clock_cr",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 1271,
+          "ModuleName" : "la132_cg_cell_wrap",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false,
+          "SubNodes" : [
+           {
+            "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+            "InstLine" : 1295,
+            "InstName" : "cg_cell",
+            "Mode" : 1,
+            "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_rcg_module.v",
+            "ModuleLine" : 706,
+            "ModuleName" : "FUNC_CG_CELL",
+            "Process" : 0,
+            "SetMode" : false,
+            "SetProcess" : false,
+            "SubNodes" : [
+             {
+              "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_rcg_module.v",
+              "InstLine" : 712,
+              "InstName" : "cg",
+              "Mode" : 1,
+              "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_rcg_module.v",
+              "ModuleLine" : 550,
+              "ModuleName" : "TECH_ICG",
+              "Process" : 0,
+              "SetMode" : false,
+              "SetProcess" : false
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "InstLine" : 1203,
+          "InstName" : "clock_ljtag",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 1271,
+          "ModuleName" : "la132_cg_cell_wrap",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false,
+          "SubNodes" : [
+           {
+            "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+            "InstLine" : 1295,
+            "InstName" : "cg_cell",
+            "Mode" : 1,
+            "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_rcg_module.v",
+            "ModuleLine" : 706,
+            "ModuleName" : "FUNC_CG_CELL",
+            "Process" : 0,
+            "SetMode" : false,
+            "SetProcess" : false,
+            "SubNodes" : [
+             {
+              "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_rcg_module.v",
+              "InstLine" : 712,
+              "InstName" : "cg",
+              "Mode" : 1,
+              "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_rcg_module.v",
+              "ModuleLine" : 550,
+              "ModuleName" : "TECH_ICG",
+              "Process" : 0,
+              "SetMode" : false,
+              "SetProcess" : false
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "InstLine" : 1210,
+          "InstName" : "clock_dm",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 1271,
+          "ModuleName" : "la132_cg_cell_wrap",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false,
+          "SubNodes" : [
+           {
+            "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+            "InstLine" : 1295,
+            "InstName" : "cg_cell",
+            "Mode" : 1,
+            "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_rcg_module.v",
+            "ModuleLine" : 706,
+            "ModuleName" : "FUNC_CG_CELL",
+            "Process" : 0,
+            "SetMode" : false,
+            "SetProcess" : false,
+            "SubNodes" : [
+             {
+              "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_rcg_module.v",
+              "InstLine" : 712,
+              "InstName" : "cg",
+              "Mode" : 1,
+              "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_rcg_module.v",
+              "ModuleLine" : 550,
+              "ModuleName" : "TECH_ICG",
+              "Process" : 0,
+              "SetMode" : false,
+              "SetProcess" : false
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "InstLine" : 1219,
+          "InstName" : "clock_fpr",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 1271,
+          "ModuleName" : "la132_cg_cell_wrap",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false,
+          "SubNodes" : [
+           {
+            "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+            "InstLine" : 1295,
+            "InstName" : "cg_cell",
+            "Mode" : 1,
+            "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_rcg_module.v",
+            "ModuleLine" : 706,
+            "ModuleName" : "FUNC_CG_CELL",
+            "Process" : 0,
+            "SetMode" : false,
+            "SetProcess" : false,
+            "SubNodes" : [
+             {
+              "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_rcg_module.v",
+              "InstLine" : 712,
+              "InstName" : "cg",
+              "Mode" : 1,
+              "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_rcg_module.v",
+              "ModuleLine" : 550,
+              "ModuleName" : "TECH_ICG",
+              "Process" : 0,
+              "SetMode" : false,
+              "SetProcess" : false
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "InstLine" : 1226,
+          "InstName" : "clock_fpu",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 1271,
+          "ModuleName" : "la132_cg_cell_wrap",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false,
+          "SubNodes" : [
+           {
+            "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+            "InstLine" : 1295,
+            "InstName" : "cg_cell",
+            "Mode" : 1,
+            "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_rcg_module.v",
+            "ModuleLine" : 706,
+            "ModuleName" : "FUNC_CG_CELL",
+            "Process" : 0,
+            "SetMode" : false,
+            "SetProcess" : false,
+            "SubNodes" : [
+             {
+              "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_rcg_module.v",
+              "InstLine" : 712,
+              "InstName" : "cg",
+              "Mode" : 1,
+              "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_rcg_module.v",
+              "ModuleLine" : 550,
+              "ModuleName" : "TECH_ICG",
+              "Process" : 0,
+              "SetMode" : false,
+              "SetProcess" : false
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_top.v",
+        "InstLine" : 469,
+        "InstName" : "la132_fetch",
+        "Mode" : 1,
+        "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_fetch_stage.v",
+        "ModuleLine" : 3,
+        "ModuleName" : "la132_fetch_stage",
+        "Process" : 0,
+        "SetMode" : false,
+        "SetProcess" : false,
+        "SubNodes" : [
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_fetch_stage.v",
+          "InstLine" : 260,
+          "InstName" : "fetch_pc_priv",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 447,
+          "ModuleName" : "la132_vaddr_check",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         }
+        ]
+       },
+       {
+        "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_top.v",
+        "InstLine" : 499,
+        "InstName" : "la132_de",
+        "Mode" : 1,
+        "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_de_stage.v",
+        "ModuleLine" : 4,
+        "ModuleName" : "la132_de_stage",
+        "Process" : 0,
+        "SetMode" : false,
+        "SetProcess" : false,
+        "SubNodes" : [
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_de_stage.v",
+          "InstLine" : 378,
+          "InstName" : "decode_op_5_1",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 32,
+          "ModuleName" : "la132_decode_onehot_5_32",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_de_stage.v",
+          "InstLine" : 387,
+          "InstName" : "decode_rs_4_3",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_decode_n_m.v",
+          "ModuleLine" : 1,
+          "ModuleName" : "la132_decode_n_m",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_de_stage.v",
+          "InstLine" : 388,
+          "InstName" : "decode_rs_2_0",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_decode_n_m.v",
+          "ModuleLine" : 1,
+          "ModuleName" : "la132_decode_n_m",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_de_stage.v",
+          "InstLine" : 395,
+          "InstName" : "decode_rt_4_2",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_decode_n_m.v",
+          "ModuleLine" : 1,
+          "ModuleName" : "la132_decode_n_m",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_de_stage.v",
+          "InstLine" : 396,
+          "InstName" : "decode_rt_1_0",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_decode_n_m.v",
+          "ModuleLine" : 1,
+          "ModuleName" : "la132_decode_n_m",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_de_stage.v",
+          "InstLine" : 408,
+          "InstName" : "decode_rd",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 188,
+          "ModuleName" : "la132_decode_lowmask_5_32",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_de_stage.v",
+          "InstLine" : 410,
+          "InstName" : "decode_sa",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 236,
+          "ModuleName" : "la132_decode_highmask_5_32",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_de_stage.v",
+          "InstLine" : 414,
+          "InstName" : "decode_func",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 79,
+          "ModuleName" : "la132_decode_func",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_de_stage.v",
+          "InstLine" : 774,
+          "InstName" : "de_ctrl_stallf",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 714,
+          "ModuleName" : "la132_ctrl_stallf",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_de_stage.v",
+          "InstLine" : 1055,
+          "InstName" : "la132_general_regfiles",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 284,
+          "ModuleName" : "la132_gr_4r1w_32x32",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_de_stage.v",
+          "InstLine" : 1130,
+          "InstName" : "de_vaddr_check",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 447,
+          "ModuleName" : "la132_vaddr_check",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_de_stage.v",
+          "InstLine" : 1673,
+          "InstName" : "dec_lisa_ext_lm",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 188,
+          "ModuleName" : "la132_decode_lowmask_5_32",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_de_stage.v",
+          "InstLine" : 1703,
+          "InstName" : "clo_31_28",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 4,
+          "ModuleName" : "la132_count_one_4_3",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_de_stage.v",
+          "InstLine" : 1704,
+          "InstName" : "clo_27_24",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 4,
+          "ModuleName" : "la132_count_one_4_3",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_de_stage.v",
+          "InstLine" : 1705,
+          "InstName" : "clo_23_20",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 4,
+          "ModuleName" : "la132_count_one_4_3",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_de_stage.v",
+          "InstLine" : 1706,
+          "InstName" : "clo_19_16",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 4,
+          "ModuleName" : "la132_count_one_4_3",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_de_stage.v",
+          "InstLine" : 1707,
+          "InstName" : "clo_15_12",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 4,
+          "ModuleName" : "la132_count_one_4_3",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_de_stage.v",
+          "InstLine" : 1708,
+          "InstName" : "clo_11_8",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 4,
+          "ModuleName" : "la132_count_one_4_3",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_de_stage.v",
+          "InstLine" : 1709,
+          "InstName" : "clo_7_4",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 4,
+          "ModuleName" : "la132_count_one_4_3",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_de_stage.v",
+          "InstLine" : 1710,
+          "InstName" : "clo_3_0",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 4,
+          "ModuleName" : "la132_count_one_4_3",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_de_stage.v",
+          "InstLine" : 1714,
+          "InstName" : "clo_31_16",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 4,
+          "ModuleName" : "la132_count_one_4_3",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_de_stage.v",
+          "InstLine" : 1715,
+          "InstName" : "clo_15_0",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 4,
+          "ModuleName" : "la132_count_one_4_3",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_de_stage.v",
+          "InstLine" : 1826,
+          "InstName" : "gen_has_ihb.la132_ljtag_ihb",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_jtag_ihb.v",
+          "ModuleLine" : 3,
+          "ModuleName" : "la132_ljtag_ihb",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_de_stage.v",
+          "InstLine" : 2295,
+          "InstName" : "la132_lisa_inst_de",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_lisa_inst_decode.v",
+          "ModuleLine" : 4,
+          "ModuleName" : "la132_lisa_inst_decode",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false,
+          "SubNodes" : [
+           {
+            "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_lisa_inst_decode.v",
+            "InstLine" : 74,
+            "InstName" : "dec_lv1seg0",
+            "Mode" : 1,
+            "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_decode_n_m.v",
+            "ModuleLine" : 1,
+            "ModuleName" : "la132_decode_n_m",
+            "Process" : 0,
+            "SetMode" : false,
+            "SetProcess" : false
+           },
+           {
+            "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_lisa_inst_decode.v",
+            "InstLine" : 75,
+            "InstName" : "dec_lv1seg1",
+            "Mode" : 1,
+            "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_decode_n_m.v",
+            "ModuleLine" : 1,
+            "ModuleName" : "la132_decode_n_m",
+            "Process" : 0,
+            "SetMode" : false,
+            "SetProcess" : false
+           },
+           {
+            "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_lisa_inst_decode.v",
+            "InstLine" : 76,
+            "InstName" : "dec_lv1seg2",
+            "Mode" : 1,
+            "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_decode_n_m.v",
+            "ModuleLine" : 1,
+            "ModuleName" : "la132_decode_n_m",
+            "Process" : 0,
+            "SetMode" : false,
+            "SetProcess" : false
+           },
+           {
+            "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_lisa_inst_decode.v",
+            "InstLine" : 77,
+            "InstName" : "dec_lv1seg3",
+            "Mode" : 1,
+            "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_decode_n_m.v",
+            "ModuleLine" : 1,
+            "ModuleName" : "la132_decode_n_m",
+            "Process" : 0,
+            "SetMode" : false,
+            "SetProcess" : false
+           },
+           {
+            "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_lisa_inst_decode.v",
+            "InstLine" : 78,
+            "InstName" : "dec_lv1seg4",
+            "Mode" : 1,
+            "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_decode_n_m.v",
+            "ModuleLine" : 1,
+            "ModuleName" : "la132_decode_n_m",
+            "Process" : 0,
+            "SetMode" : false,
+            "SetProcess" : false
+           },
+           {
+            "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_lisa_inst_decode.v",
+            "InstLine" : 79,
+            "InstName" : "dec_lv1seg5",
+            "Mode" : 1,
+            "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_decode_n_m.v",
+            "ModuleLine" : 1,
+            "ModuleName" : "la132_decode_n_m",
+            "Process" : 0,
+            "SetMode" : false,
+            "SetProcess" : false
+           },
+           {
+            "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_lisa_inst_decode.v",
+            "InstLine" : 80,
+            "InstName" : "dec_lv1seg6",
+            "Mode" : 1,
+            "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_decode_n_m.v",
+            "ModuleLine" : 1,
+            "ModuleName" : "la132_decode_n_m",
+            "Process" : 0,
+            "SetMode" : false,
+            "SetProcess" : false
+           },
+           {
+            "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_lisa_inst_decode.v",
+            "InstLine" : 81,
+            "InstName" : "dec_lv1seg7",
+            "Mode" : 1,
+            "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_decode_n_m.v",
+            "ModuleLine" : 1,
+            "ModuleName" : "la132_decode_n_m",
+            "Process" : 0,
+            "SetMode" : false,
+            "SetProcess" : false
+           },
+           {
+            "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_lisa_inst_decode.v",
+            "InstLine" : 82,
+            "InstName" : "dec_lv1seg8",
+            "Mode" : 1,
+            "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_decode_n_m.v",
+            "ModuleLine" : 1,
+            "ModuleName" : "la132_decode_n_m",
+            "Process" : 0,
+            "SetMode" : false,
+            "SetProcess" : false
+           },
+           {
+            "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_lisa_inst_decode.v",
+            "InstLine" : 83,
+            "InstName" : "dec_lv1seg9",
+            "Mode" : 1,
+            "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_decode_n_m.v",
+            "ModuleLine" : 1,
+            "ModuleName" : "la132_decode_n_m",
+            "Process" : 0,
+            "SetMode" : false,
+            "SetProcess" : false
+           },
+           {
+            "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_lisa_inst_decode.v",
+            "InstLine" : 84,
+            "InstName" : "dec_lv1seg10",
+            "Mode" : 1,
+            "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_decode_n_m.v",
+            "ModuleLine" : 1,
+            "ModuleName" : "la132_decode_n_m",
+            "Process" : 0,
+            "SetMode" : false,
+            "SetProcess" : false
+           },
+           {
+            "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_lisa_inst_decode.v",
+            "InstLine" : 85,
+            "InstName" : "dec_lv1seg11",
+            "Mode" : 1,
+            "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_decode_n_m.v",
+            "ModuleLine" : 1,
+            "ModuleName" : "la132_decode_n_m",
+            "Process" : 0,
+            "SetMode" : false,
+            "SetProcess" : false
+           },
+           {
+            "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_lisa_inst_decode.v",
+            "InstLine" : 86,
+            "InstName" : "dec_lv1seg12",
+            "Mode" : 1,
+            "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_decode_n_m.v",
+            "ModuleLine" : 1,
+            "ModuleName" : "la132_decode_n_m",
+            "Process" : 0,
+            "SetMode" : false,
+            "SetProcess" : false
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_top.v",
+        "InstLine" : 571,
+        "InstName" : "gen_smart_mdu.la132_mdu",
+        "Mode" : 1,
+        "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_serial_smart_mdu.v",
+        "ModuleLine" : 45,
+        "ModuleName" : "la132_serial_smart_mdu",
+        "Process" : 0,
+        "SetMode" : false,
+        "SetProcess" : false,
+        "SubNodes" : [
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_serial_smart_mdu.v",
+          "InstLine" : 121,
+          "InstName" : "inst_mdu_pipe_ctl",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_serial_smart_mdu.v",
+          "ModuleLine" : 213,
+          "ModuleName" : "la132_mdu_pipe_ctl_1",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_serial_smart_mdu.v",
+          "InstLine" : 157,
+          "InstName" : "inst_mdu_de_dp",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_serial_smart_mdu.v",
+          "ModuleLine" : 384,
+          "ModuleName" : "la132_mdu_de_dp_1",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_serial_smart_mdu.v",
+          "InstLine" : 172,
+          "InstName" : "inst_mdu_mem_dp",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_serial_smart_mdu.v",
+          "ModuleLine" : 415,
+          "ModuleName" : "la132_mdu_mem_dp_1",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false,
+          "SubNodes" : [
+           {
+            "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_serial_smart_mdu.v",
+            "InstLine" : 583,
+            "InstName" : "decode_rs",
+            "Mode" : 1,
+            "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+            "ModuleLine" : 188,
+            "ModuleName" : "la132_decode_lowmask_5_32",
+            "Process" : 0,
+            "SetMode" : false,
+            "SetProcess" : false
+           }
+          ]
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_serial_smart_mdu.v",
+          "InstLine" : 197,
+          "InstName" : "inst_mdu_hi_lo_reg",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_serial_smart_mdu.v",
+          "ModuleLine" : 4,
+          "ModuleName" : "la132_mdu_hi_lo_reg_1",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         }
+        ]
+       },
+       {
+        "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_top.v",
+        "InstLine" : 613,
+        "InstName" : "la132_mem",
+        "Mode" : 1,
+        "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_mem_stage.v",
+        "ModuleLine" : 4,
+        "ModuleName" : "la132_mem_stage",
+        "Process" : 0,
+        "SetMode" : false,
+        "SetProcess" : false,
+        "SubNodes" : [
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_mem_stage.v",
+          "InstLine" : 591,
+          "InstName" : "mem_addr",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 425,
+          "ModuleName" : "la132_vaddr_to_paddr",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_mem_stage.v",
+          "InstLine" : 1070,
+          "InstName" : "la132_mem_ex_entry",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 658,
+          "ModuleName" : "la132_exception_entry",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_mem_stage.v",
+          "InstLine" : 1126,
+          "InstName" : "de_ctrl_stallf",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 714,
+          "ModuleName" : "la132_ctrl_stallf",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_mem_stage.v",
+          "InstLine" : 1172,
+          "InstName" : "memls_vaddr_sel",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 604,
+          "ModuleName" : "la132_vaddr_sel_bus",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_mem_stage.v",
+          "InstLine" : 1391,
+          "InstName" : "cpucfg_inst",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_lisa_cpucfg.v",
+          "ModuleLine" : 4,
+          "ModuleName" : "la132_lisa_cpucfg",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_mem_stage.v",
+          "InstLine" : 2291,
+          "InstName" : "u_csr_mpu0",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 735,
+          "ModuleName" : "la132_csr_mpu",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_mem_stage.v",
+          "InstLine" : 2313,
+          "InstName" : "u_csr_mpu1",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 735,
+          "ModuleName" : "la132_csr_mpu",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_mem_stage.v",
+          "InstLine" : 2335,
+          "InstName" : "u_csr_mpu2",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 735,
+          "ModuleName" : "la132_csr_mpu",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_mem_stage.v",
+          "InstLine" : 2357,
+          "InstName" : "u_csr_mpu3",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 735,
+          "ModuleName" : "la132_csr_mpu",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         }
+        ]
+       },
+       {
+        "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_top.v",
+        "InstLine" : 693,
+        "InstName" : "la132_wb",
+        "Mode" : 1,
+        "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_wb_stage.v",
+        "ModuleLine" : 3,
+        "ModuleName" : "la132_wb_stage",
+        "Process" : 0,
+        "SetMode" : false,
+        "SetProcess" : false
+       },
+       {
+        "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_top.v",
+        "InstLine" : 738,
+        "InstName" : "la132_axi_ifc",
+        "Mode" : 1,
+        "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_axi_interface.v",
+        "ModuleLine" : 5,
+        "ModuleName" : "la132_axi_interface",
+        "Process" : 0,
+        "SetMode" : false,
+        "SetProcess" : false,
+        "SubNodes" : [
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_axi_interface.v",
+          "InstLine" : 156,
+          "InstName" : "fetch_vaddr_sel",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 604,
+          "ModuleName" : "la132_vaddr_sel_bus",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_axi_interface.v",
+          "InstLine" : 224,
+          "InstName" : "mald_addr_sel",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 604,
+          "ModuleName" : "la132_vaddr_sel_bus",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_axi_interface.v",
+          "InstLine" : 232,
+          "InstName" : "memld_st_vaddr_sel",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+          "ModuleLine" : 604,
+          "ModuleName" : "la132_vaddr_sel_bus",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false
+         },
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_axi_interface.v",
+          "InstLine" : 616,
+          "InstName" : "la132_axi_sysbus",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_axi_sysbus.v",
+          "ModuleLine" : 5,
+          "ModuleName" : "la132_axi_sysbus",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false,
+          "SubNodes" : [
+           {
+            "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_axi_sysbus.v",
+            "InstLine" : 524,
+            "InstName" : "gen_no_dcc.la132_dcache",
+            "Mode" : 1,
+            "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_nocache.v",
+            "ModuleLine" : 4,
+            "ModuleName" : "la132_nocache",
+            "Process" : 0,
+            "SetMode" : false,
+            "SetProcess" : false
+           },
+           {
+            "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_axi_sysbus.v",
+            "InstLine" : 870,
+            "InstName" : "gen_no_icc.la132_icache",
+            "Mode" : 1,
+            "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_nocache.v",
+            "ModuleLine" : 4,
+            "ModuleName" : "la132_nocache",
+            "Process" : 0,
+            "SetMode" : false,
+            "SetProcess" : false
+           },
+           {
+            "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_axi_sysbus.v",
+            "InstLine" : 974,
+            "InstName" : "dcc_vaddr_to_paddr",
+            "Mode" : 1,
+            "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+            "ModuleLine" : 425,
+            "ModuleName" : "la132_vaddr_to_paddr",
+            "Process" : 0,
+            "SetMode" : false,
+            "SetProcess" : false
+           },
+           {
+            "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_axi_sysbus.v",
+            "InstLine" : 987,
+            "InstName" : "icc_vaddr_to_paddr",
+            "Mode" : 1,
+            "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+            "ModuleLine" : 425,
+            "ModuleName" : "la132_vaddr_to_paddr",
+            "Process" : 0,
+            "SetMode" : false,
+            "SetProcess" : false
+           },
+           {
+            "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_axi_sysbus.v",
+            "InstLine" : 1002,
+            "InstName" : "u_vaddr_attribute",
+            "Mode" : 1,
+            "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+            "ModuleLine" : 486,
+            "ModuleName" : "la132_vaddr_attribute",
+            "Process" : 0,
+            "SetMode" : false,
+            "SetProcess" : false,
+            "SubNodes" : [
+             {
+              "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+              "InstLine" : 544,
+              "InstName" : "dcc_vaddr_cfgseg",
+              "Mode" : 1,
+              "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+              "ModuleLine" : 588,
+              "ModuleName" : "la132_vaddr_cfgseg",
+              "Process" : 0,
+              "SetMode" : false,
+              "SetProcess" : false
+             },
+             {
+              "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+              "InstLine" : 571,
+              "InstName" : "icc_vaddr_cfgseg",
+              "Mode" : 1,
+              "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+              "ModuleLine" : 588,
+              "ModuleName" : "la132_vaddr_cfgseg",
+              "Process" : 0,
+              "SetMode" : false,
+              "SetProcess" : false
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_top.v",
+        "InstLine" : 864,
+        "InstName" : "la132_ljtag_module",
+        "Mode" : 1,
+        "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_jtag_module.v",
+        "ModuleLine" : 5,
+        "ModuleName" : "la132_ljtag_module",
+        "Process" : 0,
+        "SetMode" : false,
+        "SetProcess" : false,
+        "SubNodes" : [
+         {
+          "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_jtag_module.v",
+          "InstLine" : 295,
+          "InstName" : "tap",
+          "Mode" : 1,
+          "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_jtag_module.v",
+          "ModuleLine" : 329,
+          "ModuleName" : "la132_ljtag_tap_module",
+          "Process" : 0,
+          "SetMode" : false,
+          "SetProcess" : false,
+          "SubNodes" : [
+           {
+            "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_jtag_module.v",
+            "InstLine" : 421,
+            "InstName" : "fsm",
+            "Mode" : 1,
+            "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_jtag_module.v",
+            "ModuleLine" : 1076,
+            "ModuleName" : "la132_ljtag_tap_fsm",
+            "Process" : 0,
+            "SetMode" : false,
+            "SetProcess" : false
+           },
+           {
+            "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_jtag_module.v",
+            "InstLine" : 438,
+            "InstName" : "instreg",
+            "Mode" : 1,
+            "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_jtag_module.v",
+            "ModuleLine" : 506,
+            "ModuleName" : "la132_ljtag_tap_instreg",
+            "Process" : 0,
+            "SetMode" : false,
+            "SetProcess" : false
+           },
+           {
+            "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_jtag_module.v",
+            "InstLine" : 453,
+            "InstName" : "decode",
+            "Mode" : 1,
+            "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_jtag_module.v",
+            "ModuleLine" : 1263,
+            "ModuleName" : "la132_ljtag_tap_decode",
+            "Process" : 0,
+            "SetMode" : false,
+            "SetProcess" : false
+           },
+           {
+            "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_jtag_module.v",
+            "InstLine" : 467,
+            "InstName" : "reggroup",
+            "Mode" : 1,
+            "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_jtag_module.v",
+            "ModuleLine" : 566,
+            "ModuleName" : "la132_ljtag_tap_reg_group",
+            "Process" : 0,
+            "SetMode" : false,
+            "SetProcess" : false,
+            "SubNodes" : [
+             {
+              "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_jtag_module.v",
+              "InstLine" : 645,
+              "InstName" : "ID",
+              "Mode" : 1,
+              "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_jtag_module.v",
+              "ModuleLine" : 1413,
+              "ModuleName" : "la132_ljtag_tap_basicreg_id",
+              "Process" : 0,
+              "SetMode" : false,
+              "SetProcess" : false
+             },
+             {
+              "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_jtag_module.v",
+              "InstLine" : 656,
+              "InstName" : "IMP",
+              "Mode" : 1,
+              "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_jtag_module.v",
+              "ModuleLine" : 1450,
+              "ModuleName" : "la132_ljtag_tap_basicreg_imp",
+              "Process" : 0,
+              "SetMode" : false,
+              "SetProcess" : false
+             },
+             {
+              "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_jtag_module.v",
+              "InstLine" : 683,
+              "InstName" : "ADDR",
+              "Mode" : 1,
+              "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_jtag_module.v",
+              "ModuleLine" : 1488,
+              "ModuleName" : "la132_ljtag_tap_basicreg_32bit_0",
+              "Process" : 0,
+              "SetMode" : false,
+              "SetProcess" : false
+             },
+             {
+              "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_jtag_module.v",
+              "InstLine" : 724,
+              "InstName" : "DATA",
+              "Mode" : 1,
+              "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_jtag_module.v",
+              "ModuleLine" : 1488,
+              "ModuleName" : "la132_ljtag_tap_basicreg_32bit_0",
+              "Process" : 0,
+              "SetMode" : false,
+              "SetProcess" : false
+             },
+             {
+              "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_jtag_module.v",
+              "InstLine" : 806,
+              "InstName" : "ECR1",
+              "Mode" : 1,
+              "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_jtag_module.v",
+              "ModuleLine" : 1565,
+              "ModuleName" : "la132_ljtag_tap_basicreg_ecr_31_19",
+              "Process" : 0,
+              "SetMode" : false,
+              "SetProcess" : false
+             },
+             {
+              "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_jtag_module.v",
+              "InstLine" : 984,
+              "InstName" : "ECR3",
+              "Mode" : 1,
+              "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_jtag_module.v",
+              "ModuleLine" : 1605,
+              "ModuleName" : "la132_ljtag_tap_basicreg_ecr_11_9",
+              "Process" : 0,
+              "SetMode" : false,
+              "SetProcess" : false
+             },
+             {
+              "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_jtag_module.v",
+              "InstLine" : 998,
+              "InstName" : "ECR4",
+              "Mode" : 1,
+              "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_jtag_module.v",
+              "ModuleLine" : 1641,
+              "ModuleName" : "la132_ljtag_tap_basicreg_ecr_8_4",
+              "Process" : 0,
+              "SetMode" : false,
+              "SetProcess" : false
+             },
+             {
+              "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_jtag_module.v",
+              "InstLine" : 1011,
+              "InstName" : "ECR5",
+              "Mode" : 1,
+              "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_jtag_module.v",
+              "ModuleLine" : 1677,
+              "ModuleName" : "la132_ljtag_tap_basicreg_ecr_3_0",
+              "Process" : 0,
+              "SetMode" : false,
+              "SetProcess" : false
+             },
+             {
+              "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_jtag_module.v",
+              "InstLine" : 1061,
+              "InstName" : "PCSAMPLE",
+              "Mode" : 1,
+              "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_jtag_module.v",
+              "ModuleLine" : 1526,
+              "ModuleName" : "la132_ljtag_tap_basicreg_pcsample",
+              "Process" : 0,
+              "SetMode" : false,
+              "SetProcess" : false
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_top.v",
+        "InstLine" : 896,
+        "InstName" : "la132_ljtag_dcr",
+        "Mode" : 1,
+        "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_jtag_dcr.v",
+        "ModuleLine" : 3,
+        "ModuleName" : "la132_ljtag_dcr",
+        "Process" : 0,
+        "SetMode" : false,
+        "SetProcess" : false
+       },
+       {
+        "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_top.v",
+        "InstLine" : 909,
+        "InstName" : "la132_ljtag_rstgen",
+        "Mode" : 1,
+        "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/LA132/la132_tools.v",
+        "ModuleLine" : 1109,
+        "ModuleName" : "la132_ljtag_rstgen",
+        "Process" : 0,
+        "SetMode" : false,
+        "SetProcess" : false
+       }
+      ]
+     },
+     {
+      "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_mcu_cpu.v",
+      "InstLine" : 359,
+      "InstName" : "A_cpu_mux",
+      "Mode" : 1,
+      "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/axi_mux.v",
+      "ModuleLine" : 24,
+      "ModuleName" : "axi_slave_mux_cpu",
+      "Process" : 0,
+      "SetMode" : false,
+      "SetProcess" : false,
+      "SubNodes" : [
+       {
+        "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/axi_mux.v",
+        "InstLine" : 1771,
+        "InstName" : "wr_fifo",
+        "Mode" : 1,
+        "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/axi_mux.v",
+        "ModuleLine" : 1980,
+        "ModuleName" : "nb_sync_fifo_mux",
+        "Process" : 0,
+        "SetMode" : false,
+        "SetProcess" : false
+       },
+       {
+        "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/axi_mux.v",
+        "InstLine" : 1940,
+        "InstName" : "rd_fifo",
+        "Mode" : 1,
+        "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/axi_mux.v",
+        "ModuleLine" : 1980,
+        "ModuleName" : "nb_sync_fifo_mux",
+        "Process" : 0,
+        "SetMode" : false,
+        "SetProcess" : false
+       }
+      ]
+     },
+     {
+      "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_mcu_cpu.v",
+      "InstLine" : 478,
+      "InstName" : "A_axi2apb",
+      "Mode" : 1,
+      "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/axi2apb.v",
+      "ModuleLine" : 10,
+      "ModuleName" : "axi2apb_bridge",
+      "Process" : 0,
+      "SetMode" : false,
+      "SetProcess" : false
+     },
+     {
+      "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_mcu_cpu.v",
+      "InstLine" : 531,
+      "InstName" : "A_apb_mux_cpu",
+      "Mode" : 1,
+      "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/apb_mux9.v",
+      "ModuleLine" : 6,
+      "ModuleName" : "apb_mux9",
+      "Process" : 0,
+      "SetMode" : false,
+      "SetProcess" : false
+     }
+    ]
+   },
+   {
+    "InstFile" : "E:/gowin_project_2024_0103_1914/1C102/src/godson_mcu_top.v",
+    "InstLine" : 112,
+    "InstName" : "A_gpio",
+    "Mode" : 1,
+    "ModuleFile" : "E:/gowin_project_2024_0103_1914/1C102/src/gpio/gpio.v",
+    "ModuleLine" : 2,
+    "ModuleName" : "apb_gpio",
+    "Process" : 0,
+    "SetMode" : false,
+    "SetProcess" : false
+   }
+  ]
+ }
+]

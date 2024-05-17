@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="godson_mcu_top" Register="22" Alu="21" Lut="3">
+    <SubModule name="gw_gao_inst_0" Register="303" Alu="10" Lut="368" Bsram="3"/>
+    <SubModule name="pll"/>
+    <SubModule name="A_cpu" Register="3112" Alu="644" Lut="11820">
+        <SubModule name="A_flash" Lut="1">
+            <SubModule name="flash_128k_inst" Register="4" Lut="497" Bsram="32"/>
+        </SubModule>
+        <SubModule name="A_dram">
+            <SubModule name="ram_8k_inst" Register="1" Lut="32" Bsram="4"/>
+        </SubModule>
+        <SubModule name="A_cpu_mux" Register="2" Lut="99">
+            <SubModule name="wr_fifo" Register="8" Lut="12" Ssram="1"/>
+            <SubModule name="rd_fifo" Register="8" Lut="14" Ssram="1"/>
+        </SubModule>
+        <SubModule name="A_axi2apb" Register="107" Lut="127"/>
+        <SubModule name="A_apb_mux_cpu" Lut="229"/>
+        <SubModule name="gpio1" Register="160" Lut="129">
+            <SubModule name="pad_GPIO01" Lut="1"/>
+            <SubModule name="pad_GPIO13" Lut="1"/>
+            <SubModule name="pad_GPIO14" Lut="1"/>
+            <SubModule name="pad_GPIO15" Lut="1"/>
+            <SubModule name="pad_GPIO16" Lut="1"/>
+            <SubModule name="pad_GPIO17" Lut="1"/>
+            <SubModule name="pad_GPIO18" Lut="1"/>
+            <SubModule name="pad_GPIO19" Lut="1"/>
+            <SubModule name="pad_GPIO20" Lut="1"/>
+            <SubModule name="pad_GPIO34" Lut="1"/>
+            <SubModule name="pad_GPIO35" Lut="1"/>
+            <SubModule name="pad_GPIO36" Lut="1"/>
+            <SubModule name="pad_GPIO37" Lut="1"/>
+            <SubModule name="pad_GPIO38" Lut="1"/>
+            <SubModule name="pad_GPIO39" Lut="1"/>
+            <SubModule name="pad_GPIO40" Lut="1"/>
+        </SubModule>
+        <SubModule name="pwm1" Register="161" Alu="93" Lut="238"/>
+        <SubModule name="hept1" Register="132" Alu="64" Lut="196"/>
+        <SubModule name="confreg1" Register="24" Lut="17">
+            <SubModule name="int0" Register="2" Lut="6"/>
+            <SubModule name="int1" Register="1" Lut="1"/>
+            <SubModule name="int2" Register="2" Lut="3"/>
+            <SubModule name="int3" Register="1" Lut="1"/>
+            <SubModule name="int4" Register="1" Lut="1"/>
+            <SubModule name="int5" Register="1" Lut="1"/>
+            <SubModule name="int6" Register="1" Lut="1"/>
+            <SubModule name="int7" Register="1" Lut="1"/>
+        </SubModule>
+        <SubModule name="uart1" Register="48" Lut="20">
+            <SubModule name="uart_rx_i" Register="36" Alu="16" Lut="64"/>
+            <SubModule name="uart_tx_i" Register="32" Alu="16" Lut="59"/>
+            <SubModule name="uart_rx_fifo_i" Register="30" Alu="4" Lut="57" Ssram="3"/>
+            <SubModule name="uart_tx_fifo_i" Register="30" Alu="4" Lut="53" Ssram="2"/>
+            <SubModule name="uart_interrupt_i" Register="2" Lut="15"/>
+        </SubModule>
+        <SubModule name="i2c1" Register="84" Alu="23" Lut="59">
+            <SubModule name="pad_I2C_SCL" Lut="2"/>
+            <SubModule name="pad_I2C_SDA" Lut="2"/>
+            <SubModule name="master_byte_controller" Register="20" Lut="47">
+                <SubModule name="bit_controller" Register="49" Lut="122"/>
+            </SubModule>
+            <SubModule name="i_sda_i_sync" Register="2"/>
+            <SubModule name="i_scl_i_sync" Register="2"/>
+        </SubModule>
+        <SubModule name="spi1" Register="72" Lut="97">
+            <SubModule name="rfifo" Register="5" Lut="8" Ssram="2"/>
+            <SubModule name="wfifo" Register="5" Lut="7" Ssram="2"/>
+        </SubModule>
+    </SubModule>
+</Module>

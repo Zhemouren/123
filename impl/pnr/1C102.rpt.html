@@ -1,0 +1,2726 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>PnR Analysis Report</title>
+<style type="text/css">
+body { font-family: Verdana, Arial, sans-serif; font-size: 12px; }
+div#main_wrapper{ width: 100%; }
+div#content { margin-left: 350px; margin-right: 30px; }
+div#catalog_wrapper {position: fixed; top: 30px; width: 350px; float: left; }
+div#catalog ul { list-style-type: none; }
+div#catalog li { text-align: left; list-style-type:circle; color: #0084ff; margin-top: 3px; margin-bottom: 3px; }
+div#catalog a { display:inline-block; text-decoration: none; color: #0084ff; font-weight: bold; padding: 3px; }
+div#catalog a:visited { color: #0084ff; }
+div#catalog a:hover { color: #fff; background: #0084ff; }
+hr { margin-top: 30px; margin-bottom: 30px; }
+h1, h3 { text-align: center; }
+h1 {margin-top: 50px; }
+table, th, td { white-space:pre; border: 1px solid #aaa; }
+table { border-collapse:collapse; margin-top: 10px; margin-bottom: 20px; width: 100%; }
+th, td { padding: 5px 5px 5px 5px; }
+th { color: #fff; font-weight: bold; background-color: #0084ff; }
+table.summary_table td.label { width: 24%; min-width: 200px; background-color: #dee8f4; }
+table.thermal_table td.label { width: 24%; min-width: 200px; background-color: #dee8f4; }
+table.Configure_table td.label { width: 24%; min-width: 200px; background-color: #dee8f4; }
+table.detail_table th.label {  min-width: 8%; width: 8%; }
+</style>
+</head>
+<body>
+<div id="main_wrapper">
+<div id="catalog_wrapper">
+<div id="catalog">
+<ul>
+<li><a href="#Message" style=" font-size: 16px;">PnR Messages</a></li>
+<!--<li><a href="#Summary" style=" font-size: 16px;">PnR Summaries</a></li>-->
+<li><a href="#PnR_Details" style=" font-size: 16px;">PnR Details</a>
+<li><a href="#Resource" style=" font-size: 16px;">Resource</a>
+<ul>
+<li><a href="#Resource_Usage_Summary" style=" font-size: 14px;">Resource Usage Summary</a></li>
+<li><a href="#I/O_Bank_Usage_Summary" style=" font-size: 14px;">I/O Bank Usage Summary</a></li>
+<li><a href="#Global_Clock_Usage_Summary" style=" font-size: 14px;">Global Clock Usage Summary</a></li>
+<li><a href="#Global_Clock_Signals" style=" font-size: 14px;">Global Clock Signals</a></li>
+<li><a href="#Pinout_by_Port_Name" style=" font-size: 14px;">Pinout by Port Name</a></li>
+<li><a href="#All_Package_Pins" style=" font-size: 14px;">All Package Pins</a></li>
+</ul>
+</li>
+</ul>
+</div><!-- catalog -->
+</div><!-- catalog_wrapper -->
+<div id="content">
+<h1><a name="Message">PnR Messages</a></h1>
+<table class="summary_table">
+<tr>
+<td class="label">Report Title</td>
+<td>PnR Report</td>
+</tr>
+<tr>
+<td class="label">Design File</td>
+<td>F:\GOWIN\Project\loongxin2\impl\gwsynthesis\1C102.vg</td>
+</tr>
+<tr>
+<td class="label">Physical Constraints File</td>
+<td>F:\GOWIN\Project\loongxin2\src\hw\constraints\102.cst</td>
+</tr>
+<tr>
+<td class="label">Timing Constraints File</td>
+<td>F:\GOWIN\Project\loongxin2\src\1C102.sdc</td>
+</tr>
+<tr>
+<td class="label">Tool Version</td>
+<td>V1.9.9 (64-bit)</td>
+</tr>
+<tr>
+<td class="label">Part Number</td>
+<td>GW5A-LV25MG121NES</td>
+</tr>
+<tr>
+<td class="label">Device</td>
+<td>GW5A-25</td>
+</tr>
+<tr>
+<td class="label">Device Version</td>
+<td>A</td>
+</tr>
+<tr>
+<td class="label">Created Time</td>
+<td>Fri May 17 16:24:24 2024
+</td>
+</tr>
+<tr>
+<td class="label">Legal Announcement</td>
+<td>Copyright (C)2014-2023 Gowin Semiconductor Corporation. All rights reserved.</td>
+</tr>
+</table>
+<h1><a name="PnR_Details">PnR Details</a></h1>
+<!--<h1><a name="Summary">PnR Summaries</a></h1>-->
+<table class="summary_table">
+<tr>
+<td class="label">Place & Route Process</td>
+<td>Running placement:
+   Placement Phase 0: CPU time = 0h 0m 8s, Elapsed time = 0h 0m 8s
+   Placement Phase 1: CPU time = 0h 0m 0.678s, Elapsed time = 0h 0m 0.678s
+   Placement Phase 2: CPU time = 0h 0m 17s, Elapsed time = 0h 0m 17s
+   Placement Phase 3: CPU time = 0h 0m 10s, Elapsed time = 0h 0m 10s
+   Total Placement: CPU time = 0h 0m 35s, Elapsed time = 0h 0m 35s
+Running routing:
+   Routing Phase 0: CPU time = 0h 0m 0.007s, Elapsed time = 0h 0m 0.008s
+   Routing Phase 1: CPU time = 0h 0m 39s, Elapsed time = 0h 0m 39s
+   Routing Phase 2: CPU time = 0h 0m 0.387s, Elapsed time = 0h 0m 0.387s
+   Routing Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
+   Total Routing: CPU time = 0h 0m 40s, Elapsed time = 0h 0m 40s
+Generate output files:
+   CPU time = 0h 0m 4s, Elapsed time = 0h 0m 4s
+</td>
+</tr>
+<tr>
+<td class="label">Total Time and Memory Usage</td>
+<td>CPU time = 0h 1m 19s, Elapsed time = 0h 1m 19s, Peak memory usage = 760MB</td>
+</tr>
+</table>
+<br/>
+<h1><a name="Resource">Resource</a></h1>
+<!--<h1><a name="Summary">PnR Summaries</a></h1>-->
+<h2><a name="Resource_Usage_Summary">Resource Usage Summary:</a></h2>
+<table class="summary_table">
+<tr>
+<td class="label"><b>Resource</b></td>
+<td><b>Usage</b></td>
+<td><b>Utilization</b></td>
+</tr>
+<tr>
+<td class="label">Logic</td>
+<td>15405/23040</td>
+<td>67%</td>
+</tr>
+<tr>
+<td class="label">&nbsp &nbsp --LUT,ALU,ROM16</td>
+<td>15339(14401 LUT, 938 ALU, 0 ROM16)</td>
+<td>-</td>
+</tr>
+<tr>
+<td class="label">&nbsp &nbsp --SSRAM(RAM16)</td>
+<td>11</td>
+<td>-</td>
+</tr>
+<tr>
+<td class="label">Register</td>
+<td>4471/23280</td>
+<td>20%</td>
+</tr>
+<tr>
+<td class="label">&nbsp &nbsp --Logic Register as Latch</td>
+<td>104/23040</td>
+<td><1%</td>
+</tr>
+<tr>
+<td class="label">&nbsp &nbsp --Logic Register as FF</td>
+<td>4356/23040</td>
+<td>19%</td>
+</tr>
+<tr>
+<td class="label">&nbsp &nbsp --I/O Register as Latch</td>
+<td>0/240</td>
+<td>0%</td>
+</tr>
+<tr>
+<td class="label">&nbsp &nbsp --I/O Register as FF</td>
+<td>11/240</td>
+<td>5%</td>
+</tr>
+<tr>
+<td class="label">CLS</td>
+<td>9438/11520</td>
+<td>82%</td>
+</tr>
+<tr>
+<td class="label">I/O Port</td>
+<td>42</td>
+<td>-</td>
+</tr>
+<tr>
+<td class="label">I/O Buf</td>
+<td>41</td>
+<td>-</td>
+</tr>
+<tr>
+<td class="label"> &nbsp &nbsp --Input Buf</td>
+<td>12</td>
+<td>-</td>
+</tr>
+<tr>
+<td class="label"> &nbsp &nbsp --Output Buf</td>
+<td>11</td>
+<td>-</td>
+</tr>
+<tr>
+<td class="label"> &nbsp &nbsp --Inout Buf</td>
+<td>18</td>
+<td>-</td>
+</tr>
+<tr>
+<td class="label">IOLOGIC</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td class="label">BSRAM</td>
+<td>36 SP<br/>3 SDPB<br/></td>
+<td>70%</td>
+</tr>
+<tr>
+<td class="label">DSP</td>
+<td>0</td><td>0%</td>
+</tr>
+<tr>
+<td class="label">PLL</td>
+<td>1/6</td>
+<td>17%</td>
+</tr>
+<tr>
+<td class="label">DDRDLL</td>
+<td>0/4</td>
+<td>0%</td>
+</tr>
+<tr>
+<td class="label">DCS</td>
+<td>0/8</td>
+<td>0%</td>
+</tr>
+<tr>
+<td class="label">DQCE</td>
+<td>0/24</td>
+<td>0%</td>
+</tr>
+<tr>
+<td class="label">OSC</td>
+<td>0/1</td>
+<td>0%</td>
+</tr>
+<tr>
+<td class="label">CLKDIV</td>
+<td>0/16</td>
+<td>0%</td>
+</tr>
+<tr>
+<td class="label">DLLDLY</td>
+<td>0/8</td>
+<td>0%</td>
+</tr>
+<tr>
+<td class="label">DQS</td>
+<td>0/4</td>
+<td>0%</td>
+</tr>
+<tr>
+<td class="label">DHCEN</td>
+<td>0/16</td>
+<td>0%</td>
+</tr>
+</table>
+<h2><a name="I/O_Bank_Usage_Summary">I/O Bank Usage Summary:</a></h2>
+<table class="summary_table">
+<tr>
+<td class="label"><b>I/O Bank</b></td>
+<td><b>Usage</b></td>
+</tr>
+<tr>
+<td class="label">bank 0</td>
+<td>5/6(83%)</td>
+</tr>
+<tr>
+<td class="label">bank 1</td>
+<td>5/10(50%)</td>
+</tr>
+<tr>
+<td class="label">bank 2</td>
+<td>9/12(75%)</td>
+</tr>
+<tr>
+<td class="label">bank 3</td>
+<td>3/4(75%)</td>
+</tr>
+<tr>
+<td class="label">bank 4</td>
+<td>0/11(0%)</td>
+</tr>
+<tr>
+<td class="label">bank 5</td>
+<td>5/13(38%)</td>
+</tr>
+<tr>
+<td class="label">bank 6</td>
+<td>1/10(10%)</td>
+</tr>
+<tr>
+<td class="label">bank 7</td>
+<td>10/16(62%)</td>
+</tr>
+<tr>
+<td class="label">bank 10</td>
+<td>4/4(100%)</td>
+</tr>
+</table>
+<br/>
+<h2><a name="Global_Clock_Usage_Summary">Global Clock Usage Summary:</a></h2>
+<table class="summary_table">
+<tr>
+<td class="label"><b>Global Clock</b></td>
+<td><b>Usage</b></td>
+</tr>
+<tr>
+<td class="label">PRIMARY</td>
+<td>7/8(88%)</td>
+</tr>
+<tr>
+<td class="label">LW</td>
+<td>7/8(88%)</td>
+</tr>
+<tr>
+<td class="label">GCLK_PIN</td>
+<td>14/30(47%)</td>
+</tr>
+<tr>
+<td class="label">PLL</td>
+<td>1/6(17%)</td>
+</tr>
+<tr>
+<td class="label">DDRDLL</td>
+<td>0/4(0%)</td>
+</tr>
+<tr>
+<td class="label">CLKDIV</td>
+<td>0/16(0%)</td>
+</tr>
+<tr>
+<td class="label">DLLDLY</td>
+<td>0/8(0%)</td>
+</tr>
+</table>
+<br/>
+<h2><a name="Global_Clock_Signals">Global Clock Signals:</a></h2>
+<table class="summary_table">
+<tr>
+<td class="label"><b>Signal</b></td>
+<td><b>Global Clock</b></td>
+<td><b>Location</b></td>
+</tr>
+<tr>
+<td class="label">LJTAG_TCK_1</td>
+<td>PRIMARY</td>
+<td> PTR1</td>
+</tr>
+<tr>
+<td class="label">clk_ext8m</td>
+<td>PRIMARY</td>
+<td> PTR0 PTR1 PTR2</td>
+</tr>
+<tr>
+<td class="label">gw_gao_inst_0/control0[0]</td>
+<td>PRIMARY</td>
+<td> PTR0 PTR1</td>
+</tr>
+<tr>
+<td class="label">A_cpu/gpio1/n4_5</td>
+<td>PRIMARY</td>
+<td> PTR1</td>
+</tr>
+<tr>
+<td class="label">A_cpu/pwm1/n101_3</td>
+<td>PRIMARY</td>
+<td> PTR1</td>
+</tr>
+<tr>
+<td class="label">A_cpu/hept1/re</td>
+<td>PRIMARY</td>
+<td> PTR1</td>
+</tr>
+<tr>
+<td class="label">A_cpu/uart1/n60_6</td>
+<td>PRIMARY</td>
+<td> PTR1</td>
+</tr>
+<tr>
+<td class="label">n198_4</td>
+<td>LW</td>
+<td> -</td>
+</tr>
+<tr>
+<td class="label">gw_gao_inst_0/gao_jtag_reset</td>
+<td>LW</td>
+<td> -</td>
+</tr>
+<tr>
+<td class="label">A_cpu/A_la132/reset_Z</td>
+<td>LW</td>
+<td> -</td>
+</tr>
+<tr>
+<td class="label">A_cpu/A_la132/pc_allowin</td>
+<td>LW</td>
+<td> -</td>
+</tr>
+<tr>
+<td class="label">A_cpu/A_la132/n16123_6</td>
+<td>LW</td>
+<td> -</td>
+</tr>
+<tr>
+<td class="label">A_cpu/A_la132/gen_smart_mdu.la132_mdu/inst_mdu_mem_dp/a_r_63_8</td>
+<td>LW</td>
+<td> -</td>
+</tr>
+<tr>
+<td class="label">A_cpu/A_la132/la132_ljtag_module/tap/n9_5</td>
+<td>LW</td>
+<td> -</td>
+</tr>
+</table>
+<br/>
+<h2><a name="Pinout_by_Port_Name">Pinout by Port Name:</a></h2>
+<table class="summary_table">
+<tr>
+<td class="label"><b>Port Name</b></td>
+<td><b>Diff Pair</b></td>
+<td><b>Loc./Bank</b></td>
+<td><b>Constraint</b></td>
+<td><b>Dir.</b></td>
+<td><b>Site</b></td>
+<td><b>IO Type</b></td>
+<td><b>Drive</b></td>
+<td><b>Pull Mode</b></td>
+<td><b>PCI Clamp</b></td>
+<td><b>Hysteresis</b></td>
+<td><b>Open Drain</b></td>
+<td><b>Vref</b></td>
+<td><b>Single Resistor</b></td>
+<td><b>Diff Resistor</b></td>
+<td><b>BankVccio</b></td>
+<td><b>Pull Strength</b></td>
+</tr>
+<tr>
+<td class="label">CLK50M</td>
+<td></td>
+<td>E2/5</td>
+<td>Y</td>
+<td>in</td>
+<td>IOB12[A]</td>
+<td>LVCMOS33</td>
+<td>OFF</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">RSTN</td>
+<td></td>
+<td>H11/7</td>
+<td>Y</td>
+<td>in</td>
+<td>IOT3[A]</td>
+<td>LVCMOS33</td>
+<td>OFF</td>
+<td>DOWN</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">soft_resetn</td>
+<td></td>
+<td>H10/7</td>
+<td>Y</td>
+<td>in</td>
+<td>IOT3[B]</td>
+<td>LVCMOS33</td>
+<td>OFF</td>
+<td>DOWN</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">LJTAG_TRST</td>
+<td></td>
+<td>G5/1</td>
+<td>Y</td>
+<td>in</td>
+<td>IOT72[B]</td>
+<td>LVCMOS33</td>
+<td>OFF</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">SPI_MISO</td>
+<td></td>
+<td>L2/2</td>
+<td>Y</td>
+<td>in</td>
+<td>IOR18[A]</td>
+<td>LVCMOS33</td>
+<td>OFF</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">RsRx</td>
+<td></td>
+<td>G1/2</td>
+<td>Y</td>
+<td>in</td>
+<td>IOR24[B]</td>
+<td>LVCMOS33</td>
+<td>OFF</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">tms_pad_i</td>
+<td></td>
+<td>B1/10</td>
+<td>N</td>
+<td>in</td>
+<td>IOR3[A]</td>
+<td>LVCMOS33</td>
+<td>OFF</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">tck_pad_i</td>
+<td></td>
+<td>C1/10</td>
+<td>N</td>
+<td>in</td>
+<td>IOR1[A]</td>
+<td>LVCMOS33</td>
+<td>OFF</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">tdi_pad_i</td>
+<td></td>
+<td>A3/10</td>
+<td>N</td>
+<td>in</td>
+<td>IOR1[B]</td>
+<td>LVCMOS33</td>
+<td>OFF</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">pps_led</td>
+<td></td>
+<td>F7/0</td>
+<td>Y</td>
+<td>out</td>
+<td>IOT58[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">SPI_CLK</td>
+<td></td>
+<td>G2/2</td>
+<td>Y</td>
+<td>out</td>
+<td>IOR24[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">SPI_MOSI</td>
+<td></td>
+<td>J4/2</td>
+<td>Y</td>
+<td>out</td>
+<td>IOR22[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">SPI_CSN1</td>
+<td></td>
+<td>L4/2</td>
+<td>Y</td>
+<td>out</td>
+<td>IOR31[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">SPI_CSN2</td>
+<td></td>
+<td>F2/5</td>
+<td>Y</td>
+<td>out</td>
+<td>IOB26[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">SPI_CSN3</td>
+<td></td>
+<td>B2/5</td>
+<td>Y</td>
+<td>out</td>
+<td>IOB4[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">SCL</td>
+<td></td>
+<td>G10/7</td>
+<td>Y</td>
+<td>out</td>
+<td>IOT7[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">PWM01</td>
+<td></td>
+<td>H1/3</td>
+<td>Y</td>
+<td>out</td>
+<td>IOB91[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">RsTx</td>
+<td></td>
+<td>K4/2</td>
+<td>Y</td>
+<td>out</td>
+<td>IOR22[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">tdo_pad_o</td>
+<td></td>
+<td>A2/10</td>
+<td>N</td>
+<td>out</td>
+<td>IOR3[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">LJTAG_TMS</td>
+<td></td>
+<td>H7/1</td>
+<td>Y</td>
+<td>io</td>
+<td>IOT66[B]</td>
+<td>LVCMOS33</td>
+<td>OFF</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">LJTAG_TDO</td>
+<td></td>
+<td>G7/1</td>
+<td>Y</td>
+<td>io</td>
+<td>IOT68[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">LJTAG_TDI</td>
+<td></td>
+<td>G8/1</td>
+<td>Y</td>
+<td>io</td>
+<td>IOT68[B]</td>
+<td>LVCMOS33</td>
+<td>OFF</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">LJTAG_TCK</td>
+<td></td>
+<td>J5/1</td>
+<td>Y</td>
+<td>io</td>
+<td>IOT61[B]</td>
+<td>LVCMOS33</td>
+<td>OFF</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">GPIO01</td>
+<td></td>
+<td>J8/0</td>
+<td>Y</td>
+<td>io</td>
+<td>IOT56[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">GPIO13</td>
+<td></td>
+<td>D11/6</td>
+<td>Y</td>
+<td>io</td>
+<td>IOL9[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">GPIO14</td>
+<td></td>
+<td>H2/3</td>
+<td>Y</td>
+<td>io</td>
+<td>IOB91[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">GPIO15</td>
+<td></td>
+<td>H4/3</td>
+<td>Y</td>
+<td>io</td>
+<td>IOB89[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">GPIO16</td>
+<td></td>
+<td>J2/2</td>
+<td>Y</td>
+<td>io</td>
+<td>IOR33[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">GPIO17</td>
+<td></td>
+<td>D1/5</td>
+<td>Y</td>
+<td>io</td>
+<td>IOB14[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">GPIO18</td>
+<td></td>
+<td>J7/7</td>
+<td>Y</td>
+<td>io</td>
+<td>IOT21[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">GPIO19</td>
+<td></td>
+<td>L8/7</td>
+<td>Y</td>
+<td>io</td>
+<td>IOT19[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">GPIO20</td>
+<td></td>
+<td>K10/7</td>
+<td>Y</td>
+<td>io</td>
+<td>IOT15[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">GPIO34</td>
+<td></td>
+<td>K9/0</td>
+<td>Y</td>
+<td>io</td>
+<td>IOT31[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">GPIO35</td>
+<td></td>
+<td>L9/0</td>
+<td>Y</td>
+<td>io</td>
+<td>IOT31[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">GPIO36</td>
+<td></td>
+<td>C2/5</td>
+<td>Y</td>
+<td>io</td>
+<td>IOB4[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">GPIO37</td>
+<td></td>
+<td>K1/2</td>
+<td>Y</td>
+<td>io</td>
+<td>IOR20[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">GPIO38</td>
+<td></td>
+<td>J1/2</td>
+<td>Y</td>
+<td>io</td>
+<td>IOR33[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>DOWN</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">GPIO39</td>
+<td></td>
+<td>K11/7</td>
+<td>Y</td>
+<td>io</td>
+<td>IOT11[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">GPIO40</td>
+<td></td>
+<td>L11/7</td>
+<td>Y</td>
+<td>io</td>
+<td>IOT11[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">I2C_SCL</td>
+<td></td>
+<td>J10/7</td>
+<td>Y</td>
+<td>io</td>
+<td>IOT1[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">I2C_SDA</td>
+<td></td>
+<td>F6/0</td>
+<td>Y</td>
+<td>io</td>
+<td>IOT58[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">SDA</td>
+<td></td>
+<td>G11/7</td>
+<td>Y</td>
+<td>io</td>
+<td>IOT7[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+</table>
+<br/>
+<h2><a name="All_Package_Pins">All Package Pins:</a></h2>
+<table class="summary_table">
+<tr>
+<td class="label"><b>Loc./Bank</b></td>
+<td><b>Signal</b></td>
+<td><b>Dir.</b></td>
+<td><b>Site</b></td>
+<td><b>IO Type</b></td>
+<td><b>Drive</b></td>
+<td><b>Pull Mode</b></td>
+<td><b>PCI Clamp</b></td>
+<td><b>Hysteresis</b></td>
+<td><b>Open Drain</b></td>
+<td><b>Vref</b></td>
+<td><b>Single Resistor</b></td>
+<td><b>Diff Resistor</b></td>
+<td><b>Bank Vccio</b></td>
+<td><b>Pull Strength</b></td>
+</tr>
+<tr>
+<td class="label">J11/7</td>
+<td>-</td>
+<td>in</td>
+<td>IOT1[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">J10/7</td>
+<td>I2C_SCL</td>
+<td>io</td>
+<td>IOT1[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">H11/7</td>
+<td>RSTN</td>
+<td>in</td>
+<td>IOT3[A]</td>
+<td>LVCMOS33</td>
+<td>OFF</td>
+<td>DOWN</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">H10/7</td>
+<td>soft_resetn</td>
+<td>in</td>
+<td>IOT3[B]</td>
+<td>LVCMOS33</td>
+<td>OFF</td>
+<td>DOWN</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">G11/7</td>
+<td>SDA</td>
+<td>io</td>
+<td>IOT7[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">G10/7</td>
+<td>SCL</td>
+<td>out</td>
+<td>IOT7[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">K11/7</td>
+<td>GPIO39</td>
+<td>io</td>
+<td>IOT11[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">L11/7</td>
+<td>GPIO40</td>
+<td>io</td>
+<td>IOT11[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">L10/7</td>
+<td>-</td>
+<td>in</td>
+<td>IOT15[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">K10/7</td>
+<td>GPIO20</td>
+<td>io</td>
+<td>IOT15[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">L7/7</td>
+<td>-</td>
+<td>in</td>
+<td>IOT19[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">L8/7</td>
+<td>GPIO19</td>
+<td>io</td>
+<td>IOT19[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">K7/7</td>
+<td>-</td>
+<td>in</td>
+<td>IOT21[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">J7/7</td>
+<td>GPIO18</td>
+<td>io</td>
+<td>IOT21[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">L6/7</td>
+<td>-</td>
+<td>in</td>
+<td>IOT23[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">K6/7</td>
+<td>-</td>
+<td>in</td>
+<td>IOT23[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">L9/0</td>
+<td>GPIO35</td>
+<td>io</td>
+<td>IOT31[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">K9/0</td>
+<td>GPIO34</td>
+<td>io</td>
+<td>IOT31[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">J8/0</td>
+<td>GPIO01</td>
+<td>io</td>
+<td>IOT56[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">K8/0</td>
+<td>-</td>
+<td>in</td>
+<td>IOT56[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">F7/0</td>
+<td>pps_led</td>
+<td>out</td>
+<td>IOT58[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">F6/0</td>
+<td>I2C_SDA</td>
+<td>io</td>
+<td>IOT58[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">H5/1</td>
+<td>-</td>
+<td>in</td>
+<td>IOT61[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">J5/1</td>
+<td>LJTAG_TCK</td>
+<td>in</td>
+<td>IOT61[B]</td>
+<td>LVCMOS33</td>
+<td>OFF</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">L5/1</td>
+<td>-</td>
+<td>in</td>
+<td>IOT63[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">K5/1</td>
+<td>-</td>
+<td>in</td>
+<td>IOT63[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">H8/1</td>
+<td>-</td>
+<td>in</td>
+<td>IOT66[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">H7/1</td>
+<td>LJTAG_TMS</td>
+<td>in</td>
+<td>IOT66[B]</td>
+<td>LVCMOS33</td>
+<td>OFF</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">G7/1</td>
+<td>LJTAG_TDO</td>
+<td>out</td>
+<td>IOT68[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">G8/1</td>
+<td>LJTAG_TDI</td>
+<td>in</td>
+<td>IOT68[B]</td>
+<td>LVCMOS33</td>
+<td>OFF</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">F5/1</td>
+<td>-</td>
+<td>in</td>
+<td>IOT72[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">G5/1</td>
+<td>LJTAG_TRST</td>
+<td>in</td>
+<td>IOT72[B]</td>
+<td>LVCMOS33</td>
+<td>OFF</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">D8/5</td>
+<td>-</td>
+<td>in</td>
+<td>IOB1[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">B2/5</td>
+<td>SPI_CSN3</td>
+<td>out</td>
+<td>IOB4[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">C2/5</td>
+<td>GPIO36</td>
+<td>io</td>
+<td>IOB4[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">A2_B8A/5</td>
+<td>-</td>
+<td>in</td>
+<td>IOB8[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">B1_B10A/5</td>
+<td>-</td>
+<td>in</td>
+<td>IOB10[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">A3_B10B/5</td>
+<td>-</td>
+<td>in</td>
+<td>IOB10[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">E2/5</td>
+<td>CLK50M</td>
+<td>in</td>
+<td>IOB12[A]</td>
+<td>LVCMOS33</td>
+<td>OFF</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">E1/5</td>
+<td>-</td>
+<td>in</td>
+<td>IOB12[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>DOWN</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">C1_B14A/5</td>
+<td>-</td>
+<td>in</td>
+<td>IOB14[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">D1/5</td>
+<td>GPIO17</td>
+<td>io</td>
+<td>IOB14[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">A1/5</td>
+<td>-</td>
+<td>in</td>
+<td>IOB24[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">F2/5</td>
+<td>SPI_CSN2</td>
+<td>out</td>
+<td>IOB26[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">F1/5</td>
+<td>-</td>
+<td>in</td>
+<td>IOB26[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">E8/4</td>
+<td>-</td>
+<td>in</td>
+<td>IOB37[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">E6/4</td>
+<td>-</td>
+<td>in</td>
+<td>IOB37[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">D5/4</td>
+<td>-</td>
+<td>in</td>
+<td>IOB54[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">E4/4</td>
+<td>-</td>
+<td>in</td>
+<td>IOB54[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">B3/4</td>
+<td>-</td>
+<td>in</td>
+<td>IOB56[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">C3/4</td>
+<td>-</td>
+<td>in</td>
+<td>IOB56[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">E5/4</td>
+<td>-</td>
+<td>in</td>
+<td>IOB58[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">D6/4</td>
+<td>-</td>
+<td>in</td>
+<td>IOB58[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">E3/4</td>
+<td>-</td>
+<td>in</td>
+<td>IOB60[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">E7/4</td>
+<td>-</td>
+<td>in</td>
+<td>IOB62[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">D7/4</td>
+<td>-</td>
+<td>in</td>
+<td>IOB64[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">G4/3</td>
+<td>-</td>
+<td>in</td>
+<td>IOB89[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">H4/3</td>
+<td>GPIO15</td>
+<td>io</td>
+<td>IOB89[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">H1/3</td>
+<td>PWM01</td>
+<td>out</td>
+<td>IOB91[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">H2/3</td>
+<td>GPIO14</td>
+<td>io</td>
+<td>IOB91[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">E11/6</td>
+<td>-</td>
+<td>in</td>
+<td>IOL3[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">E10/6</td>
+<td>-</td>
+<td>in</td>
+<td>IOL3[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">C11/6</td>
+<td>-</td>
+<td>in</td>
+<td>IOL5[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">C10/6</td>
+<td>-</td>
+<td>in</td>
+<td>IOL5[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">D11/6</td>
+<td>GPIO13</td>
+<td>io</td>
+<td>IOL9[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">D10/6</td>
+<td>-</td>
+<td>in</td>
+<td>IOL9[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">B11/6</td>
+<td>-</td>
+<td>in</td>
+<td>IOL12[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">B10/6</td>
+<td>-</td>
+<td>in</td>
+<td>IOL12[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">A11/6</td>
+<td>-</td>
+<td>in</td>
+<td>IOL14[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">A10/6</td>
+<td>-</td>
+<td>in</td>
+<td>IOL14[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">C1/10</td>
+<td>tck_pad_i</td>
+<td>in</td>
+<td>IOR1[A]</td>
+<td>LVCMOS33</td>
+<td>OFF</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">A3/10</td>
+<td>tdi_pad_i</td>
+<td>in</td>
+<td>IOR1[B]</td>
+<td>LVCMOS33</td>
+<td>OFF</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">B1/10</td>
+<td>tms_pad_i</td>
+<td>in</td>
+<td>IOR3[A]</td>
+<td>LVCMOS33</td>
+<td>OFF</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">A2/10</td>
+<td>tdo_pad_o</td>
+<td>out</td>
+<td>IOR3[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">L2/2</td>
+<td>SPI_MISO</td>
+<td>in</td>
+<td>IOR18[A]</td>
+<td>LVCMOS33</td>
+<td>OFF</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">L1/2</td>
+<td>-</td>
+<td>in</td>
+<td>IOR18[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">K1/2</td>
+<td>GPIO37</td>
+<td>io</td>
+<td>IOR20[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">K2/2</td>
+<td>-</td>
+<td>in</td>
+<td>IOR20[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">J4/2</td>
+<td>SPI_MOSI</td>
+<td>out</td>
+<td>IOR22[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">K4/2</td>
+<td>RsTx</td>
+<td>out</td>
+<td>IOR22[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">G2/2</td>
+<td>SPI_CLK</td>
+<td>out</td>
+<td>IOR24[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">G1/2</td>
+<td>RsRx</td>
+<td>in</td>
+<td>IOR24[B]</td>
+<td>LVCMOS33</td>
+<td>OFF</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">L4/2</td>
+<td>SPI_CSN1</td>
+<td>out</td>
+<td>IOR31[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">L3/2</td>
+<td>-</td>
+<td>in</td>
+<td>IOR31[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">J1/2</td>
+<td>GPIO38</td>
+<td>io</td>
+<td>IOR33[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>DOWN</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">J2/2</td>
+<td>GPIO16</td>
+<td>io</td>
+<td>IOR33[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+</table>
+<br/>
+</div><!-- content -->
+</div><!-- main_wrapper -->
+</body>
+</html>
