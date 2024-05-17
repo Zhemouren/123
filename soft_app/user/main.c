@@ -232,8 +232,8 @@ int main(void) {
     {
         if(flag==0){OLED_CLS();flag=1;}
         LEDgree_OFF();//关闭绿灯
-        // mode=1;
-        // flag1=1;
+        mode=1;
+        flag1=1;
         }
     }
     my_delay_ms(50);//每50ms轮询一次
