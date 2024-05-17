@@ -13,7 +13,7 @@
 #include"ls1c102_ptimer.h"
 
 #include "soc_ls1c102.h"
-
+#include "hbirdv2_uart.h"
 #include "soc_gpio.h"
 #include "soc_pwm.h"
 #include "soc_hpet.h"

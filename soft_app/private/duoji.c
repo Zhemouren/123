@@ -20,7 +20,7 @@ void SG90_GetAngle(int angle)
         可输入 angle = 0 | 45 | 90 | 135 | 180 对应选择多大角度
     */
     pwm_steering_engine_set(angle);//
-    /*value=50相当于一个周期内（20ms）有0.5ms高脉冲*/
+    
 }
 void SG90_Init()
 {

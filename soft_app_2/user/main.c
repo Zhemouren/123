@@ -57,7 +57,7 @@ uint8_t mode = 1;//运行界面
 
 int main(void) {
 
-    EnableInt();// 开总中断
+   /////// // EnableInt();// 开总中断
 
     my_GPIO_Init();//初始化GPIO
     my_PWM_Init(); //初始化PWM
@@ -69,8 +69,8 @@ int main(void) {
     my_delay_ms(500);
   while (1)
   {
-    // if(HLK_IO==1)//如果人体雷达感应模块感应到人体，唤醒OLED面板
-    // {   
+    if(HLK_IO==1)//如果人体雷达感应模块感应到人体，唤醒OLED面板
+    {   
         flag=0;
         KeyNum=MatrixKey();
         switch(mode)
@@ -224,14 +224,16 @@ int main(void) {
             default:
                 break;
         }
+   
     }
-    // else
-    // {
-    //     if(flag==0){OLED_CLS();flag=1;}
-    //     // mode=1;
-    //     // flag1=1;
-    //     }
-    // }
+    else
+    {
+        if(flag==0){OLED_CLS();flag=1;}
+        // mode=1;
+        // flag1=1;
+        }
+    }
+    my_delay_ms(50);//每50ms轮询一次
     return 0;
 }
 
@@ -497,8 +499,10 @@ void Write_ID()
         IDArray[0] = cardID; // 存储新ID到第一个元素
         OLED_ShowNum(45,3,(uint32_t)cardID,5,16);
         my_delay_ms(1000);
-         interface_display(15);
-          my_delay_ms(1000);
+
+        interface_display(15);
+        Buzzer();//写入后蜂鸣器响两声
+        my_delay_ms(850);
           mode=6;
           flag1=6;          //添加成功后自动跳转到卡界面
     }  
@@ -518,7 +522,8 @@ void Delate_ID()
     {
         IDArray[i] = 0; // 将数组元素清零
     }  
-    my_delay_ms(1000);
+    Buzzer();//写入后蜂鸣器响两声
+    my_delay_ms(850);//实际延迟1s
     mode=6;
     flag1=6;
 //     for (int i = 0; i < MM; i++)
@@ -543,10 +548,12 @@ void Read_ID()
             {
                 interface_display(8);
                 SG90_Open();
-                my_delay_ms(5000);
+                Buzzer_one();//门禁开启提示音
+                my_delay_ms(2500);//
+                Buzzer_one();//门禁关闭提示音
                 SG90_Close();
                 interface_display(9);
-                my_delay_ms(2000);
+                my_delay_ms(2500);
                 flag1=1;
                 mode=1;
                 break; // 找到匹配的卡号后，退出循环
@@ -608,11 +615,12 @@ void Key_main()
                     interface_display(8);//显示解锁成功
                     
                     SG90_Open();
-                    my_delay_ms(2000);
                     Buzzer_one();
-                    SG90_Close();
+                    my_delay_ms(2500);
+                    Buzzer_one();//门禁关闭提示音
+                    SG90_Close();//门禁开启
                     interface_display(9);
-                    my_delay_ms(2000);
+                    my_delay_ms(2500);
                     flag1=1;
                     mode=1;
 					Password=0;		//密码清零
@@ -624,7 +632,7 @@ void Key_main()
                     interface_display(6);//显示解锁失败
                     Buzzer();
                     SG90_Close();
-                    my_delay_ms(2000);
+                    my_delay_ms(1000);
 					Password=0;		//密码清零
 					Count=0;		//计次清零
                     interface_display(5);//显示请输入密码
@@ -681,7 +689,7 @@ void Key()
                 interface_display(8);//显示解锁成功
                 mode=5;
                 flag1=5;//进设置界面
-                my_delay_ms(800);
+                my_delay_ms(1000);
 				Password=0;		//密码清零
 				Count=0;		//计次清零
 			}
@@ -690,7 +698,7 @@ void Key()
                 OLED_CLS();
                 interface_display(6);//显示解锁失败
                 Buzzer();
-                my_delay_ms(800);
+                my_delay_ms(1000);
                 mode=8;
                 flag1=8;//进设置界面
 				Password=0;		//密码清零
@@ -728,12 +736,12 @@ void Add_Key()
             }
             int temp = Password;
                 
-                for(i = Count - 1; i >= 0; i--)
-                {
-                    int8_t digit = temp % 10;
-                    temp /= 10;
-                    OLED_ShowNum(45+ i * 8, 3, digit, 1, 16);
-                }
+            for(i = Count - 1; i >= 0; i--)
+            {
+                int8_t digit = temp % 10;
+                temp /= 10;
+                OLED_ShowNum(45+ i * 8, 3, digit, 1, 16);
+            }
         }
         if (KeyNum == 11) // 如果S11按键按下，确认
         {
@@ -744,22 +752,23 @@ void Add_Key()
             passwordArray[0] = Password; // 存储新密码到第一个元素
             Password = 0; // 密码清零
             Count = 0; // 计次清零
+            Buzzer();
             interface_display(15);
-            my_delay_ms(2000);
+            my_delay_ms(1000);
             mode=7;
             flag1=7; //添加成功后自动跳转到密码管理界面
         }
-			if(KeyNum==12)	//如果S12按键按下，取消
-			{
-                /* 逻辑清0 */
-				Password=0;		//密码清零
-				Count=0;		//计次清零
-                /* 显示清0 */
-                for(i=0;i<4;i++)
-                {
-                 OLED_ShowStr(45+i*8, 3, " ", 2);
-                }
-			}
+		if(KeyNum==12)	//如果S12按键按下，取消
+		{
+            /* 逻辑清0 */
+			Password=0;		//密码清零
+			Count=0;		//计次清零
+            /* 显示清0 */
+            for(i=0;i<4;i++)
+            {
+             OLED_ShowStr(45+i*8, 3, " ", 2);
+            }
+		}
     }
 }
 

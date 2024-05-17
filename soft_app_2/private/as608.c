@@ -769,9 +769,9 @@ void Add_FR(void)
         if(ensure == 0x00)
         {
 //			printf("指纹正常\r\n");
-            OLED_CLS();
-            OLED_ShowCN_STR(40,2,62,2);
-            OLED_ShowCN_STR(72,2,77,1);  //显示录入中
+          OLED_CLS();
+          OLED_ShowCN_STR(40,2,62,2);
+          OLED_ShowCN_STR(72,2,77,1);  //显示录入中
             
           i = 0;
           processnum = 1; //跳到第二步
@@ -784,9 +784,9 @@ void Add_FR(void)
     case 1:
       i++;
 //		  printf("请再按一次\r\n");
-            OLED_CLS();
-            OLED_ShowCN_STR(40,2,62,2);
-            OLED_ShowCN_STR(72,2,77,1);  //显示录入中
+          OLED_CLS();
+          OLED_ShowCN_STR(40,2,62,2);
+          OLED_ShowCN_STR(72,2,77,1);  //显示录入中
       ensure = PS_GetImage();
       if(ensure == 0x00)
       {
@@ -794,9 +794,9 @@ void Add_FR(void)
         if(ensure == 0x00)
         {
 //					printf("指纹正常\r\n");
-            OLED_CLS();
-            OLED_ShowCN_STR(40,2,62,2);
-            OLED_ShowCN_STR(72,2,77,1);  //显示录入中
+          OLED_CLS();
+          OLED_ShowCN_STR(40,2,62,2);
+          OLED_ShowCN_STR(72,2,77,1);  //显示录入中
           i = 0;
           processnum = 2; //跳到第三步
         }
@@ -807,16 +807,16 @@ void Add_FR(void)
 
     case 2:
 //		  printf("对比两次指纹\r\n");
-                OLED_CLS();
-            OLED_ShowCN_STR(40,2,62,2);
-            OLED_ShowCN_STR(72,2,77,1);  //显示录入中
+          OLED_CLS();
+          OLED_ShowCN_STR(40,2,62,2);
+          OLED_ShowCN_STR(72,2,77,1);  //显示录入中
       ensure = PS_Match();
       if(ensure == 0x00)
       {
 //		printf("对比成功\r\n");
-                      OLED_CLS();
-            OLED_ShowCN_STR(40,2,62,2);
-            OLED_ShowCN_STR(72,2,77,1);  //显示录入中
+        OLED_CLS();
+        OLED_ShowCN_STR(40,2,62,2);
+        OLED_ShowCN_STR(72,2,77,1);  //显示录入中
         OLED_CLS(); 
         OLED_ShowCN_STR(30,2,62,2);  //显示录入成功
         OLED_ShowCN_STR(62,2,66,2);  //显示录入成功
@@ -832,7 +832,7 @@ void Add_FR(void)
         i = 0;
         processnum = 0; //跳回第一步
       }
-      my_delay_ms(500);
+      // my_delay_ms(500);
       break;
 
     case 3:
@@ -849,14 +849,12 @@ void Add_FR(void)
         processnum = 0;
         ShowErrMessage(ensure);
       }
-      my_delay_ms(500);
+      // my_delay_ms(500);
       break;
 
     case 4:
         // printf("默认选择ID为1 \r\n");
 		ID_NUM = 1;
-    
-
       while(key_num != 15)
       {
         key_num = MatrixKey();
@@ -895,7 +893,7 @@ void Add_FR(void)
       }
       break;
     }
-    my_delay_ms(400);
+    my_delay_ms(500);//每次延迟500ms
     if(i == 10) //超过5次没有按手指则退出
     {
       break;
@@ -925,12 +923,14 @@ void press_FR(void)
          OLED_CLS(); 
             interface_display(8);//显示解锁成功
         //开门动作
+        
         SG90_Open();
-        my_delay_ms(5000);
+        Buzzer_one();//门禁开启
+        my_delay_ms(2500);
+        Buzzer_one();//门禁关闭提示
         SG90_Close();
         interface_display(9);
-        my_delay_ms(1500);
-        my_delay_ms(1500);
+        my_delay_ms(2500);
           //退出指纹识别
             break;
         }
@@ -938,8 +938,8 @@ void press_FR(void)
         {
            OLED_CLS(); 
            interface_display(6);//显示解锁失败
-           Buzzer();
-          my_delay_ms(1500);
+            Buzzer();
+          my_delay_ms(1000);
         }
       }
       else  ;
@@ -960,11 +960,12 @@ void Del_FR(void)
   if(ensure == 0)
   {
 		// printf("删除指纹成功 \r\n");
-    gpio_write(10,0);
-    
+    // gpio_write(10,0);
+    Buzzer();
   }
   else
     ShowErrMessage(ensure);
+
   my_delay_ms(1000);
 
 }
@@ -977,7 +978,8 @@ void Del_FR_Lib(void)
   if(ensure == 0)
   {
 //		printf("清空指纹库成功\r\n");
-//      interface_display(14);
+    //  interface_display(14);
+    Buzzer();
   }
   else
      ShowErrMessage(ensure);

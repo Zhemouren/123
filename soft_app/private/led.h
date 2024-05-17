@@ -5,8 +5,8 @@
 
 void LEDred_ON(void);
 void LEDred_OFF(void);
-void LEDblue_ON(void);
-void LEDblue_OFF(void);
+void LEDgree_ON(void);
+void LEDgree_OFF(void);
 void Buzzer(void);
 void Buzzer_one(void);
 void Buzzer_two(void);
