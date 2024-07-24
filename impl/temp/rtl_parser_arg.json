@@ -1,0 +1,173 @@
+{
+ "Device" : "GW5AST-138B",
+ "Files" : [
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/ADC.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/CAU.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/adc_top.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/advanced_fir_filter/advanced_fir_filter.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/box_ave.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/confreg.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/fft/fft.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/fifo_topx/fifo_topx.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/gowin_pll/gowin_pll.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/gowin_pllx/gowin_pllx.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/gowin_sp/gowin_sp.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/gpio.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/hpet.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/hw/amba/apb_mux9.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/hw/amba/axi2apb.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/hw/amba/axi_mux.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/hw/config.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/hw/godson_mcu_cpu.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/hw/godson_mcu_top.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/hw/io_tools.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/hw/ip_repo/blk_mem_gen_0/blk_mem_gen_0.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/hw/ip_repo/blk_mem_gen_1/blk_mem_gen_1.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/hw/la132_top_pack/la132_top_gowin.vp",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/i2c_master_bit_ctrl.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/i2c_master_byte_ctrl.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/i2c_slave_bit_ctrl.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/i2c_slave_byte_ctrl.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/i2c_top.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/iic_dri.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/io_generic_fifo.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/oled_top.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/pwm.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/simple_spi_top.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/spi_fifo4.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/spi_top.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/uart_interrupt.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/uart_rx.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/uart_top.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "H:/GOWIN/Project/loongxin3/src/uart_tx.v",
+   "Type" : "verilog"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "H:/GOWIN/Project/loongxin3/impl/temp/rtl_parser.result",
+ "Top" : "godson_mcu_top",
+ "VerilogStd" : "sysv",
+ "VhdlStd" : "vhdl_93"
+}

@@ -1,0 +1,1084 @@
+[
+ {
+  "InstFile" : "H:/GOWIN/Project/loongxin3/src/CAU.v",
+  "InstLine" : 24,
+  "InstName" : "CAU",
+  "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/CAU.v",
+  "ModuleLine" : 24,
+  "ModuleName" : "CAU",
+  "SubInsts" : [
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/CAU.v",
+    "InstLine" : 213,
+    "InstName" : "fifo_topx_inst1",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/fifo_topx/fifo_topx.v",
+    "ModuleLine" : 708,
+    "ModuleName" : "fifo_topx",
+    "SubInsts" : [
+     {
+      "InstFile" : "H:/GOWIN/Project/loongxin3/src/fifo_topx/fifo_topx.v",
+      "InstLine" : 733,
+      "InstName" : "fifo_inst",
+      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/fifo_topx/fifo_topx.v",
+      "ModuleLine" : 13,
+      "ModuleName" : "~fifo.fifo_topx"
+     }
+    ]
+   },
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/CAU.v",
+    "InstLine" : 227,
+    "InstName" : "FFT_inst",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/fft/fft.v",
+    "ModuleLine" : 2743,
+    "ModuleName" : "FFT_Top",
+    "SubInsts" : [
+     {
+      "InstFile" : "H:/GOWIN/Project/loongxin3/src/fft/fft.v",
+      "InstLine" : 2778,
+      "InstName" : "fft_top_inst",
+      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/fft/fft.v",
+      "ModuleLine" : 10,
+      "ModuleName" : "~fft_top.FFT_Top"
+     }
+    ]
+   },
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/CAU.v",
+    "InstLine" : 246,
+    "InstName" : "fifo_topx_inst2",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/fifo_topx/fifo_topx.v",
+    "ModuleLine" : 708,
+    "ModuleName" : "fifo_topx",
+    "SubInsts" : [
+     {
+      "InstFile" : "H:/GOWIN/Project/loongxin3/src/fifo_topx/fifo_topx.v",
+      "InstLine" : 733,
+      "InstName" : "fifo_inst",
+      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/fifo_topx/fifo_topx.v",
+      "ModuleLine" : 13,
+      "ModuleName" : "~fifo.fifo_topx"
+     }
+    ]
+   },
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/CAU.v",
+    "InstLine" : 355,
+    "InstName" : "adc_inst",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/adc_top.v",
+    "ModuleLine" : 67,
+    "ModuleName" : "ADC_top",
+    "SubInsts" : [
+     {
+      "InstFile" : "H:/GOWIN/Project/loongxin3/src/adc_top.v",
+      "InstLine" : 120,
+      "InstName" : "SSD_ADC",
+      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/ADC.v",
+      "ModuleLine" : 68,
+      "ModuleName" : "sigmadelta_adc",
+      "SubInsts" : [
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/ADC.v",
+        "InstLine" : 163,
+        "InstName" : "box_ave",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/box_ave.v",
+        "ModuleLine" : 72,
+        "ModuleName" : "box_ave"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/CAU.v",
+    "InstLine" : 374,
+    "InstName" : "fir_inst",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/advanced_fir_filter/advanced_fir_filter.v",
+    "ModuleLine" : 4633,
+    "ModuleName" : "Advanced_FIR_Filter_Top",
+    "SubInsts" : [
+     {
+      "InstFile" : "H:/GOWIN/Project/loongxin3/src/advanced_fir_filter/advanced_fir_filter.v",
+      "InstLine" : 4656,
+      "InstName" : "advanced_fir_filter_inst",
+      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/advanced_fir_filter/advanced_fir_filter.v",
+      "ModuleLine" : 11,
+      "ModuleName" : "(advanced_fir_filter)/(Advanced_FIR_Filter_Top)"
+     }
+    ]
+   },
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/CAU.v",
+    "InstLine" : 388,
+    "InstName" : "fifo_adc_inst",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/fifo_topx/fifo_topx.v",
+    "ModuleLine" : 708,
+    "ModuleName" : "fifo_topx",
+    "SubInsts" : [
+     {
+      "InstFile" : "H:/GOWIN/Project/loongxin3/src/fifo_topx/fifo_topx.v",
+      "InstLine" : 733,
+      "InstName" : "fifo_inst",
+      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/fifo_topx/fifo_topx.v",
+      "ModuleLine" : 13,
+      "ModuleName" : "~fifo.fifo_topx"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_mcu_top.v",
+  "InstLine" : 3,
+  "InstName" : "godson_mcu_top",
+  "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_mcu_top.v",
+  "ModuleLine" : 3,
+  "ModuleName" : "godson_mcu_top",
+  "SubInsts" : [
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_mcu_top.v",
+    "InstLine" : 97,
+    "InstName" : "pll",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/gowin_pll/gowin_pll.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "Gowin_PLL"
+   },
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_mcu_top.v",
+    "InstLine" : 105,
+    "InstName" : "pllx",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/gowin_pllx/gowin_pllx.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "Gowin_PLLx"
+   },
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_mcu_top.v",
+    "InstLine" : 112,
+    "InstName" : "A_cpu",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_mcu_cpu.v",
+    "ModuleLine" : 3,
+    "ModuleName" : "godson_mcu_cpu",
+    "SubInsts" : [
+     {
+      "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_mcu_cpu.v",
+      "InstLine" : 321,
+      "InstName" : "A_la132",
+      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/la132_top_pack/la132_top_gowin.vp",
+      "ModuleLine" : 391,
+      "ModuleName" : "la132_top"
+     },
+     {
+      "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_mcu_cpu.v",
+      "InstLine" : 292,
+      "InstName" : "A_flash",
+      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_mcu_cpu.v",
+      "ModuleLine" : 960,
+      "ModuleName" : "Flash_64k",
+      "SubInsts" : [
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_mcu_cpu.v",
+        "InstLine" : 976,
+        "InstName" : "flash_128k_inst",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/gowin_sp/gowin_sp.v",
+        "ModuleLine" : 10,
+        "ModuleName" : "Gowin_SP"
+       }
+      ]
+     },
+     {
+      "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_mcu_cpu.v",
+      "InstLine" : 304,
+      "InstName" : "A_dram",
+      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_mcu_cpu.v",
+      "ModuleLine" : 927,
+      "ModuleName" : "Dram_8k",
+      "SubInsts" : [
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_mcu_cpu.v",
+        "InstLine" : 943,
+        "InstName" : "ram_8k_inst",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/ip_repo/blk_mem_gen_1/blk_mem_gen_1.v",
+        "ModuleLine" : 10,
+        "ModuleName" : "blk_mem_gen_1"
+       }
+      ]
+     },
+     {
+      "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_mcu_cpu.v",
+      "InstLine" : 441,
+      "InstName" : "A_cpu_mux",
+      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/amba/axi_mux.v",
+      "ModuleLine" : 23,
+      "ModuleName" : "axi_slave_mux_cpu",
+      "SubInsts" : [
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/amba/axi_mux.v",
+        "InstLine" : 1772,
+        "InstName" : "wr_fifo",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/amba/axi_mux.v",
+        "ModuleLine" : 1981,
+        "ModuleName" : "nb_sync_fifo_mux"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/amba/axi_mux.v",
+        "InstLine" : 1941,
+        "InstName" : "rd_fifo",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/amba/axi_mux.v",
+        "ModuleLine" : 1981,
+        "ModuleName" : "nb_sync_fifo_mux"
+       }
+      ]
+     },
+     {
+      "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_mcu_cpu.v",
+      "InstLine" : 558,
+      "InstName" : "A_axi2apb",
+      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/amba/axi2apb.v",
+      "ModuleLine" : 12,
+      "ModuleName" : "axi2apb_bridge"
+     },
+     {
+      "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_mcu_cpu.v",
+      "InstLine" : 611,
+      "InstName" : "A_apb_mux_cpu",
+      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/amba/apb_mux9.v",
+      "ModuleLine" : 3,
+      "ModuleName" : "apb_mux9"
+     },
+     {
+      "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_mcu_cpu.v",
+      "InstLine" : 705,
+      "InstName" : "gpio1",
+      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/gpio.v",
+      "ModuleLine" : 3,
+      "ModuleName" : "GPIO_TOP",
+      "SubInsts" : [
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/gpio.v",
+        "InstLine" : 110,
+        "InstName" : "pad_GPIO01",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/io_tools.v",
+        "ModuleLine" : 1,
+        "ModuleName" : "GPIO_IOBUF"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/gpio.v",
+        "InstLine" : 111,
+        "InstName" : "pad_GPIO13",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/io_tools.v",
+        "ModuleLine" : 1,
+        "ModuleName" : "GPIO_IOBUF"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/gpio.v",
+        "InstLine" : 114,
+        "InstName" : "pad_GPIO14",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/io_tools.v",
+        "ModuleLine" : 1,
+        "ModuleName" : "GPIO_IOBUF"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/gpio.v",
+        "InstLine" : 115,
+        "InstName" : "pad_GPIO15",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/io_tools.v",
+        "ModuleLine" : 1,
+        "ModuleName" : "GPIO_IOBUF"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/gpio.v",
+        "InstLine" : 116,
+        "InstName" : "pad_GPIO16",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/io_tools.v",
+        "ModuleLine" : 1,
+        "ModuleName" : "GPIO_IOBUF"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/gpio.v",
+        "InstLine" : 117,
+        "InstName" : "pad_GPIO17",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/io_tools.v",
+        "ModuleLine" : 1,
+        "ModuleName" : "GPIO_IOBUF"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/gpio.v",
+        "InstLine" : 119,
+        "InstName" : "pad_GPIO18",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/io_tools.v",
+        "ModuleLine" : 1,
+        "ModuleName" : "GPIO_IOBUF"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/gpio.v",
+        "InstLine" : 121,
+        "InstName" : "pad_GPIO19",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/io_tools.v",
+        "ModuleLine" : 1,
+        "ModuleName" : "GPIO_IOBUF"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/gpio.v",
+        "InstLine" : 122,
+        "InstName" : "pad_GPIO20",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/io_tools.v",
+        "ModuleLine" : 1,
+        "ModuleName" : "GPIO_IOBUF"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/gpio.v",
+        "InstLine" : 124,
+        "InstName" : "pad_GPIO34",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/io_tools.v",
+        "ModuleLine" : 1,
+        "ModuleName" : "GPIO_IOBUF"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/gpio.v",
+        "InstLine" : 125,
+        "InstName" : "pad_GPIO35",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/io_tools.v",
+        "ModuleLine" : 1,
+        "ModuleName" : "GPIO_IOBUF"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/gpio.v",
+        "InstLine" : 126,
+        "InstName" : "pad_GPIO36",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/io_tools.v",
+        "ModuleLine" : 1,
+        "ModuleName" : "GPIO_IOBUF"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/gpio.v",
+        "InstLine" : 127,
+        "InstName" : "pad_GPIO37",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/io_tools.v",
+        "ModuleLine" : 1,
+        "ModuleName" : "GPIO_IOBUF"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/gpio.v",
+        "InstLine" : 128,
+        "InstName" : "pad_GPIO38",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/io_tools.v",
+        "ModuleLine" : 1,
+        "ModuleName" : "GPIO_IOBUF"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/gpio.v",
+        "InstLine" : 129,
+        "InstName" : "pad_GPIO39",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/io_tools.v",
+        "ModuleLine" : 1,
+        "ModuleName" : "GPIO_IOBUF"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/gpio.v",
+        "InstLine" : 130,
+        "InstName" : "pad_GPIO40",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/io_tools.v",
+        "ModuleLine" : 1,
+        "ModuleName" : "GPIO_IOBUF"
+       }
+      ]
+     },
+     {
+      "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_mcu_cpu.v",
+      "InstLine" : 737,
+      "InstName" : "pwm1",
+      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/pwm.v",
+      "ModuleLine" : 3,
+      "ModuleName" : "PWM_TOP"
+     },
+     {
+      "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_mcu_cpu.v",
+      "InstLine" : 752,
+      "InstName" : "hept1",
+      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hpet.v",
+      "ModuleLine" : 3,
+      "ModuleName" : "HPET_TOP"
+     },
+     {
+      "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_mcu_cpu.v",
+      "InstLine" : 769,
+      "InstName" : "confreg1",
+      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/confreg.v",
+      "ModuleLine" : 3,
+      "ModuleName" : "CONFREG",
+      "SubInsts" : [
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/confreg.v",
+        "InstLine" : 74,
+        "InstName" : "int0",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/confreg.v",
+        "ModuleLine" : 97,
+        "ModuleName" : "one_int_gen"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/confreg.v",
+        "InstLine" : 76,
+        "InstName" : "int1",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/confreg.v",
+        "ModuleLine" : 97,
+        "ModuleName" : "one_int_gen"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/confreg.v",
+        "InstLine" : 78,
+        "InstName" : "int2",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/confreg.v",
+        "ModuleLine" : 97,
+        "ModuleName" : "one_int_gen"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/confreg.v",
+        "InstLine" : 80,
+        "InstName" : "int3",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/confreg.v",
+        "ModuleLine" : 97,
+        "ModuleName" : "one_int_gen"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/confreg.v",
+        "InstLine" : 82,
+        "InstName" : "int4",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/confreg.v",
+        "ModuleLine" : 97,
+        "ModuleName" : "one_int_gen"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/confreg.v",
+        "InstLine" : 84,
+        "InstName" : "int5",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/confreg.v",
+        "ModuleLine" : 97,
+        "ModuleName" : "one_int_gen"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/confreg.v",
+        "InstLine" : 86,
+        "InstName" : "int6",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/confreg.v",
+        "ModuleLine" : 97,
+        "ModuleName" : "one_int_gen"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/confreg.v",
+        "InstLine" : 88,
+        "InstName" : "int7",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/confreg.v",
+        "ModuleLine" : 97,
+        "ModuleName" : "one_int_gen"
+       }
+      ]
+     },
+     {
+      "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_mcu_cpu.v",
+      "InstLine" : 796,
+      "InstName" : "uart1",
+      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/uart_top.v",
+      "ModuleLine" : 13,
+      "ModuleName" : "UART_TOP",
+      "SubInsts" : [
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/uart_top.v",
+        "InstLine" : 76,
+        "InstName" : "uart_rx_i",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/uart_rx.v",
+        "ModuleLine" : 13,
+        "ModuleName" : "uart_rx"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/uart_top.v",
+        "InstLine" : 94,
+        "InstName" : "uart_tx_i",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/uart_tx.v",
+        "ModuleLine" : 13,
+        "ModuleName" : "uart_tx"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/uart_top.v",
+        "InstLine" : 113,
+        "InstName" : "uart_rx_fifo_i",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/io_generic_fifo.v",
+        "ModuleLine" : 13,
+        "ModuleName" : "io_generic_fifo"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/uart_top.v",
+        "InstLine" : 129,
+        "InstName" : "uart_tx_fifo_i",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/io_generic_fifo.v",
+        "ModuleLine" : 13,
+        "ModuleName" : "io_generic_fifo"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/uart_top.v",
+        "InstLine" : 146,
+        "InstName" : "uart_interrupt_i",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/uart_interrupt.v",
+        "ModuleLine" : 13,
+        "ModuleName" : "uart_interrupt"
+       }
+      ]
+     },
+     {
+      "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_mcu_cpu.v",
+      "InstLine" : 832,
+      "InstName" : "i2c1",
+      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/i2c_top.v",
+      "ModuleLine" : 3,
+      "ModuleName" : "I2C_TOP",
+      "SubInsts" : [
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/i2c_top.v",
+        "InstLine" : 26,
+        "InstName" : "pad_I2C_SCL",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/io_tools.v",
+        "ModuleLine" : 14,
+        "ModuleName" : "I2C_IOBUF"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/i2c_top.v",
+        "InstLine" : 27,
+        "InstName" : "pad_I2C_SDA",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/io_tools.v",
+        "ModuleLine" : 14,
+        "ModuleName" : "I2C_IOBUF"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/i2c_top.v",
+        "InstLine" : 163,
+        "InstName" : "master_byte_controller",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/i2c_master_byte_ctrl.v",
+        "ModuleLine" : 2,
+        "ModuleName" : "i2c_master_byte_ctrl",
+        "SubInsts" : [
+         {
+          "InstFile" : "H:/GOWIN/Project/loongxin3/src/i2c_master_byte_ctrl.v",
+          "InstLine" : 93,
+          "InstName" : "bit_controller",
+          "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/i2c_master_bit_ctrl.v",
+          "ModuleLine" : 46,
+          "ModuleName" : "i2c_master_bit_ctrl"
+         }
+        ]
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/i2c_top.v",
+        "InstLine" : 244,
+        "InstName" : "i_sda_i_sync",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/i2c_top.v",
+        "ModuleLine" : 274,
+        "ModuleName" : "i2c_sync_module"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/i2c_top.v",
+        "InstLine" : 245,
+        "InstName" : "i_scl_i_sync",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/i2c_top.v",
+        "ModuleLine" : 274,
+        "ModuleName" : "i2c_sync_module"
+       }
+      ]
+     },
+     {
+      "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_mcu_cpu.v",
+      "InstLine" : 852,
+      "InstName" : "spi1",
+      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/spi_top.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "SPI_TOP",
+      "SubInsts" : [
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/spi_top.v",
+        "InstLine" : 178,
+        "InstName" : "rfifo",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/spi_fifo4.v",
+        "ModuleLine" : 3,
+        "ModuleName" : "spi_fifo4"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/spi_top.v",
+        "InstLine" : 189,
+        "InstName" : "wfifo",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/spi_fifo4.v",
+        "ModuleLine" : 3,
+        "ModuleName" : "spi_fifo4"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+  "InstLine" : 6,
+  "InstName" : "godson_rcg_module",
+  "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+  "ModuleLine" : 6,
+  "ModuleName" : "godson_rcg_module",
+  "SubInsts" : [
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "InstLine" : 33,
+    "InstName" : "A_dotest_sync",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 168,
+    "ModuleName" : "dotest_sync"
+   },
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "InstLine" : 37,
+    "InstName" : "A_rst_filter",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 150,
+    "ModuleName" : "reset_sync"
+   },
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "InstLine" : 43,
+    "InstName" : "A_wdt_mux",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 628,
+    "ModuleName" : "TECH_CNMUX2"
+   },
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "InstLine" : 55,
+    "InstName" : "A_srst_int32k",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 119,
+    "ModuleName" : "areset_sync"
+   },
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "InstLine" : 57,
+    "InstName" : "CLK8M_to_32k_int",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 726,
+    "ModuleName" : "clk8m_32k"
+   },
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "InstLine" : 62,
+    "InstName" : "A_scan_32k_cg",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 550,
+    "ModuleName" : "TECH_ICG"
+   },
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "InstLine" : 64,
+    "InstName" : "A_osc32k_mux",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 628,
+    "ModuleName" : "TECH_CNMUX2"
+   },
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "InstLine" : 66,
+    "InstName" : "A_cksel32k",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 323,
+    "ModuleName" : "clock_select_32k"
+   }
+  ]
+ },
+ {
+  "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+  "InstLine" : 185,
+  "InstName" : "cpu_rcg",
+  "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+  "ModuleLine" : 185,
+  "ModuleName" : "cpu_rcg",
+  "SubInsts" : [
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "InstLine" : 221,
+    "InstName" : "A_srst_int32m",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 119,
+    "ModuleName" : "areset_sync"
+   },
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "InstLine" : 224,
+    "InstName" : "A_scan_clk_cg",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 550,
+    "ModuleName" : "TECH_ICG"
+   },
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "InstLine" : 225,
+    "InstName" : "A_osc32m_mux",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 628,
+    "ModuleName" : "TECH_CNMUX2"
+   },
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "InstLine" : 226,
+    "InstName" : "A_int32m_buf",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 589,
+    "ModuleName" : "TECH_CNBUF"
+   },
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "InstLine" : 255,
+    "InstName" : "A_int8_m",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 628,
+    "ModuleName" : "TECH_CNMUX2"
+   },
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "InstLine" : 256,
+    "InstName" : "A_pclk_cg",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 550,
+    "ModuleName" : "TECH_ICG"
+   },
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "InstLine" : 257,
+    "InstName" : "A_pclk_or",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 619,
+    "ModuleName" : "TECH_CNOR2"
+   },
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "InstLine" : 263,
+    "InstName" : "A_cksel",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 341,
+    "ModuleName" : "clock_select_328",
+    "SubInsts" : [
+     {
+      "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+      "InstLine" : 397,
+      "InstName" : "i_lockup_sts1",
+      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+      "ModuleLine" : 690,
+      "ModuleName" : "TECH_LATCH"
+     },
+     {
+      "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+      "InstLine" : 398,
+      "InstName" : "i_lockup_sts0",
+      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+      "ModuleLine" : 690,
+      "ModuleName" : "TECH_LATCH"
+     },
+     {
+      "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+      "InstLine" : 399,
+      "InstName" : "i_lockup_cksel",
+      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+      "ModuleLine" : 690,
+      "ModuleName" : "TECH_LATCH"
+     },
+     {
+      "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+      "InstLine" : 402,
+      "InstName" : "I_gfm",
+      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+      "ModuleLine" : 462,
+      "ModuleName" : "gfmux",
+      "SubInsts" : [
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+        "InstLine" : 481,
+        "InstName" : "rst_a",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+        "ModuleLine" : 119,
+        "ModuleName" : "areset_sync"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+        "InstLine" : 482,
+        "InstName" : "rst_b",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+        "ModuleLine" : 119,
+        "ModuleName" : "areset_sync"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+        "InstLine" : 500,
+        "InstName" : "i_selb_sync",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+        "ModuleLine" : 89,
+        "ModuleName" : "sync_module"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+        "InstLine" : 528,
+        "InstName" : "cg_a",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+        "ModuleLine" : 550,
+        "ModuleName" : "TECH_ICG"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+        "InstLine" : 529,
+        "InstName" : "cg_b",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+        "ModuleLine" : 550,
+        "ModuleName" : "TECH_ICG"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+        "InstLine" : 532,
+        "InstName" : "band",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+        "ModuleLine" : 599,
+        "ModuleName" : "TECH_CNAND2"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+        "InstLine" : 537,
+        "InstName" : "omux",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+        "ModuleLine" : 628,
+        "ModuleName" : "TECH_CNMUX2"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "InstLine" : 274,
+    "InstName" : "A_clk328_buf",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 589,
+    "ModuleName" : "TECH_CNBUF"
+   },
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "InstLine" : 277,
+    "InstName" : "i_lockup_rdy_r",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 690,
+    "ModuleName" : "TECH_LATCH"
+   },
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "InstLine" : 289,
+    "InstName" : "A_cpu_clk_chop",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 550,
+    "ModuleName" : "TECH_ICG"
+   },
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "InstLine" : 290,
+    "InstName" : "A_bus_clk_chop",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 550,
+    "ModuleName" : "TECH_ICG"
+   },
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "InstLine" : 293,
+    "InstName" : "A_bcnt_m",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 628,
+    "ModuleName" : "TECH_CNMUX2"
+   },
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "InstLine" : 294,
+    "InstName" : "A_bus_clk_or",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 619,
+    "ModuleName" : "TECH_CNOR2"
+   },
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "InstLine" : 296,
+    "InstName" : "A_srst_buscpu",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 119,
+    "ModuleName" : "areset_sync"
+   },
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "InstLine" : 299,
+    "InstName" : "i_lockup_syncen",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 690,
+    "ModuleName" : "TECH_LATCH"
+   },
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "InstLine" : 313,
+    "InstName" : "A_vclk_mux",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 628,
+    "ModuleName" : "TECH_CNMUX2"
+   }
+  ]
+ },
+ {
+  "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+  "InstLine" : 543,
+  "InstName" : "cg_module",
+  "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+  "ModuleLine" : 543,
+  "ModuleName" : "cg_module",
+  "SubInsts" : [
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "InstLine" : 546,
+    "InstName" : "cg",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 550,
+    "ModuleName" : "TECH_ICG"
+   }
+  ]
+ },
+ {
+  "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+  "InstLine" : 649,
+  "InstName" : "TECH_CNDFFR",
+  "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+  "ModuleLine" : 649,
+  "ModuleName" : "TECH_CNDFFR"
+ },
+ {
+  "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+  "InstLine" : 661,
+  "InstName" : "TECH_CNXOR2",
+  "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+  "ModuleLine" : 661,
+  "ModuleName" : "TECH_CNXOR2"
+ },
+ {
+  "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+  "InstLine" : 706,
+  "InstName" : "FUNC_CG_CELL",
+  "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+  "ModuleLine" : 706,
+  "ModuleName" : "FUNC_CG_CELL",
+  "SubInsts" : [
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "InstLine" : 712,
+    "InstName" : "cg",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 550,
+    "ModuleName" : "TECH_ICG"
+   }
+  ]
+ },
+ {
+  "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+  "InstLine" : 715,
+  "InstName" : "TECH_BUF",
+  "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_rcg_module.v",
+  "ModuleLine" : 715,
+  "ModuleName" : "TECH_BUF"
+ },
+ {
+  "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/io_tools.v",
+  "InstLine" : 27,
+  "InstName" : "SPI_IOBUF",
+  "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/io_tools.v",
+  "ModuleLine" : 27,
+  "ModuleName" : "SPI_IOBUF"
+ },
+ {
+  "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/ip_repo/blk_mem_gen_0/blk_mem_gen_0.v",
+  "InstLine" : 10,
+  "InstName" : "blk_mem_gen_0",
+  "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/ip_repo/blk_mem_gen_0/blk_mem_gen_0.v",
+  "ModuleLine" : 10,
+  "ModuleName" : "blk_mem_gen_0"
+ },
+ {
+  "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/la132_top_pack/la132_top_gowin.vp",
+  "InstLine" : 7,
+  "InstName" : "la132_top_gowin_top",
+  "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/la132_top_pack/la132_top_gowin.vp",
+  "ModuleLine" : 7,
+  "ModuleName" : "la132_top_gowin_top",
+  "SubInsts" : [
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/la132_top_pack/la132_top_gowin.vp",
+    "InstLine" : 247,
+    "InstName" : "la132_top_ins",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/la132_top_pack/la132_top_gowin.vp",
+    "ModuleLine" : 391,
+    "ModuleName" : "la132_top"
+   }
+  ]
+ },
+ {
+  "InstFile" : "H:/GOWIN/Project/loongxin3/src/i2c_slave_byte_ctrl.v",
+  "InstLine" : 6,
+  "InstName" : "i2c_slave_byte_ctrl",
+  "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/i2c_slave_byte_ctrl.v",
+  "ModuleLine" : 6,
+  "ModuleName" : "i2c_slave_byte_ctrl",
+  "SubInsts" : [
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/i2c_slave_byte_ctrl.v",
+    "InstLine" : 79,
+    "InstName" : "bit_controller",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/i2c_slave_bit_ctrl.v",
+    "ModuleLine" : 44,
+    "ModuleName" : "i2c_slave_bit_ctrl"
+   }
+  ]
+ },
+ {
+  "InstFile" : "H:/GOWIN/Project/loongxin3/src/oled_top.v",
+  "InstLine" : 12,
+  "InstName" : "Oled_Top",
+  "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/oled_top.v",
+  "ModuleLine" : 12,
+  "ModuleName" : "Oled_Top",
+  "SubInsts" : [
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/oled_top.v",
+    "InstLine" : 114,
+    "InstName" : "I2C_Master_V",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/iic_dri.v",
+    "ModuleLine" : 32,
+    "ModuleName" : "I2C_Master"
+   }
+  ]
+ },
+ {
+  "InstFile" : "H:/GOWIN/Project/loongxin3/src/simple_spi_top.v",
+  "InstLine" : 3,
+  "InstName" : "simple_spi_top",
+  "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/simple_spi_top.v",
+  "ModuleLine" : 3,
+  "ModuleName" : "simple_spi_top",
+  "SubInsts" : [
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/simple_spi_top.v",
+    "InstLine" : 170,
+    "InstName" : "rfifo",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/spi_fifo4.v",
+    "ModuleLine" : 3,
+    "ModuleName" : "spi_fifo4"
+   },
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/simple_spi_top.v",
+    "InstLine" : 181,
+    "InstName" : "wfifo",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/spi_fifo4.v",
+    "ModuleLine" : 3,
+    "ModuleName" : "spi_fifo4"
+   }
+  ]
+ }
+]

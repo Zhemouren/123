@@ -1,0 +1,20 @@
+-d H:\GOWIN\Project\loongxin3\impl\gwsynthesis\1C102.vg
+-p GW5AST-138B-FCPBGA676A-1
+-pn GW5AST-LV138FPG676AES
+-cst H:\GOWIN\Project\loongxin3\src\hw\constraints\102.cst
+-cfg H:\GOWIN\Project\loongxin3\impl\pnr\device.cfg
+-sdc H:\GOWIN\Project\loongxin3\src\1C102.sdc
+-gao_crc 0001101000111000
+-bit
+-tr
+-ph
+-posp
+-o
+-timing
+-cst_error
+-convert_sdp32_36_to_sdp16_18
+-correct_hold 1
+-route_maxfan 23
+-global_freq 100.000
+-enable_dsrm 0
+-rtl_gao

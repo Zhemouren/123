@@ -1,0 +1,491 @@
+F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_top.v {1 {vlog -work work -stats=none F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_top.v
+Model Technology ModelSim DE-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module godson_mcu_top
+
+Top level modules:
+	godson_mcu_top
+
+} {} {}} F:/GOWIN/Project/loongxin2/src/oled_top.v {1 {vlog -work work -stats=none F:/GOWIN/Project/loongxin2/src/oled_top.v
+Model Technology ModelSim DE-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module Oled_Top
+
+Top level modules:
+	Oled_Top
+
+} {} {}} F:/GOWIN/Project/loongxin2/src/hw/io_tools.v {1 {vlog -work work -stats=none F:/GOWIN/Project/loongxin2/src/hw/io_tools.v
+Model Technology ModelSim DE-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module GPIO_IOBUF
+-- Compiling module I2C_IOBUF
+-- Compiling module SPI_IOBUF
+
+Top level modules:
+	GPIO_IOBUF
+	I2C_IOBUF
+	SPI_IOBUF
+
+} {} {}} F:/GOWIN/Project/loongxin2/src/uart_top.v {1 {vlog -work work -stats=none F:/GOWIN/Project/loongxin2/src/uart_top.v
+Model Technology ModelSim DE-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module UART_TOP
+
+Top level modules:
+	UART_TOP
+
+} {} {}} F:/GOWIN/Project/loongxin2/src/baudgen.v {1 {vlog -work work -stats=none F:/GOWIN/Project/loongxin2/src/baudgen.v
+Model Technology ModelSim DE-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module BAUDGEN
+
+Top level modules:
+	BAUDGEN
+
+} {} {}} F:/GOWIN/Project/loongxin2/src/i2c_slave_byte_ctrl.v {1 {vlog -work work -stats=none F:/GOWIN/Project/loongxin2/src/i2c_slave_byte_ctrl.v
+Model Technology ModelSim DE-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module i2c_slave_byte_ctrl
+
+Top level modules:
+	i2c_slave_byte_ctrl
+
+} {} {}} F:/GOWIN/Project/loongxin2/src/i2c_master_byte_ctrl.v {1 {vlog -work work -stats=none F:/GOWIN/Project/loongxin2/src/i2c_master_byte_ctrl.v
+Model Technology ModelSim DE-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module i2c_master_byte_ctrl
+
+Top level modules:
+	i2c_master_byte_ctrl
+
+} {} {}} F:/GOWIN/Project/loongxin2/src/hpet.v {1 {vlog -work work -stats=none F:/GOWIN/Project/loongxin2/src/hpet.v
+Model Technology ModelSim DE-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module HPET_TOP
+
+Top level modules:
+	HPET_TOP
+
+} {} {}} F:/GOWIN/Project/loongxin2/src/i2c_slave_bit_ctrl.v {1 {vlog -work work -stats=none F:/GOWIN/Project/loongxin2/src/i2c_slave_bit_ctrl.v
+Model Technology ModelSim DE-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module i2c_slave_bit_ctrl
+
+Top level modules:
+	i2c_slave_bit_ctrl
+
+} {} {}} F:/GOWIN/Project/loongxin2/src/tb/tb.v {1 {vlog -work work -stats=none F:/GOWIN/Project/loongxin2/src/tb/tb.v
+Model Technology ModelSim DE-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module test
+
+Top level modules:
+	test
+
+} {} {}} F:/GOWIN/Project/loongxin2/src/hw/amba/apb_mux9.v {1 {vlog -work work -stats=none F:/GOWIN/Project/loongxin2/src/hw/amba/apb_mux9.v
+Model Technology ModelSim DE-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module apb_mux9
+
+Top level modules:
+	apb_mux9
+
+} {} {}} F:/GOWIN/Project/loongxin2/src/spi_fifo4.v {1 {vlog -work work -stats=none F:/GOWIN/Project/loongxin2/src/spi_fifo4.v
+Model Technology ModelSim DE-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module spi_fifo4
+
+Top level modules:
+	spi_fifo4
+
+} {} {}} H:/GOWIN/Project/loongxin3/src/hw/config.v {1 {vlog -work work -stats=none H:/GOWIN/Project/loongxin3/src/hw/config.v
+Model Technology ModelSim DE-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+
+} {} {}} F:/GOWIN/Project/loongxin2/src/pwm.v {1 {vlog -work work -stats=none F:/GOWIN/Project/loongxin2/src/pwm.v
+Model Technology ModelSim DE-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module PWM_TOP
+
+Top level modules:
+	PWM_TOP
+
+} {} {}} F:/GOWIN/Project/loongxin2/src/uart_rx.v {1 {vlog -work work -stats=none F:/GOWIN/Project/loongxin2/src/uart_rx.v
+Model Technology ModelSim DE-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module UART_RX
+
+Top level modules:
+	UART_RX
+
+} {} {}} F:/GOWIN/Project/loongxin2/src/hw/amba/axi2apb.v {1 {vlog -work work -stats=none F:/GOWIN/Project/loongxin2/src/hw/amba/axi2apb.v
+Model Technology ModelSim DE-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module axi2apb_bridge
+
+Top level modules:
+	axi2apb_bridge
+
+} {} {}} F:/GOWIN/Project/loongxin2/src/gowin_pll/gowin_pll.v {1 {vlog -work work -stats=none F:/GOWIN/Project/loongxin2/src/gowin_pll/gowin_pll.v
+Model Technology ModelSim DE-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module Gowin_PLL
+
+Top level modules:
+	Gowin_PLL
+
+} {} {}} F:/GOWIN/Project/loongxin2/src/hw/la132_top_pack/la132_top_sim.v {1 {vlog -work work -stats=none F:/GOWIN/Project/loongxin2/src/hw/la132_top_pack/la132_top_sim.v
+Model Technology ModelSim DE-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module la132_top
+
+Top level modules:
+	la132_top
+
+} {} {}} F:/GOWIN/Project/loongxin2/src/spi_top.v {1 {vlog -work work -stats=none F:/GOWIN/Project/loongxin2/src/spi_top.v
+Model Technology ModelSim DE-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module SPI_TOP
+
+Top level modules:
+	SPI_TOP
+
+} {} {}} F:/GOWIN/Project/loongxin2/src/simple_spi_top.v {1 {vlog -work work -stats=none F:/GOWIN/Project/loongxin2/src/simple_spi_top.v
+Model Technology ModelSim DE-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module simple_spi_top
+
+Top level modules:
+	simple_spi_top
+
+} {} {}} F:/GOWIN/Project/loongxin2/src/uart_tx.v {1 {vlog -work work -stats=none F:/GOWIN/Project/loongxin2/src/uart_tx.v
+Model Technology ModelSim DE-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module UART_TX
+
+Top level modules:
+	UART_TX
+
+} {} {}} F:/GOWIN/Gowin_V1.9.9_x64/IDE/simlib/gw5a/prim_sim.v {1 {vlog -work work -stats=none F:/GOWIN/Gowin_V1.9.9_x64/IDE/simlib/gw5a/prim_sim.v
+Model Technology ModelSim DE-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling UDP mux2
+-- Compiling module MUX2
+-- Compiling module MUX2_LUT5
+-- Compiling module MUX2_LUT6
+-- Compiling module MUX2_LUT7
+-- Compiling module MUX2_LUT8
+-- Compiling module MUX2_MUX8
+-- Compiling module MUX2_MUX16
+-- Compiling module MUX2_MUX32
+-- Compiling module MUX4
+-- Compiling module MUX8
+-- Compiling module MUX16
+-- Compiling module MUX32
+-- Compiling module LUT1
+-- Compiling module LUT2
+-- Compiling module LUT3
+-- Compiling module LUT4
+-- Compiling module LUT5
+-- Compiling module LUT6
+-- Compiling module LUT7
+-- Compiling module LUT8
+-- Compiling module ALU
+-- Compiling module DFFSE
+-- Compiling module DFFRE
+-- Compiling module DFFPE
+-- Compiling module DFFCE
+-- Compiling module DLCE
+-- Compiling module DLPE
+-- Compiling module RAM16S1
+-- Compiling module RAM16S2
+-- Compiling module RAM16S4
+-- Compiling module RAM16SDP1
+-- Compiling module RAM16SDP2
+-- Compiling module RAM16SDP4
+-- Compiling module ROM16
+-- Compiling module INV
+-- Compiling module GND
+-- Compiling module VCC
+-- Compiling module GSR
+-- Compiling module IBUF
+-- Compiling module OBUF
+-- Compiling module TBUF
+-- Compiling module IOBUF
+-- Compiling module TLVDS_IBUF
+-- Compiling module TLVDS_OBUF
+-- Compiling module TLVDS_TBUF
+-- Compiling module TLVDS_IOBUF
+-- Compiling module ELVDS_OBUF
+-- Compiling module ELVDS_TBUF
+-- Compiling module ELVDS_IOBUF
+-- Compiling module MIPI_IBUF
+-- Compiling module MIPI_OBUF_A
+-- Compiling module IBUF_R
+-- Compiling module IOBUF_R
+-- Compiling module ELVDS_IOBUF_R
+-- Compiling module I3C_IOBUF
+-- Compiling module TLVDS_IBUF_ADC
+-- Compiling module SP
+-- Compiling module SPX9
+-- Compiling module SDPB
+-- Compiling module SDPX9B
+-- Compiling module DPB
+-- Compiling module DPX9B
+-- Compiling module pROM
+-- Compiling module pROMX9
+-- Compiling module SDP36KE
+-- Compiling module MULTADDALU12X12
+-- Compiling module MULTALU27X18
+-- Compiling module MULT12X12
+-- Compiling module MULT27X36
+-- Compiling module IDDR
+-- Compiling module IDDRC
+-- Compiling module IDDR_MEM
+-- Compiling module ODDR
+-- Compiling module ODDRC
+-- Compiling module ODDR_MEM
+-- Compiling module IDES4
+-- Compiling module IDES8
+-- Compiling module IDES10
+-- Compiling module IDES16
+-- Compiling module IDES4_MEM
+-- Compiling module IVIDEO
+-- Compiling module IDES8_MEM
+-- Compiling module IDES14
+-- Compiling module IDES32
+-- Compiling module OSER4
+-- Compiling module OSER4_MEM
+-- Compiling module OVIDEO
+-- Compiling module OSER8
+-- Compiling module OSER8_MEM
+-- Compiling module OSER10
+-- Compiling module OSER16
+-- Compiling module IODELAY
+-- Compiling module OSIDES32
+-- Compiling module DCE
+-- Compiling module DCS
+-- Compiling module DDRDLL
+-- Compiling module DLLDLY
+-- Compiling module CLKDIV
+-- Compiling module CLKDIV2
+-- Compiling module DHCE
+-- Compiling module OSC
+-- Compiling module OSCA
+-- Compiling module PLL
+-- Compiling module PLLA
+-- Compiling module AE350_SOC
+-- Compiling module AE350_RAM
+-- Compiling module SAMB
+-- Compiling module OTP
+-- Compiling module CMSER
+-- Compiling module CMSERA
+-- Compiling module ADCLRC
+-- Compiling module ADCULC
+-- Compiling module ADC
+-- Compiling module MIPI_DPHY_RX
+-- Compiling module MIPI_DPHY
+-- Compiling module GTR12_QUAD
+-- Compiling module GTR12_UPAR
+-- Compiling module GTR12_PMAC
+-- Compiling module DQS
+
+Top level modules:
+	MUX2_LUT5
+	MUX2_LUT6
+	MUX2_LUT7
+	MUX2_LUT8
+	MUX2_MUX8
+	MUX2_MUX16
+	MUX2_MUX32
+	LUT1
+	LUT2
+	LUT3
+	LUT4
+	LUT8
+	ALU
+	DFFSE
+	DFFRE
+	DFFPE
+	DFFCE
+	DLCE
+	DLPE
+	RAM16S1
+	RAM16S2
+	RAM16S4
+	RAM16SDP1
+	RAM16SDP2
+	RAM16SDP4
+	ROM16
+	INV
+	GND
+	VCC
+	GSR
+	IBUF
+	OBUF
+	TBUF
+	IOBUF
+	TLVDS_IBUF
+	TLVDS_OBUF
+	TLVDS_TBUF
+	TLVDS_IOBUF
+	ELVDS_OBUF
+	ELVDS_TBUF
+	ELVDS_IOBUF
+	MIPI_IBUF
+	MIPI_OBUF_A
+	IBUF_R
+	IOBUF_R
+	ELVDS_IOBUF_R
+	I3C_IOBUF
+	TLVDS_IBUF_ADC
+	SP
+	SPX9
+	SDPB
+	SDPX9B
+	DPB
+	DPX9B
+	pROM
+	pROMX9
+	SDP36KE
+	MULTADDALU12X12
+	MULTALU27X18
+	MULT12X12
+	MULT27X36
+	IDDR
+	IDDRC
+	IDDR_MEM
+	ODDR
+	ODDRC
+	ODDR_MEM
+	IDES4
+	IDES8
+	IDES10
+	IDES16
+	IDES4_MEM
+	IVIDEO
+	IDES8_MEM
+	IDES14
+	IDES32
+	OSER4
+	OSER4_MEM
+	OVIDEO
+	OSER8
+	OSER8_MEM
+	OSER10
+	OSER16
+	OSIDES32
+	DCE
+	DCS
+	DDRDLL
+	DLLDLY
+	CLKDIV
+	CLKDIV2
+	DHCE
+	OSC
+	OSCA
+	PLL
+	PLLA
+	AE350_SOC
+	AE350_RAM
+	SAMB
+	OTP
+	CMSER
+	CMSERA
+	ADCLRC
+	ADCULC
+	ADC
+	MIPI_DPHY_RX
+	MIPI_DPHY
+	GTR12_QUAD
+	GTR12_UPAR
+	GTR12_PMAC
+	DQS
+
+} {} {}} F:/GOWIN/Project/loongxin2/src/gpio.v {1 {vlog -work work -stats=none F:/GOWIN/Project/loongxin2/src/gpio.v
+Model Technology ModelSim DE-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module GPIO_TOP
+
+Top level modules:
+	GPIO_TOP
+
+} {} {}} F:/GOWIN/Project/loongxin2/src/hw/godson_rcg_module.v {1 {vlog -work work -stats=none F:/GOWIN/Project/loongxin2/src/hw/godson_rcg_module.v
+Model Technology ModelSim DE-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module godson_rcg_module
+-- Compiling module sync_module
+-- Compiling module areset_sync
+-- Compiling module reset_sync
+-- Compiling module dotest_sync
+-- Compiling module cpu_rcg
+-- Compiling module clock_select_32k
+-- Compiling module clock_select_328
+-- Compiling module gfmux
+-- Compiling module cg_module
+-- Compiling module TECH_ICG
+-- Compiling module TECH_CNBUF
+-- Compiling module TECH_CNAND2
+-- Compiling module TECH_CNOR2
+-- Compiling module TECH_CNMUX2
+-- Compiling module TECH_CNDFFR
+-- Compiling module TECH_CNXOR2
+-- Compiling module TECH_LATCH
+-- Compiling module FUNC_CG_CELL
+-- Compiling module TECH_BUF
+-- Compiling module clk8m_32k
+
+Top level modules:
+	godson_rcg_module
+	cpu_rcg
+	cg_module
+	TECH_CNDFFR
+	TECH_CNXOR2
+	FUNC_CG_CELL
+	TECH_BUF
+
+} {} {}} F:/GOWIN/Project/loongxin2/src/i2c_top.v {1 {vlog -work work -stats=none F:/GOWIN/Project/loongxin2/src/i2c_top.v
+Model Technology ModelSim DE-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module I2C_TOP
+-- Compiling module i2c_sync_module
+
+Top level modules:
+	I2C_TOP
+
+} {} {}} F:/GOWIN/Project/loongxin2/src/uart_rfifo.v {1 {vlog -work work -stats=none F:/GOWIN/Project/loongxin2/src/uart_rfifo.v
+Model Technology ModelSim DE-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module UART_RFIFO
+
+Top level modules:
+	UART_RFIFO
+
+} {} {}} F:/GOWIN/Project/loongxin2/src/hw/amba/axi_mux.v {1 {vlog -work work -stats=none F:/GOWIN/Project/loongxin2/src/hw/amba/axi_mux.v
+Model Technology ModelSim DE-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module axi_slave_mux_cpu
+-- Compiling module nb_sync_fifo_mux
+
+Top level modules:
+	axi_slave_mux_cpu
+
+} {} {}} F:/GOWIN/Project/loongxin2/src/hw/ip_repo/blk_mem_gen_1/blk_mem_gen_1.v {1 {vlog -work work -stats=none F:/GOWIN/Project/loongxin2/src/hw/ip_repo/blk_mem_gen_1/blk_mem_gen_1.v
+Model Technology ModelSim DE-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module blk_mem_gen_1
+
+Top level modules:
+	blk_mem_gen_1
+
+} {} {}} F:/GOWIN/Project/loongxin2/src/iic_dri.v {1 {vlog -work work -stats=none F:/GOWIN/Project/loongxin2/src/iic_dri.v
+Model Technology ModelSim DE-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module I2C_Master
+
+Top level modules:
+	I2C_Master
+
+} {} {}} F:/GOWIN/Project/loongxin2/src/i2c_master_bit_ctrl.v {1 {vlog -work work -stats=none F:/GOWIN/Project/loongxin2/src/i2c_master_bit_ctrl.v
+Model Technology ModelSim DE-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module i2c_master_bit_ctrl
+
+Top level modules:
+	i2c_master_bit_ctrl
+
+} {} {}} F:/GOWIN/Project/loongxin2/src/uart_tfifo.v {1 {vlog -work work -stats=none F:/GOWIN/Project/loongxin2/src/uart_tfifo.v
+Model Technology ModelSim DE-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module UART_TFIFO
+
+Top level modules:
+	UART_TFIFO
+
+} {} {}} F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v {1 {vlog -work work -stats=none F:/GOWIN/Project/loongxin2/src/hw/godson_mcu_cpu.v
+Model Technology ModelSim DE-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module godson_mcu_cpu
+-- Compiling module Dram_8k
+-- Compiling module Flash_128k
+
+Top level modules:
+	godson_mcu_cpu
+
+} {} {}} F:/GOWIN/Project/loongxin2/src/confreg.v {1 {vlog -work work -stats=none F:/GOWIN/Project/loongxin2/src/confreg.v
+Model Technology ModelSim DE-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module CONFREG
+-- Compiling module one_int_gen
+
+Top level modules:
+	CONFREG
+
+} {} {}}

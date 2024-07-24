@@ -1,0 +1,47 @@
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'H:\GOWIN\Gowin_V1.9.10_x64\IDE\ipcore\FFT\data\5a_low\fft.v'
+Analyzing included file 'defile.v'("H:\GOWIN\Gowin_V1.9.10_x64\IDE\ipcore\FFT\data\5a_low\fft.v":2401)
+Back to file 'H:\GOWIN\Gowin_V1.9.10_x64\IDE\ipcore\FFT\data\5a_low\fft.v'("H:\GOWIN\Gowin_V1.9.10_x64\IDE\ipcore\FFT\data\5a_low\fft.v":2401)
+Analyzing included file 'H:\GOWIN\Gowin_V1.9.10_x64\IDE\ipcore\FFT\data\5a_low\static_macro_define.v'("H:\GOWIN\Gowin_V1.9.10_x64\IDE\ipcore\FFT\data\5a_low\fft.v":2401)
+Back to file 'H:\GOWIN\Gowin_V1.9.10_x64\IDE\ipcore\FFT\data\5a_low\fft.v'("H:\GOWIN\Gowin_V1.9.10_x64\IDE\ipcore\FFT\data\5a_low\fft.v":2401)
+WARN  (EX3788) : Block identifier is required on this block("H:\GOWIN\Gowin_V1.9.10_x64\IDE\ipcore\FFT\data\5a_low\fft.v":2401)
+WARN  (EX2830) : Data object 'reconstructX' is already declared("H:\GOWIN\Gowin_V1.9.10_x64\IDE\ipcore\FFT\data\5a_low\fft.v":2401)
+Previous declaration of 'reconstructX' is from here("H:\GOWIN\Gowin_V1.9.10_x64\IDE\ipcore\FFT\data\5a_low\fft.v":2401)
+WARN  (EX3671) : Second declaration of 'reconstructX' is ignored("H:\GOWIN\Gowin_V1.9.10_x64\IDE\ipcore\FFT\data\5a_low\fft.v":2401)
+Analyzing included file 'twRe.v'("H:\GOWIN\Gowin_V1.9.10_x64\IDE\ipcore\FFT\data\5a_low\fft.v":2401)
+Back to file 'H:\GOWIN\Gowin_V1.9.10_x64\IDE\ipcore\FFT\data\5a_low\fft.v'("H:\GOWIN\Gowin_V1.9.10_x64\IDE\ipcore\FFT\data\5a_low\fft.v":2401)
+Analyzing included file 'twIm.v'("H:\GOWIN\Gowin_V1.9.10_x64\IDE\ipcore\FFT\data\5a_low\fft.v":2401)
+Back to file 'H:\GOWIN\Gowin_V1.9.10_x64\IDE\ipcore\FFT\data\5a_low\fft.v'("H:\GOWIN\Gowin_V1.9.10_x64\IDE\ipcore\FFT\data\5a_low\fft.v":2401)
+Analyzing Verilog file 'H:\GOWIN\Gowin_V1.9.10_x64\IDE\ipcore\FFT\data\5a_low\interface.v'
+Analyzing included file 'defile.v'("H:\GOWIN\Gowin_V1.9.10_x64\IDE\ipcore\FFT\data\5a_low\interface.v":1)
+Back to file 'H:\GOWIN\Gowin_V1.9.10_x64\IDE\ipcore\FFT\data\5a_low\interface.v'("H:\GOWIN\Gowin_V1.9.10_x64\IDE\ipcore\FFT\data\5a_low\interface.v":1)
+Analyzing included file 'H:\GOWIN\Gowin_V1.9.10_x64\IDE\ipcore\FFT\data\5a_low\static_macro_define.v'("H:\GOWIN\Gowin_V1.9.10_x64\IDE\ipcore\FFT\data\5a_low\interface.v":2)
+Back to file 'H:\GOWIN\Gowin_V1.9.10_x64\IDE\ipcore\FFT\data\5a_low\interface.v'("H:\GOWIN\Gowin_V1.9.10_x64\IDE\ipcore\FFT\data\5a_low\interface.v":2)
+Compiling module 'FFT_Top'("H:\GOWIN\Gowin_V1.9.10_x64\IDE\ipcore\FFT\data\5a_low\interface.v":4)
+Compiling module '**'("H:\GOWIN\Gowin_V1.9.10_x64\IDE\ipcore\FFT\data\5a_low\fft.v":2401)
+WARN  (EX3791) : Expression size ** truncated to fit in target size **("H:\GOWIN\Gowin_V1.9.10_x64\IDE\ipcore\FFT\data\5a_low\fft.v":2401)
+Extracting RAM for identifier '**'("H:\GOWIN\Gowin_V1.9.10_x64\IDE\ipcore\FFT\data\5a_low\fft.v":2401)
+NOTE  (EX0101) : Current top module is "FFT_Top"
+[5%] Running netlist conversion ...
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+WARN  (NL0002) : The module "~memory.FFT_Top" instantiated to "imMem" is swept in optimizing("H:\GOWIN\Gowin_V1.9.10_x64\IDE\ipcore\FFT\data\5a_low\fft.v":2401)
+WARN  (NL0002) : The module "~memory.FFT_Top" instantiated to "imMem" is swept in optimizing("H:\GOWIN\Gowin_V1.9.10_x64\IDE\ipcore\FFT\data\5a_low\fft.v":2401)
+[95%] Generate netlist file "H:\GOWIN\Project\loongxin3\src\fft\temp\FFT\fft.vg" completed
+Generate template file "H:\GOWIN\Project\loongxin3\src\fft\temp\FFT\fft_tmp.v" completed
+[100%] Generate report file "H:\GOWIN\Project\loongxin3\src\fft\temp\FFT\fft_syn.rpt.html" completed
+GowinSynthesis finish
