@@ -70,8 +70,8 @@ int main(void) {
     my_delay_ms(500);
   while (1)
   {
-    if(HLK_IO==1)//如果人体雷达感应模块感应到人体，唤醒OLED面板
-    {   
+    // if(HLK_IO==1)//如果人体雷达感应模块感应到人体，唤醒OLED面板
+    // {   
         flag=0;
         LEDgree_ON();//开启绿灯
         KeyNum=MatrixKey();
@@ -204,7 +204,7 @@ int main(void) {
 // /*17     添加指纹界面       */
             case 17:
                     if(flag1==17){interface_display(21);mode =16;flag1=16;}
-                    Add_FR();
+                    Add_FR();//录入指纹后按15才能返回
                     if(KeyNum==16){mode =16;flag1=16;}//返回
                     else ;
                 break;
@@ -227,16 +227,16 @@ int main(void) {
                 break;
         }
    
+    // }
+    // else
+    // {
+    //     if(flag==0){OLED_CLS();flag=1;}
+    //     LEDgree_OFF();//关闭绿灯
+    //     mode=1;
+    //     flag1=1;
+    //     }
     }
-    else
-    {
-        if(flag==0){OLED_CLS();flag=1;}
-        LEDgree_OFF();//关闭绿灯
-        mode=1;
-        flag1=1;
-        }
-    }
-    my_delay_ms(50);//每50ms轮询一次
+    // my_delay_ms(50);//每50ms轮询一次
     return 0;
 }
 
