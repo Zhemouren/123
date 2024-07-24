@@ -810,23 +810,23 @@ module godson_mcu_cpu (
 	
 	);
 
-// CAU CAU_inst(
+CAU CAU_inst(
 
-// 	.apb_pclk			  (clock		),
-// 	.apb_prstn			  ( reset),
-// 	.apb_psel			  (apb5_psel		),
-// 	.apb_paddr			  (apb5_paddr		),
-// 	.apb_pwrite			  (apb5_pwrite		),
-// 	.apb_penable		  (apb5_penable		),
-// 	.apb_pwdata			  (apb5_pwdata		),
-// 	.apb_prdata			  (apb5_prdata		),
+	.apb_pclk			  (clock		),
+	.apb_prstn			  ( reset),
+	.apb_psel			  (apb5_psel		),
+	.apb_paddr			  (apb5_paddr		),
+	.apb_pwrite			  (apb5_pwrite		),
+	.apb_penable		  (apb5_penable		),
+	.apb_pwdata			  (apb5_pwdata		),
+	.apb_prdata			  (apb5_prdata		),
 
-//     .fft_clk        (dac_clk),
-//     .dac_clk        (dac_clk),
-//     .comp_in        (comp_in),
-//     .ad_pwm         (ad_pwm)
+    .fft_clk        (dac_clk),
+    .dac_clk        (dac_clk),
+    .comp_in        (comp_in),
+    .ad_pwm         (ad_pwm)
 
-// );
+);
 
 //	i2c add by zhemou
 	I2C_TOP i2c1(
