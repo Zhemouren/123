@@ -70,8 +70,8 @@ int main(void) {
     my_delay_ms(500);
   while (1)
   {
-    // if(HLK_IO==1)//如果人体雷达感应模块感应到人体，唤醒OLED面板
-    // {   
+    if(HLK_IO==1)//如果人体雷达感应模块感应到人体，唤醒OLED面板
+    {   
         flag=0;
         LEDgree_ON();//开启绿灯
         KeyNum=MatrixKey();
@@ -188,9 +188,8 @@ int main(void) {
 // /*15     已清空界面 ----卡解锁   */
             case 15:
                     if(flag1==15){interface_display(18);mode =1;flag1=1;}
-                    press_FR();
-                    if(KeyNum==16){mode =2;flag1=2;}//返回
-                    else ;
+                        press_FR();
+                    if(KeyNum==16){mode =2;flag1=2; }//返回
                 break;
 // /*16     指纹管理   */
             case 16:
@@ -204,7 +203,7 @@ int main(void) {
 // /*17     添加指纹界面       */
             case 17:
                     if(flag1==17){interface_display(21);mode =16;flag1=16;}
-                    Add_FR();//录入指纹后按15才能返回
+                    Add_FR();
                     if(KeyNum==16){mode =16;flag1=16;}//返回
                     else ;
                 break;
@@ -227,16 +226,16 @@ int main(void) {
                 break;
         }
    
-    // }
-    // else
-    // {
-    //     if(flag==0){OLED_CLS();flag=1;}
-    //     LEDgree_OFF();//关闭绿灯
-    //     mode=1;
-    //     flag1=1;
-    //     }
     }
-    // my_delay_ms(50);//每50ms轮询一次
+    else
+    {
+        if(flag==0){OLED_CLS();flag=1;}
+        LEDgree_OFF();//关闭绿灯
+        mode=1;
+        flag1=1;
+        }
+    }
+    my_delay_ms(50);//每50ms轮询一次
     return 0;
 }
 
@@ -655,6 +654,13 @@ void Key_main()
                  OLED_ShowStr(45+i*8, 3, " ", 2);
                 }
 			}
+            if (KeyNum==16)
+            {
+                /* 逻辑清0 */
+				Password=0;		//密码清零
+				Count=0;		//计次清零
+            }
+            
 		}
 }
 
@@ -722,6 +728,14 @@ void Key()
              OLED_ShowStr(45+i*8, 3, " ", 2);
             }
 		}
+        //lyq
+		if(KeyNum==16)	//如果S16按键按下，退出
+		{
+            /* 逻辑清0 */
+			Password=0;		//密码清零
+			Count=0;		//计次清零
+        }
+
 		}
 }
 

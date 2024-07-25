@@ -55,7 +55,7 @@ void pwm_steering_engine_init(void) {
  * Return: None
  */
 void pwm_steering_engine_set(int angle) {
-    // g_pwm->comp = 4000 + 800 * angle / 9;
+    // g_pwm->comp = 4000 + 800 * angle / 9;//lyq舵机本来g_pwm->comp = 16000 + 3200 * angle / 9
      g_pwm->comp = 16000 + 3200 * angle / 9;//时钟更改为32M后为了保持相同角度 要乘以4
 }
     

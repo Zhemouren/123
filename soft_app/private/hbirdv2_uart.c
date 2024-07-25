@@ -34,23 +34,31 @@ void uart_config_stopbit( UART_STOP_BIT stopbit)
 
 void uart_enable_paritybit()
 {
-
+    // if (__RARELY(uart == NULL)) {
+    //     return -1;
+    // }
 
     uart->LCR |= 0x8;
 
-
+    // return 0;
 }
 
 void uart_disable_paritybit()
 {
+    // if (__RARELY(uart == NULL)) {
+    //     return -1;
+    // }
 
     uart->LCR &= 0xFFFFFFF7;
 
-
+    // return 0;
 }
 
 void uart_set_parity(  UART_PARITY_BIT paritybit)
 {
+    // if (__RARELY(uart == NULL)) {
+    //     return -1;
+    // }
 
     uart->LCR &= 0xFFFFFFCF;
     uart->LCR |= (paritybit << 4);
@@ -60,15 +68,31 @@ void uart_set_parity(  UART_PARITY_BIT paritybit)
 
 void uart_write(  uint8_t val)
 {
+    // if (__RARELY(uart == NULL)) {
+    //     return -1;
+    // }
+#ifndef SIMULATION_SPIKE
+#ifndef SIMULATION_XLSPIKE
     while ((uart->LSR & 0x20) == 0);
+#endif
     uart->THR = val;
+#else
+    extern void htif_putc(char ch);
+    htif_putc(val);
+#endif
+    // return 0;
 }
 
 uint8_t uart_read()
 {
     uint32_t reg;
+    // if (__RARELY(uart == NULL)) {
+    //     return -1;
+    // }
+    
     while ((uart->LSR & 0x1) == 0);
     reg = uart->RBR;
+    
     return (uint8_t)(reg & 0xFF);
 }
 

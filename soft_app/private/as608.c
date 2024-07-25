@@ -134,7 +134,7 @@ uint8_t as608_init(void)
 	return AS608_Check();
 }
 //判断接收的数组有没有应答包
-//waittime为等待接收数据的时间
+//waittime为等待接收数据的时间（单位1ms）
 //返回值：数据包首地址
 uint8_t *JudgeStr(uint16_t waittime)
 {
@@ -738,11 +738,12 @@ void ShowErrMessage(uint8_t ensure)
    OLED_CLS(); 
    OLED_ShowCN_STR(30,2,62,2);
    OLED_ShowCN_STR(62,2,70,2);  //显示录入异常
-   my_delay_ms(3000);
-   OLED_CLS(); 
-   OLED_ShowCN_STR(25,2,72,5); //显示请稍后尝试
-   OLED_CLS();  
-   OLED_ShowCN_STR(30,2,58,4);  //显示请按手指
+   my_delay_ms(1000);//lyq 原本3000
+  //lyq
+  //  OLED_CLS(); 
+  //  OLED_ShowCN_STR(25,2,72,5); //显示请稍后尝试
+  //  OLED_CLS();  
+  //  OLED_ShowCN_STR(30,2,58,4);  //显示请按手指
         
 }
 
@@ -751,18 +752,22 @@ void ShowErrMessage(uint8_t ensure)
 void Add_FR(void)
 {
   uint8_t  	key_num;
-  uint8_t ID=0;
-  uint8_t i, ensure, processnum = 0;
+  uint8_t i = 0, ensure, processnum = 0;
   uint8_t ID_NUM = 0;
   while(1)
   {
+    i++;
+    if(i == 5) //超过5次没有按手指则退出
+    {
+      break;
+    }
     switch (processnum)
     {
     case 0:
-      i++;
 //	  printf("请按手指\r\n");
       OLED_CLS();  
       OLED_ShowCN_STR(30,2,58,4);  //显示请按手指
+      my_delay_ms(500);
       ensure = PS_GetImage();
       if(ensure == 0x00)
       {
@@ -783,7 +788,6 @@ void Add_FR(void)
       break;
 
     case 1:
-      i++;
 //		  printf("请再按一次\r\n");
           OLED_CLS();
           OLED_ShowCN_STR(40,2,62,2);
@@ -830,7 +834,6 @@ void Add_FR(void)
         OLED_ShowCN_STR(30,2,62,2);  //显示录入
         OLED_ShowCN_STR(62,2,68,2);  //显示失败
         ShowErrMessage(ensure);
-        i = 0;
         processnum = 0; //跳回第一步
       }
       // my_delay_ms(500);
@@ -838,7 +841,7 @@ void Add_FR(void)
 
     case 3:
 //	  printf("生成指纹模板\r\n");
-      my_delay_ms(500);
+      my_delay_ms(250);
       ensure = PS_RegModel();
       if(ensure == 0x00)
       {
@@ -859,13 +862,13 @@ void Add_FR(void)
       while(key_num != 15)
       {
         key_num = MatrixKey();
-        if(key_num == 13)//减号键
+        if(key_num == 13)
         {
           key_num = 0;
           if(ID_NUM > 0)
             ID_NUM--;
         }
-        if(key_num == 14)//加号键
+        if(key_num == 14)
         {
           key_num = 0;
           if(ID_NUM < 200)
@@ -883,10 +886,9 @@ void Add_FR(void)
         OLED_CLS(); 
         OLED_ShowCN_STR(10,2,62,6);  //显示录入指纹成功
         OLED_ShowStr(32,4,"ID:",2);
-        ID=1;
         OLED_ShowNum(60,4,ID_NUM,1,16);
         my_delay_ms(1500);
-        // break ;
+        return ;
       }
       else
       {
@@ -895,14 +897,10 @@ void Add_FR(void)
       }
       break;
     }
-    
-    // my_delay_ms(500);//每次延迟500ms
-    if(i == 10 | (ID==1)) //超过5次没有按手指则退出
-    {
-      break;
-    }
+    my_delay_ms(250);//每次延迟500ms
   }
 }
+
 
 SysPara AS608Para;//指纹模块AS608参数
 //刷指纹
@@ -910,11 +908,22 @@ void press_FR(void)
 {
   SearchResult seach;
   uint8_t ensure;
+  uint8_t jishu;//lyq刷指纹循环次数
+  jishu = 0;//lyq
     OLED_CLS(); 
     OLED_ShowCN_STR(30,2,58,4);  //显示请按手指
   while(1)
   {
+    
     ensure = PS_GetImage();
+    
+    //lyq
+    jishu ++;
+    if (jishu == 10)
+    {
+      break;
+    }
+    
     if(ensure == 0x00) //获取图像成功
     {
       ensure = PS_GenChar(CharBuffer1);
@@ -943,6 +952,8 @@ void press_FR(void)
            interface_display(6);//显示解锁失败
             Buzzer();
           my_delay_ms(1000);
+          //lyq解锁失败退出指纹识别
+            break;
         }
       }
       else  ;
