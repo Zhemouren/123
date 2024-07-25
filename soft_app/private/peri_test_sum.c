@@ -881,11 +881,11 @@ void Init_main(void)
 {//初始化函数
 //   HAL_TIM_PWM_Start(&htim3,TIM_CHANNEL_3);/*  定时器3初始化  舵机  */  
     
-  SG90_Init();                             /*  舵机头初始化  */  
-  OLED_Init();                             /*  OLED屏初始化  */
-  OLED_CLS();                             /*  OLED清屏初始化 */
-  RC522_Init();                             /*  RC522卡初始化*/
-  as608_init();                             /*  AS608指纹模块初始化*/
+//   SG90_Init();                             /*  舵机头初始化  */  
+//   OLED_Init();                             /*  OLED屏初始化  */
+//   OLED_CLS();                             /*  OLED清屏初始化 */
+//   RC522_Init();                             /*  RC522卡初始化*/
+//   as608_init();                             /*  AS608指纹模块初始化*/
     // my_recv_buf_init();
 	// return 0;
 }
