@@ -195,7 +195,7 @@ assign	ddr_rmake = ~GPIO01	;
 //OV5640 2 HDMI 
 top top_inst(
 	.clk		(CLK50M		),
-	.rst_n		(ddr_rmake	),
+	.rst_n		(RSTN	),
 	.cmos_scl	(cmos_scl	),          //cmos i2c clock
 	.cmos_sda	(cmos_sda	),          //cmos i2c data
 	.cmos_vsync	(cmos_vsync	),        //cmos vsync
