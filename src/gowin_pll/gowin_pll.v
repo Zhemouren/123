@@ -1,11 +1,11 @@
-//Copyright (C)2014-2023 Gowin Semiconductor Corporation.
+//Copyright (C)2014-2024 Gowin Semiconductor Corporation.
 //All rights reserved.
 //File Title: IP file
-//Tool Version: V1.9.9 (64-bit)
+//Tool Version: V1.9.10 (64-bit)
 //Part Number: GW5AST-LV138FPG676AES
-//Device: GW5AST-138B
+//Device: GW5AST-138
 //Device Version: B
-//Created Time: Sun Jul 21 16:26:11 2024
+//Created Time: Thu Jul 25 21:06:01 2024
 
 module Gowin_PLL (lock, clkout0, clkout1, clkin, reset);
 
@@ -82,7 +82,7 @@ defparam PLL_inst.FCLKIN = "50";
 defparam PLL_inst.IDIV_SEL = 1;
 defparam PLL_inst.FBDIV_SEL = 1;
 defparam PLL_inst.ODIV0_SEL = 25;
-defparam PLL_inst.ODIV1_SEL = 50;
+defparam PLL_inst.ODIV1_SEL = 6;
 defparam PLL_inst.ODIV2_SEL = 8;
 defparam PLL_inst.ODIV3_SEL = 8;
 defparam PLL_inst.ODIV4_SEL = 8;

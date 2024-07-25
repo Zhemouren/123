@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="Advanced_FIR_Filter_Top" Register="783" Alu="248" Lut="274" MULTALU27X18="8"/>
+<Module name="Advanced_FIR_Filter_Top" Register="2868" Alu="977" Lut="389" MULTALU27X18="27" T_Register="2868(2868)" T_Alu="977(977)" T_Lut="389(389)" T_MULTALU27X18="27(27)"/>

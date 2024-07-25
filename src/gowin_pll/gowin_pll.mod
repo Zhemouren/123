@@ -1,5 +1,5 @@
 -series GW5AST
--device GW5AST-138B
+-device GW5AST-138
 -device_version B
 -package FCPBGA676A
 -part_number GW5AST-LV138FPG676AES
@@ -41,7 +41,7 @@
 -en_clkout1 true
 -clkout1_bypass false
 -dyn_odiv1_sel false
--odiv1_sel 50
+-odiv1_sel 6
 -dyn_dt1_sel false
 -clkout1_dt_dir 1
 -clkout1_dt_step 0

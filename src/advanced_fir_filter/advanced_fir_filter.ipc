@@ -7,15 +7,17 @@ type=ad_fir
 version=1.0
 
 [Config]
-CHANNEL_N=1
-COEFFICIENT_FILE=D:/matlab/my_exam/coeff.dat
+CHANNEL_N=2
+COEFFICIENT_FILE=../../sw/loongxin/FIR_CAU.dat
 COEFFWIDTH=16
-DisableIO=true
-FACTOR_NUMBER=1
+FACTOR_NUMBER=2
 FIR_FILTER_TYPE=fir singlerate
 IDATAWIDTH=8
 LANG=0
 ODATAWIDTH=16
 Synthesis_tool=GowinSynthesis
-TAPS_NUMBER=8
+TAPS_NUMBER=27
 TDM_VALUE=1
+Decimator_Factor=2
+Hilbert-I=false
+Interpolator_Factor=2

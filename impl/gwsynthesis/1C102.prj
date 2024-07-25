@@ -13,7 +13,6 @@
         <File path="H:\GOWIN\Project\loongxin3\src\fft\fft.v" type="verilog"/>
         <File path="H:\GOWIN\Project\loongxin3\src\fifo_topx\fifo_topx.v" type="verilog"/>
         <File path="H:\GOWIN\Project\loongxin3\src\gowin_pll\gowin_pll.v" type="verilog"/>
-        <File path="H:\GOWIN\Project\loongxin3\src\gowin_pllx\gowin_pllx.v" type="verilog"/>
         <File path="H:\GOWIN\Project\loongxin3\src\gowin_sp\gowin_sp.v" type="verilog"/>
         <File path="H:\GOWIN\Project\loongxin3\src\gpio.v" type="verilog"/>
         <File path="H:\GOWIN\Project\loongxin3\src\hpet.v" type="verilog"/>
@@ -28,12 +27,6 @@
         <File path="H:\GOWIN\Project\loongxin3\src\hw\ip_repo\blk_mem_gen_0\blk_mem_gen_0.v" type="verilog"/>
         <File path="H:\GOWIN\Project\loongxin3\src\hw\ip_repo\blk_mem_gen_1\blk_mem_gen_1.v" type="verilog"/>
         <File path="H:\GOWIN\Project\loongxin3\src\hw\la132_top_pack\la132_top_gowin.vp" type="verilog"/>
-        <File path="H:\GOWIN\Project\loongxin3\src\i2c_master_bit_ctrl.v" type="verilog"/>
-        <File path="H:\GOWIN\Project\loongxin3\src\i2c_master_byte_ctrl.v" type="verilog"/>
-        <File path="H:\GOWIN\Project\loongxin3\src\i2c_slave_bit_ctrl.v" type="verilog"/>
-        <File path="H:\GOWIN\Project\loongxin3\src\i2c_slave_byte_ctrl.v" type="verilog"/>
-        <File path="H:\GOWIN\Project\loongxin3\src\i2c_top.v" type="verilog"/>
-        <File path="H:\GOWIN\Project\loongxin3\src\iic_dri.v" type="verilog"/>
         <File path="H:\GOWIN\Project\loongxin3\src\io_generic_fifo.v" type="verilog"/>
         <File path="H:\GOWIN\Project\loongxin3\src\oled_top.v" type="verilog"/>
         <File path="H:\GOWIN\Project\loongxin3\src\pwm.v" type="verilog"/>
@@ -44,6 +37,35 @@
         <File path="H:\GOWIN\Project\loongxin3\src\uart_rx.v" type="verilog"/>
         <File path="H:\GOWIN\Project\loongxin3\src\uart_top.v" type="verilog"/>
         <File path="H:\GOWIN\Project\loongxin3\src\uart_tx.v" type="verilog"/>
+        <File path="H:\GOWIN\Project\loongxin3\src\gowin_pll\sys_pll.v" type="verilog"/>
+        <File path="H:\GOWIN\Project\loongxin3\src\gowin_pll\cmos_pll.v" type="verilog"/>
+        <File path="H:\GOWIN\Project\loongxin3\src\gowin_pll\mem_pll.v" type="verilog"/>
+        <File path="H:\GOWIN\Project\loongxin3\src\dvi_tx\dvi_tx.v" type="verilog"/>
+        <File path="H:\GOWIN\Project\loongxin3\src\video_frame_buffer\video_frame_buffer.v" type="verilog"/>
+        <File path="H:\GOWIN\Project\loongxin3\src\video_fifo\video_fifo.v" type="verilog"/>
+        <File path="H:\GOWIN\Project\loongxin3\src\clk_unit.v" type="verilog"/>
+        <File path="H:\GOWIN\Project\loongxin3\src\cmos_8_16bit.v" type="verilog"/>
+        <File path="H:\GOWIN\Project\loongxin3\src\lut_ov5640_rgb565_480_272.v" type="verilog"/>
+        <File path="H:\GOWIN\Project\loongxin3\src\syn_gen.v" type="verilog"/>
+        <File path="H:\GOWIN\Project\loongxin3\src\sync_vg.v" type="verilog"/>
+        <File path="H:\GOWIN\Project\loongxin3\src\testpattern.v" type="verilog"/>
+        <File path="H:\GOWIN\Project\loongxin3\src\top.v" type="verilog"/>
+        <File path="H:\GOWIN\Project\loongxin3\src\vga.v" type="verilog"/>
+        <File path="H:\GOWIN\Project\loongxin3\src\VGA_unit.v" type="verilog"/>
+        <File path="H:\GOWIN\Project\loongxin3\src\ddr3_memory_interface\DDR3MI.v" type="verilog"/>
+        <File path="H:\GOWIN\Project\loongxin3\src\timescale.v" type="verilog"/>
+        <File path="H:\GOWIN\Project\loongxin3\src\i2c_master_bit_ctrl.v" type="verilog"/>
+        <File path="H:\GOWIN\Project\loongxin3\src\i2c_master_byte_ctrl.v" type="verilog"/>
+        <File path="H:\GOWIN\Project\loongxin3\src\i2c_slave_bit_ctrl.v" type="verilog"/>
+        <File path="H:\GOWIN\Project\loongxin3\src\i2c_slave_byte_ctrl.v" type="verilog"/>
+        <File path="H:\GOWIN\Project\loongxin3\src\i2c_top.v" type="verilog"/>
+        <File path="H:\GOWIN\Project\loongxin3\src\iic_dri.v" type="verilog"/>
+        <File path="H:\GOWIN\Project\loongxin3\src\i2c_config_cmos.v" type="verilog"/>
+        <File path="H:\GOWIN\Project\loongxin3\src\i2c_master_bit_ctrl_cmos.v" type="verilog"/>
+        <File path="H:\GOWIN\Project\loongxin3\src\i2c_master_byte_ctrl_cmos.v" type="verilog"/>
+        <File path="H:\GOWIN\Project\loongxin3\src\i2c_master_defines_cmos.v" type="verilog"/>
+        <File path="H:\GOWIN\Project\loongxin3\src\i2c_master_top_cmos.v" type="verilog"/>
+        <File path="H:\GOWIN\Project\loongxin3\src\timescale_cmos.v" type="verilog"/>
         <File path="H:\GOWIN\Gowin_V1.9.10_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_crc32.v" type="gao"/>
         <File path="H:\GOWIN\Gowin_V1.9.10_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_match.v" type="gao"/>
         <File path="H:\GOWIN\Gowin_V1.9.10_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_mem_ctrl.v" type="gao"/>

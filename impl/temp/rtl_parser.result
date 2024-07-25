@@ -1,133 +1,5 @@
 [
  {
-  "InstFile" : "H:/GOWIN/Project/loongxin3/src/CAU.v",
-  "InstLine" : 24,
-  "InstName" : "CAU",
-  "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/CAU.v",
-  "ModuleLine" : 24,
-  "ModuleName" : "CAU",
-  "SubInsts" : [
-   {
-    "InstFile" : "H:/GOWIN/Project/loongxin3/src/CAU.v",
-    "InstLine" : 213,
-    "InstName" : "fifo_topx_inst1",
-    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/fifo_topx/fifo_topx.v",
-    "ModuleLine" : 708,
-    "ModuleName" : "fifo_topx",
-    "SubInsts" : [
-     {
-      "InstFile" : "H:/GOWIN/Project/loongxin3/src/fifo_topx/fifo_topx.v",
-      "InstLine" : 733,
-      "InstName" : "fifo_inst",
-      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/fifo_topx/fifo_topx.v",
-      "ModuleLine" : 13,
-      "ModuleName" : "~fifo.fifo_topx"
-     }
-    ]
-   },
-   {
-    "InstFile" : "H:/GOWIN/Project/loongxin3/src/CAU.v",
-    "InstLine" : 227,
-    "InstName" : "FFT_inst",
-    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/fft/fft.v",
-    "ModuleLine" : 2743,
-    "ModuleName" : "FFT_Top",
-    "SubInsts" : [
-     {
-      "InstFile" : "H:/GOWIN/Project/loongxin3/src/fft/fft.v",
-      "InstLine" : 2778,
-      "InstName" : "fft_top_inst",
-      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/fft/fft.v",
-      "ModuleLine" : 10,
-      "ModuleName" : "~fft_top.FFT_Top"
-     }
-    ]
-   },
-   {
-    "InstFile" : "H:/GOWIN/Project/loongxin3/src/CAU.v",
-    "InstLine" : 246,
-    "InstName" : "fifo_topx_inst2",
-    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/fifo_topx/fifo_topx.v",
-    "ModuleLine" : 708,
-    "ModuleName" : "fifo_topx",
-    "SubInsts" : [
-     {
-      "InstFile" : "H:/GOWIN/Project/loongxin3/src/fifo_topx/fifo_topx.v",
-      "InstLine" : 733,
-      "InstName" : "fifo_inst",
-      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/fifo_topx/fifo_topx.v",
-      "ModuleLine" : 13,
-      "ModuleName" : "~fifo.fifo_topx"
-     }
-    ]
-   },
-   {
-    "InstFile" : "H:/GOWIN/Project/loongxin3/src/CAU.v",
-    "InstLine" : 355,
-    "InstName" : "adc_inst",
-    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/adc_top.v",
-    "ModuleLine" : 67,
-    "ModuleName" : "ADC_top",
-    "SubInsts" : [
-     {
-      "InstFile" : "H:/GOWIN/Project/loongxin3/src/adc_top.v",
-      "InstLine" : 120,
-      "InstName" : "SSD_ADC",
-      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/ADC.v",
-      "ModuleLine" : 68,
-      "ModuleName" : "sigmadelta_adc",
-      "SubInsts" : [
-       {
-        "InstFile" : "H:/GOWIN/Project/loongxin3/src/ADC.v",
-        "InstLine" : 163,
-        "InstName" : "box_ave",
-        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/box_ave.v",
-        "ModuleLine" : 72,
-        "ModuleName" : "box_ave"
-       }
-      ]
-     }
-    ]
-   },
-   {
-    "InstFile" : "H:/GOWIN/Project/loongxin3/src/CAU.v",
-    "InstLine" : 374,
-    "InstName" : "fir_inst",
-    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/advanced_fir_filter/advanced_fir_filter.v",
-    "ModuleLine" : 4633,
-    "ModuleName" : "Advanced_FIR_Filter_Top",
-    "SubInsts" : [
-     {
-      "InstFile" : "H:/GOWIN/Project/loongxin3/src/advanced_fir_filter/advanced_fir_filter.v",
-      "InstLine" : 4656,
-      "InstName" : "advanced_fir_filter_inst",
-      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/advanced_fir_filter/advanced_fir_filter.v",
-      "ModuleLine" : 11,
-      "ModuleName" : "(advanced_fir_filter)/(Advanced_FIR_Filter_Top)"
-     }
-    ]
-   },
-   {
-    "InstFile" : "H:/GOWIN/Project/loongxin3/src/CAU.v",
-    "InstLine" : 388,
-    "InstName" : "fifo_adc_inst",
-    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/fifo_topx/fifo_topx.v",
-    "ModuleLine" : 708,
-    "ModuleName" : "fifo_topx",
-    "SubInsts" : [
-     {
-      "InstFile" : "H:/GOWIN/Project/loongxin3/src/fifo_topx/fifo_topx.v",
-      "InstLine" : 733,
-      "InstName" : "fifo_inst",
-      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/fifo_topx/fifo_topx.v",
-      "ModuleLine" : 13,
-      "ModuleName" : "~fifo.fifo_topx"
-     }
-    ]
-   }
-  ]
- },
- {
   "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_mcu_top.v",
   "InstLine" : 3,
   "InstName" : "godson_mcu_top",
@@ -137,7 +9,7 @@
   "SubInsts" : [
    {
     "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_mcu_top.v",
-    "InstLine" : 97,
+    "InstLine" : 127,
     "InstName" : "pll",
     "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/gowin_pll/gowin_pll.v",
     "ModuleLine" : 10,
@@ -145,15 +17,7 @@
    },
    {
     "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_mcu_top.v",
-    "InstLine" : 105,
-    "InstName" : "pllx",
-    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/gowin_pllx/gowin_pllx.v",
-    "ModuleLine" : 10,
-    "ModuleName" : "Gowin_PLLx"
-   },
-   {
-    "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_mcu_top.v",
-    "InstLine" : 112,
+    "InstLine" : 138,
     "InstName" : "A_cpu",
     "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_mcu_cpu.v",
     "ModuleLine" : 3,
@@ -525,6 +389,134 @@
      },
      {
       "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_mcu_cpu.v",
+      "InstLine" : 813,
+      "InstName" : "CAU_inst",
+      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/CAU.v",
+      "ModuleLine" : 24,
+      "ModuleName" : "CAU",
+      "SubInsts" : [
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/CAU.v",
+        "InstLine" : 213,
+        "InstName" : "fifo_topx_inst1",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/fifo_topx/fifo_topx.v",
+        "ModuleLine" : 708,
+        "ModuleName" : "fifo_topx",
+        "SubInsts" : [
+         {
+          "InstFile" : "H:/GOWIN/Project/loongxin3/src/fifo_topx/fifo_topx.v",
+          "InstLine" : 733,
+          "InstName" : "fifo_inst",
+          "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/fifo_topx/fifo_topx.v",
+          "ModuleLine" : 13,
+          "ModuleName" : "~fifo.fifo_topx"
+         }
+        ]
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/CAU.v",
+        "InstLine" : 227,
+        "InstName" : "FFT_inst",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/fft/fft.v",
+        "ModuleLine" : 2743,
+        "ModuleName" : "FFT_Top",
+        "SubInsts" : [
+         {
+          "InstFile" : "H:/GOWIN/Project/loongxin3/src/fft/fft.v",
+          "InstLine" : 2778,
+          "InstName" : "fft_top_inst",
+          "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/fft/fft.v",
+          "ModuleLine" : 10,
+          "ModuleName" : "~fft_top.FFT_Top"
+         }
+        ]
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/CAU.v",
+        "InstLine" : 246,
+        "InstName" : "fifo_topx_inst2",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/fifo_topx/fifo_topx.v",
+        "ModuleLine" : 708,
+        "ModuleName" : "fifo_topx",
+        "SubInsts" : [
+         {
+          "InstFile" : "H:/GOWIN/Project/loongxin3/src/fifo_topx/fifo_topx.v",
+          "InstLine" : 733,
+          "InstName" : "fifo_inst",
+          "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/fifo_topx/fifo_topx.v",
+          "ModuleLine" : 13,
+          "ModuleName" : "~fifo.fifo_topx"
+         }
+        ]
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/CAU.v",
+        "InstLine" : 355,
+        "InstName" : "adc_inst",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/adc_top.v",
+        "ModuleLine" : 67,
+        "ModuleName" : "ADC_top",
+        "SubInsts" : [
+         {
+          "InstFile" : "H:/GOWIN/Project/loongxin3/src/adc_top.v",
+          "InstLine" : 120,
+          "InstName" : "SSD_ADC",
+          "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/ADC.v",
+          "ModuleLine" : 68,
+          "ModuleName" : "sigmadelta_adc",
+          "SubInsts" : [
+           {
+            "InstFile" : "H:/GOWIN/Project/loongxin3/src/ADC.v",
+            "InstLine" : 163,
+            "InstName" : "box_ave",
+            "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/box_ave.v",
+            "ModuleLine" : 72,
+            "ModuleName" : "box_ave"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/CAU.v",
+        "InstLine" : 374,
+        "InstName" : "fir_inst",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/advanced_fir_filter/advanced_fir_filter.v",
+        "ModuleLine" : 16568,
+        "ModuleName" : "Advanced_FIR_Filter_Top",
+        "SubInsts" : [
+         {
+          "InstFile" : "H:/GOWIN/Project/loongxin3/src/advanced_fir_filter/advanced_fir_filter.v",
+          "InstLine" : 16591,
+          "InstName" : "advanced_fir_filter_inst",
+          "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/advanced_fir_filter/advanced_fir_filter.v",
+          "ModuleLine" : 11,
+          "ModuleName" : "~advanced_fir_filter.Advanced_FIR_Filter_Top"
+         }
+        ]
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/CAU.v",
+        "InstLine" : 388,
+        "InstName" : "fifo_adc_inst",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/fifo_topx/fifo_topx.v",
+        "ModuleLine" : 708,
+        "ModuleName" : "fifo_topx",
+        "SubInsts" : [
+         {
+          "InstFile" : "H:/GOWIN/Project/loongxin3/src/fifo_topx/fifo_topx.v",
+          "InstLine" : 733,
+          "InstName" : "fifo_inst",
+          "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/fifo_topx/fifo_topx.v",
+          "ModuleLine" : 13,
+          "ModuleName" : "~fifo.fifo_topx"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_mcu_cpu.v",
       "InstLine" : 832,
       "InstName" : "i2c1",
       "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/i2c_top.v",
@@ -606,6 +598,184 @@
         "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/spi_fifo4.v",
         "ModuleLine" : 3,
         "ModuleName" : "spi_fifo4"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/hw/godson_mcu_top.v",
+    "InstLine" : 196,
+    "InstName" : "top_inst",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/top.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "top",
+    "SubInsts" : [
+     {
+      "InstFile" : "H:/GOWIN/Project/loongxin3/src/top.v",
+      "InstLine" : 121,
+      "InstName" : "sys_pll_m0",
+      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/gowin_pll/sys_pll.v",
+      "ModuleLine" : 10,
+      "ModuleName" : "sys_pll"
+     },
+     {
+      "InstFile" : "H:/GOWIN/Project/loongxin3/src/top.v",
+      "InstLine" : 125,
+      "InstName" : "cmos_pll_m0",
+      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/gowin_pll/cmos_pll.v",
+      "ModuleLine" : 10,
+      "ModuleName" : "cmos_pll"
+     },
+     {
+      "InstFile" : "H:/GOWIN/Project/loongxin3/src/top.v",
+      "InstLine" : 131,
+      "InstName" : "mem_pll_m0",
+      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/gowin_pll/mem_pll.v",
+      "ModuleLine" : 10,
+      "ModuleName" : "mem_pll"
+     },
+     {
+      "InstFile" : "H:/GOWIN/Project/loongxin3/src/top.v",
+      "InstLine" : 144,
+      "InstName" : "i2c_config_m0",
+      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/i2c_config_cmos.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "i2c_config_cmos",
+      "SubInsts" : [
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/i2c_config_cmos.v",
+        "InstLine" : 101,
+        "InstName" : "i2c_master_top_m0",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/i2c_master_top_cmos.v",
+        "ModuleLine" : 1,
+        "ModuleName" : "i2c_master_top_cmos",
+        "SubInsts" : [
+         {
+          "InstFile" : "H:/GOWIN/Project/loongxin3/src/i2c_master_top_cmos.v",
+          "InstLine" : 232,
+          "InstName" : "byte_controller",
+          "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/i2c_master_byte_ctrl_cmos.v",
+          "ModuleLine" : 75,
+          "ModuleName" : "i2c_master_byte_ctrl_cmos",
+          "SubInsts" : [
+           {
+            "InstFile" : "H:/GOWIN/Project/loongxin3/src/i2c_master_byte_ctrl_cmos.v",
+            "InstLine" : 146,
+            "InstName" : "bit_controller",
+            "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/i2c_master_bit_ctrl_cmos.v",
+            "ModuleLine" : 143,
+            "ModuleName" : "i2c_master_bit_ctrl_cmos"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "InstFile" : "H:/GOWIN/Project/loongxin3/src/top.v",
+      "InstLine" : 159,
+      "InstName" : "lut_ov5640_rgb565_480_272_m0",
+      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/lut_ov5640_rgb565_480_272.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "lut_ov5640_rgb565_480_272"
+     },
+     {
+      "InstFile" : "H:/GOWIN/Project/loongxin3/src/top.v",
+      "InstLine" : 164,
+      "InstName" : "cmos_8_16bit_m0",
+      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/cmos_8_16bit.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "cmos_8_16bit"
+     },
+     {
+      "InstFile" : "H:/GOWIN/Project/loongxin3/src/top.v",
+      "InstLine" : 209,
+      "InstName" : "Video_Frame_Buffer_Top_inst",
+      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/video_frame_buffer/video_frame_buffer.v",
+      "ModuleLine" : 3779,
+      "ModuleName" : "Video_Frame_Buffer_Top",
+      "SubInsts" : [
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/video_frame_buffer/video_frame_buffer.v",
+        "InstLine" : 3840,
+        "InstName" : "vfb_ddr3_wrapper_inst",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/video_frame_buffer/video_frame_buffer.v",
+        "ModuleLine" : 10,
+        "ModuleName" : "~vfb_ddr3_wrapper.Video_Frame_Buffer_Top"
+       }
+      ]
+     },
+     {
+      "InstFile" : "H:/GOWIN/Project/loongxin3/src/top.v",
+      "InstLine" : 271,
+      "InstName" : "vga_u1",
+      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/vga.v",
+      "ModuleLine" : 3,
+      "ModuleName" : "vga",
+      "SubInsts" : [
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/vga.v",
+        "InstLine" : 22,
+        "InstName" : "clk_inst",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/clk_unit.v",
+        "ModuleLine" : 1,
+        "ModuleName" : "clk_unit"
+       },
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/vga.v",
+        "InstLine" : 28,
+        "InstName" : "VGA_inst",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/VGA_unit.v",
+        "ModuleLine" : 1,
+        "ModuleName" : "VGA_unit",
+        "SubInsts" : [
+         {
+          "InstFile" : "H:/GOWIN/Project/loongxin3/src/VGA_unit.v",
+          "InstLine" : 44,
+          "InstName" : "u_sync_vg",
+          "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/sync_vg.v",
+          "ModuleLine" : 34,
+          "ModuleName" : "sync_vg"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "InstFile" : "H:/GOWIN/Project/loongxin3/src/top.v",
+      "InstLine" : 339,
+      "InstName" : "your_instance_name",
+      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/dvi_tx/dvi_tx.v",
+      "ModuleLine" : 1181,
+      "ModuleName" : "DVI_TX_Top",
+      "SubInsts" : [
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/dvi_tx/dvi_tx.v",
+        "InstLine" : 1210,
+        "InstName" : "rgb2dvi_inst",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/dvi_tx/dvi_tx.v",
+        "ModuleLine" : 10,
+        "ModuleName" : "~rgb2dvi.DVI_TX_Top"
+       }
+      ]
+     },
+     {
+      "InstFile" : "H:/GOWIN/Project/loongxin3/src/top.v",
+      "InstLine" : 358,
+      "InstName" : "DDR3_Memory_Interface_Top_inst",
+      "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/ddr3_memory_interface/DDR3MI.v",
+      "ModuleLine" : 21396,
+      "ModuleName" : "DDR3MI",
+      "SubInsts" : [
+       {
+        "InstFile" : "H:/GOWIN/Project/loongxin3/src/ddr3_memory_interface/DDR3MI.v",
+        "InstLine" : 21481,
+        "InstName" : "gw3_top",
+        "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/ddr3_memory_interface/DDR3MI.v",
+        "ModuleLine" : 10,
+        "ModuleName" : "~GW_DDR3_PHY_MC.DDR3MI"
        }
       ]
      }
@@ -1020,24 +1190,6 @@
   ]
  },
  {
-  "InstFile" : "H:/GOWIN/Project/loongxin3/src/i2c_slave_byte_ctrl.v",
-  "InstLine" : 6,
-  "InstName" : "i2c_slave_byte_ctrl",
-  "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/i2c_slave_byte_ctrl.v",
-  "ModuleLine" : 6,
-  "ModuleName" : "i2c_slave_byte_ctrl",
-  "SubInsts" : [
-   {
-    "InstFile" : "H:/GOWIN/Project/loongxin3/src/i2c_slave_byte_ctrl.v",
-    "InstLine" : 79,
-    "InstName" : "bit_controller",
-    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/i2c_slave_bit_ctrl.v",
-    "ModuleLine" : 44,
-    "ModuleName" : "i2c_slave_bit_ctrl"
-   }
-  ]
- },
- {
   "InstFile" : "H:/GOWIN/Project/loongxin3/src/oled_top.v",
   "InstLine" : 12,
   "InstName" : "Oled_Top",
@@ -1078,6 +1230,58 @@
     "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/spi_fifo4.v",
     "ModuleLine" : 3,
     "ModuleName" : "spi_fifo4"
+   }
+  ]
+ },
+ {
+  "InstFile" : "H:/GOWIN/Project/loongxin3/src/video_fifo/video_fifo.v",
+  "InstLine" : 945,
+  "InstName" : "video_fifo",
+  "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/video_fifo/video_fifo.v",
+  "ModuleLine" : 945,
+  "ModuleName" : "video_fifo",
+  "SubInsts" : [
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/video_fifo/video_fifo.v",
+    "InstLine" : 972,
+    "InstName" : "fifo_inst",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/video_fifo/video_fifo.v",
+    "ModuleLine" : 13,
+    "ModuleName" : "~fifo.video_fifo"
+   }
+  ]
+ },
+ {
+  "InstFile" : "H:/GOWIN/Project/loongxin3/src/syn_gen.v",
+  "InstLine" : 13,
+  "InstName" : "syn_gen",
+  "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/syn_gen.v",
+  "ModuleLine" : 13,
+  "ModuleName" : "syn_gen"
+ },
+ {
+  "InstFile" : "H:/GOWIN/Project/loongxin3/src/testpattern.v",
+  "InstLine" : 17,
+  "InstName" : "testpattern",
+  "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/testpattern.v",
+  "ModuleLine" : 17,
+  "ModuleName" : "testpattern"
+ },
+ {
+  "InstFile" : "H:/GOWIN/Project/loongxin3/src/i2c_slave_byte_ctrl.v",
+  "InstLine" : 6,
+  "InstName" : "i2c_slave_byte_ctrl",
+  "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/i2c_slave_byte_ctrl.v",
+  "ModuleLine" : 6,
+  "ModuleName" : "i2c_slave_byte_ctrl",
+  "SubInsts" : [
+   {
+    "InstFile" : "H:/GOWIN/Project/loongxin3/src/i2c_slave_byte_ctrl.v",
+    "InstLine" : 79,
+    "InstName" : "bit_controller",
+    "ModuleFile" : "H:/GOWIN/Project/loongxin3/src/i2c_slave_bit_ctrl.v",
+    "ModuleLine" : 44,
+    "ModuleName" : "i2c_slave_bit_ctrl"
    }
   ]
  }

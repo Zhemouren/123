@@ -86,7 +86,7 @@
 `define APB_SLV4_ADDR_LEN    32'h0000ffff     //APB4 length
 //APB5
 `define APB_SLV5_ADDR_BASE   32'hbfe88000     //APB5 base address    链接到uart0
-`define APB_SLV5_ADDR_LEN    32'h00000fff     //APB5 length
+`define APB_SLV5_ADDR_LEN    32'h0000ffff     //APB5 length
 //APB6
 `define APB_SLV6_ADDR_BASE   32'hbfe90000     //APB6 base address     
 `define APB_SLV6_ADDR_LEN    32'h0000ffff     //APB6 length

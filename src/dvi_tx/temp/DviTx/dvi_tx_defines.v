@@ -1,0 +1,4 @@
+`define TX_USE_5AT_PLL
+`define TX_PLL_CLKIN_FRE "148.5"
+`define TX_PLL_ODIV_SEL 2
+`define USE_ELVDS_OBUF
